@@ -1,0 +1,2 @@
+class ProductSizesController < ApplicationController
+end
