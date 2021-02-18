@@ -5,7 +5,7 @@ class CustomerDataController < ApplicationController
 
   def create
     @customer_datum = CustomerDatum.find(params[:customer_datum_id])
-
+    @customer_datum.user = current_user
     @customer_datum.save
 
     authorize @customer_datum
