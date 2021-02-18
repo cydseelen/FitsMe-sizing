@@ -8,12 +8,12 @@ class CustomerDataController < ApplicationController
 
     @customer_datum.save
 
-    #authorize @customer_datum
+    authorize @customer_datum
   end
 
   private
 
   def customer_data_params
-    params.require(:customer_datum).permit(:age, :height, :weight, :body_shape)
+    params.require(:customer_datum).permit(:age, :height, :weight, :body_shape, :fit_preference)
   end
 end
