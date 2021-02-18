@@ -1,4 +1,10 @@
 class ProductsController < ApplicationController
+  include Pundit
+  skip_after _action :verify_authorized, only: [:home]
+  before_action :skip_authorization #
+
+  skip_before_action :authenticate_user!, only: [:home]
+
   def new
     @product = Product.new
     authorize @product
