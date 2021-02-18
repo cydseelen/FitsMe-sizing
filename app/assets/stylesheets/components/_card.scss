@@ -1,0 +1,24 @@
+.brand-card {
+  background: #FFEDD6;
+  border-radius: 8px;
+  width: 681px;
+  height: 643px;
+  border: $gray;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: auto;
+}
+
+.brand-card-sm {
+    background: #FFEDD6;
+    border-radius: 8px;
+    border-color: gray;
+    width: 600px;
+    height: 560px;
+    border: $gray;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+  }

@@ -4,9 +4,9 @@ Rails.application.routes.draw do
 
   resources :customer_data, only: [:new, :create]
 
-  resources :brand, shallow: true do
-    resources :product
-    resources :product_size
+  resource :brand, shallow: true do
+    resource :product
+    resource :product_size
   end 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
