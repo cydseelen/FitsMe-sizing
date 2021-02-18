@@ -1,9 +1,9 @@
 class BrandsController < ApplicationController
     include Pundit
-    skip_after_action :verify_authorized, only: [:home]
+    skip_after_action :verify_authorized, only: [:home, :new]
     before_action :skip_authorization #
 
-    skip_before_action :authenticate_user!, only: [:home]
+    skip_before_action :authenticate_user!, only: [:home, :new]
 
     
     def new
