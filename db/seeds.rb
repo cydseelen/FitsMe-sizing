@@ -8,10 +8,11 @@
 puts "Removing old customers, brands, product files and matches"
 
 CustomerDatum.destroy_all
-User.destroy_all
-Brand.destroy_all
-Product.destroy_all
 ProductSize.destroy_all
+Product.destroy_all
+Brand.destroy_all
+User.destroy_all
+
 #Customer_product_match.destroy_all
 
 
@@ -29,34 +30,33 @@ User.create!(
 puts "Adding some Brands :)"
 
 Brand.create!(
-    user_id: 1,
     user: User.first,
     name: 'FirstBrand'
 )
 puts "Creating a brand :)"
 Brand.create!(
-    user_id: 2,
     user: User.first,
     name: 'SecondBrand'
 )
 
 CustomerDatum.create!(
-    user_id: 3,
     user: User.first,
     age: 20,
     height: 170,
     weight:  60,
+
     body_shape: 1
 )
 puts "Creating a product :)"
 Product.create!(
-   #brand_id: 1,
+    brand: Brand.first,
     name: "Nice blue sweater",
     fabric_type: "jersey",
     garment_type:  "sweater",
 )
 
 ProductSize.create!(
+    product: Product.first,
     size_name: "Medium",
     hip_measurement: 90,
     bust_measurement: 90,
@@ -64,6 +64,7 @@ ProductSize.create!(
     length_measurement:80
   )
 ProductSize.create!(
+    product: Product.first,
     size_name: "Large",
     hip_measurement: 100,
     bust_measurement: 100,
