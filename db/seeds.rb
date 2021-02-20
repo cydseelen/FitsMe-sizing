@@ -5,3 +5,68 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+puts "Removing old customers, brands, product files and matches"
+
+CustomerDatum.destroy_all
+User.destroy_all
+Brand.destroy_all
+Product.destroy_all
+ProductSize.destroy_all
+#Customer_product_match.destroy_all
+
+
+puts "Adding some Customers & products :)"
+
+
+
+puts "Creating a user :)"
+
+User.create!(
+    email: "cydnie@mail.com",
+    password: "123456"
+)
+
+puts "Adding some Brands :)"
+
+Brand.create!(
+    user_id: 1,
+    user: User.first,
+    name: 'FirstBrand'
+)
+puts "Creating a brand :)"
+Brand.create!(
+    user_id: 2,
+    user: User.first,
+    name: 'SecondBrand'
+)
+
+CustomerDatum.create!(
+    user_id: 3,
+    user: User.first,
+    age: 20,
+    height: 170,
+    weight:  60,
+    body_shape: 1
+)
+puts "Creating a product :)"
+Product.create!(
+   #brand_id: 1,
+    name: "Nice blue sweater",
+    fabric_type: "jersey",
+    garment_type:  "sweater",
+)
+
+ProductSize.create!(
+    size_name: "Medium",
+    hip_measurement: 90,
+    bust_measurement: 90,
+    waist_measurement:60,
+    length_measurement:80
+  )
+ProductSize.create!(
+    size_name: "Large",
+    hip_measurement: 100,
+    bust_measurement: 100,
+    waist_measurement:70,
+    length_measurement:90
+  )
