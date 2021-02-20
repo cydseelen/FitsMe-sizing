@@ -1,1 +1,14 @@
-<h1>Product Page</h1>
+<div class="brand-card">
+  <h1>Product Page</h1>
+
+  <%#= simple_form_for @product, url: new_brand_product_path, method: :post do |f| %>
+  <%= simple_form_for [@brand, @product] do |f| %>
+    <%= f.input :name %>
+    <%= f.input :garment_type %>
+    <%= f.input :fabric_type %>
+    <%= f.submit value="Add" %>
+  <% end %>
+
+
+  <%#= link_to 'Product Size', new_brand_product_size_path, class: "btn btn-nav" %>
+</div>
