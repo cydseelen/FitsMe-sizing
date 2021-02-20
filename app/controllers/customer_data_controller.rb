@@ -6,8 +6,8 @@ class CustomerDataController < ApplicationController
   after_action :verify_policy_scoped, only: :index, unless: :skip_pundit?
 
   def new
-    authorize @customer_datum
     @customer_datum = CustomerDatum.new
+    authorize @customer_datum
   end
 
   def create
