@@ -5,7 +5,9 @@ class BrandsController < ApplicationController
 
     skip_before_action :authenticate_user!, only: [:home, :new, :destroy, :show, :index]
 
-    
+    def home
+    end
+
     def new
       @brand = Brand.new
       authorize @brand
@@ -28,7 +30,7 @@ class BrandsController < ApplicationController
       authorize @brand
 
     end
-  
+
     def index
       @brands = policy_scope(Brand)
     end
