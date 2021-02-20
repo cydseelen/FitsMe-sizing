@@ -3,13 +3,13 @@ class CustomerDatumPolicy < ApplicationPolicy
     def resolve
       scope.all
     end
+  end
 
-    def create?
-      true
-    end
+  def create?
+    true
+  end
 
-    def new?
-      create?
-    end
+  def new?
+    true
   end
 end

@@ -1,1 +1,21 @@
-<h1>Quiz page</h1>
+<!-- Need to set up customer_data quiz pages -->
+<br>
+<div class="container">
+  <!-- <div class="form-card"> -->
+    <h1>Enter your details</h1>
+
+  <%= simple_form_for @customer_datum do |f| %>
+  <%= f.input :age %>
+  <%= f.input :height %>
+  <%= f.input :weight %>
+  <%= f.input :fit_preference %>
+  <%= f.input :body_shape %>
+  <%= f.button :submit %>
+  <% end %>
+  <br>
+  <%= link_to 'Return home', root_path %>
+  <br>
+  <!-- </div> -->
+</div>
+
+
