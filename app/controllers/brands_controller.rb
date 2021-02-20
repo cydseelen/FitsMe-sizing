@@ -19,7 +19,7 @@ class BrandsController < ApplicationController
 
       @brand.user = current_user
       if @brand.save
-        redirect_to brand_path(@brand)
+        redirect_to   new_brand_product_path(:id)
       else
         render 'new'
       end
