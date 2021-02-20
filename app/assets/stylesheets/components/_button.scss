@@ -36,3 +36,15 @@
     background: $white;
     opacity: 0.8;
   }
+
+  .btn-brand-sign {
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 40px;
+    background: #CD7613;
+    border: 2px solid #CD7613;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 8px;
+  }

@@ -5,7 +5,7 @@ class BrandPolicy < ApplicationPolicy
     end
   end
   
-  def new?
+  def show?
     true
   end
 

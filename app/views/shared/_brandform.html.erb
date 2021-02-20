@@ -1,0 +1,11 @@
+<%#= form_for(@brand, url: new_brand_path) do |f| %>
+<%#= form_for @brand do |f| %>
+  <%#= f.label :name %>
+  <%#= f.text_field :name %>
+  <%#= f.button :submit, class: 'btn-brand-sign' %>
+<%# end %>
+
+<%= simple_form_for(@brand) do |f| %>
+  <%= f.input :name %>
+  <%= f.submit value="Add" %>
+<% end %>
