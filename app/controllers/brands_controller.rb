@@ -7,7 +7,7 @@ class BrandsController < ApplicationController
 
     def home
     end
-    
+
     def new
       @brand = Brand.new
       authorize @brand
@@ -31,7 +31,7 @@ class BrandsController < ApplicationController
       authorize @brand
 
     end
-  
+
     def index
       @brands = policy_scope(Brand)
     end
