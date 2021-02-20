@@ -7,5 +7,6 @@
 
 <%= simple_form_for(@brand) do |f| %>
   <%= f.input :name %>
-  <%= f.submit value="Add" %>
+  <%#= f.submit value="Add" %>
+  <%= f.button :submit, class: 'btn-brand-sign' %>
 <% end %>

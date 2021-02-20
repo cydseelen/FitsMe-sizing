@@ -6,12 +6,13 @@ class ProductSizesController < ApplicationController
   skip_before_action :authenticate_user!, only: [:home, :new, :create]
 
   def new
-    @product_size = Product_Size.new
+    @product = Product.find(params[:product_id])
+    @product_size = ProductSize.new
     authorize @product_size
   end
   
   def create
-    @product_size = Product_Size.new(product_params)
+    @product_size = ProductSize.new(product_size_params)
     authorize @product_size
 
     @product_size.user = current_user
@@ -23,7 +24,7 @@ class ProductSizesController < ApplicationController
   end
 
   def show
-    @product_size = Product_Size.find(params[:id])
+    @product_size = ProductSize.find(params[:id])
     authorize @product_size
 
   end
@@ -34,7 +35,7 @@ class ProductSizesController < ApplicationController
   end
 
   def edit
-    @product_size = Product_Size.find(params[:id])
+    @product_size = ProductSize.find(params[:id])
     authorize @product_size
   end
   
