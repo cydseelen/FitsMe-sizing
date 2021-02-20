@@ -1,22 +1,25 @@
 class ProductsController < ApplicationController
   include Pundit
-  skip_after _action :verify_authorized, only: [:home]
+  skip_after_action :verify_authorized, only: [:home, :new, :create]
   before_action :skip_authorization #
 
-  skip_before_action :authenticate_user!, only: [:home]
+  skip_before_action :authenticate_user!, only: [:home, :new, :create]
 
   def new
+    @brand = Brand.find(params[:brand_id])
     @product = Product.new
     authorize @product
   end
   
   def create
     @product = Product.new(product_params)
+    @brand = Brand.find(params[:brand_id])
+    @product.brand = @brand
     authorize @product
 
-    @product.user = current_user
     if @product.save!
-      redirect_to product_path(@product)
+      # redirect_to new_product_product_size_path(@product)
+      redirect_to new_product_product_size_path(@product)
     else
       render 'new'
     end
@@ -56,5 +59,5 @@ class ProductsController < ApplicationController
   
   def product_params
     params.require(:product).permit(:name, :garment_type, :fabric_type)
-  end
+  end  
 end

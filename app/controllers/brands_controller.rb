@@ -5,6 +5,8 @@ class BrandsController < ApplicationController
 
     skip_before_action :authenticate_user!, only: [:home, :new, :destroy, :show, :index]
 
+    def home
+    end
     
     def new
       @brand = Brand.new
@@ -17,7 +19,8 @@ class BrandsController < ApplicationController
 
       @brand.user = current_user
       if @brand.save
-        redirect_to brand_path(@brand)
+        redirect_to new_brand_product_path(@brand)
+      
       else
         render 'new'
       end

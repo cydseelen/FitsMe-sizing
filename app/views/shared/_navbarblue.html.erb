@@ -2,7 +2,11 @@
   <div class="d-flex justify-content-between align-items-center container p-3">
     <h1>FitsMe</h1>
     <div>
-      <%= link_to 'Customer', new_customer_datum_path, class: "btn btn-nav" %>
+      <% if user_signed_in? %>
+        <%= link_to 'User', edit_user_registration_path, class: "btn btn-nav" %>
+      <% else %>
+        <%= link_to 'Log In', new_user_session_path, class: "btn btn-nav" %>
+      <% end %>
       <%= link_to 'Brand', new_brand_path, class: "btn btn-nav" %>
     </div>
   </div>
