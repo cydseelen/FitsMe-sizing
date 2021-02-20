@@ -6,6 +6,12 @@
        <h1>Registration</h1>
        <%= render 'shared/brandform' %>
     </div>
-    <%#= link_to 'Add your products', brand_products_path %>
+    <% if @brands.empty?%>
+    <%= link_to 'Add your brand', new_brand_path %>
+
+    <% else  %>
+
+    <% end %>
+
   </div>
 </div>

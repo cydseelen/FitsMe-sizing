@@ -1,1 +1,38 @@
 <p>Product Page</p>
+
+
+
+<!-- Start brand_product page Section-->
+
+    <section class="home">
+        <div class="main_container">
+
+        </div>
+
+        <div class="brand_products">
+            <div class="container">
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <%= image_tag 'fitsme.png', style: "border-radius: 8px;
+                            width: 483px; margin: 20px; opacity: 0.9;"%>
+                    </div>
+                    <div class="col-md-6 ">
+                        <h3 class="text-center"> Berlin Black </h3>
+                        <h1>
+                            <%= simple_form_for @product do |f| %>
+                                <%= f.input :name %>
+                                <%= f.input :garment_type %>
+                                <%= f.input :fabric_type %>
+                                <%= f.button :submit %>
+                              <% end %>
+                        </h1>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- End Start brand_product page Section-->

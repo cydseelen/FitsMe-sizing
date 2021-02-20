@@ -8,7 +8,10 @@ class BrandsController < ApplicationController
     
     def new
       @brand = Brand.new
+      @brands = Brand.all
+      @product = Product.new
       authorize @brand
+      authorize @product
     end
 
     def create
