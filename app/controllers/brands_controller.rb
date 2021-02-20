@@ -3,7 +3,7 @@ class BrandsController < ApplicationController
     skip_after_action :verify_authorized, only: [:home, :new, :create]
     before_action :skip_authorization
 
-    skip_before_action :authenticate_user!, only: [:home, :new, :create, :destroy, :show, :index]
+    skip_before_action :authenticate_user!, only: [:home, :new, :destroy, :show, :index]
 
     
     def new
@@ -14,6 +14,8 @@ class BrandsController < ApplicationController
     def create
       @brand = Brand.new(brand_params)
       authorize @brand
+
+      @brand.user = current_user
       if @brand.save
         redirect_to brand_path(@brand)
       else
