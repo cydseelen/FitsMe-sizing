@@ -11,6 +11,7 @@ CustomerDatum.destroy_all
 ProductSize.destroy_all
 Product.destroy_all
 Brand.destroy_all
+UserProduct.destroy_all
 User.destroy_all
 
 #Customer_product_match.destroy_all
@@ -70,4 +71,8 @@ ProductSize.create!(
     bust_measurement: 100,
     waist_measurement:70,
     length_measurement:90
+  )
+UserProduct.create!(
+  product_size: ProductSize.first,
+  customer_datum: CustomerDatum.first
   )

@@ -4,6 +4,9 @@ Rails.application.routes.draw do
 
   resources :customer_data, only: [:new, :create]
 
+
+  resources :user_products, only: [:show]
+
   resources :brands do
     resources :products
   end
