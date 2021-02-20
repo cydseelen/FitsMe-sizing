@@ -1,21 +1,21 @@
 <!-- Need to set up customer_data quiz pages -->
 <br>
-<div class="container">
-  <!-- <div class="form-card"> -->
-    <h1>Enter your details</h1>
+<div class="form-container">
+  <div class = "d-flex justify-content-center align-items-center container p-3">
+    <div class="form-card">
+      <h1>Enter your details</h1>
 
-  <%= simple_form_for @customer_datum do |f| %>
-  <%= f.input :age %>
-  <%= f.input :height %>
-  <%= f.input :weight %>
-  <%= f.input :fit_preference %>
-  <%= f.input :body_shape %>
-  <%= f.button :submit %>
-  <% end %>
-  <br>
-  <%= link_to 'Return home', root_path %>
-  <br>
-  <!-- </div> -->
+      <%= simple_form_for @customer_datum do |f| %>
+      <%= f.input :age, label: 'Age' %>
+      <%= f.input :height, label: 'Height in cm' %>
+      <%= f.input :weight, label: 'Weight in kg' %>
+      <%= f.input :body_shape, label: 'Body shape key: 1=circle 2=triangle 3=rectangle' %>
+      <%= f.input :fit_preference, label: 'Fit preference key: 1=loose 2=medium 3=tight' %>
+      <%= f.button :submit %>
+      <% end %>
+      <%= link_to 'Return home', root_path %>
+      <br>
+    </div>
+  </div>
 </div>
-
 
