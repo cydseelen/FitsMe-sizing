@@ -1,0 +1,38 @@
+<!-- Start brand_product page Section-->
+
+    <section class="home">
+        <div class="main_container">
+        </div>
+
+        <div class="brand_products">
+            <div class="container">
+                <div class="row">
+                  <h1 class="p-3">Welcome Back</h1>
+                </div>
+                <br>
+                <div class="row">
+                  <div class="index-grid">
+                    <% @brands.each do |brand| %>
+                      <%= link_to brand_path(brand) do %>
+                      <div class="btn-white">
+                         <h1><%= brand.name %></h1>
+                      </div>
+                      <%end %>
+                    <% end %>
+                  </div>
+                  <h1 class="p-3">ADD THE PRODUCTS HERE</h1>
+                  
+                </div>
+                <br>
+                <br>
+                <div class="row">
+                  <div class="container">
+                    <p><%= link_to 'New Here? No Problem.', new_brand_path %></p>
+                  </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- End Start brand_product page Section--> 
