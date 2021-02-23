@@ -13,6 +13,8 @@ class ProductSizesController < ApplicationController
   
   def create
     @product_size = ProductSize.new(product_size_params)
+    @product = Product.find(params[:product_id])
+    @product_size.product = @product
     authorize @product_size
 
     @product_size.user = current_user
@@ -26,7 +28,6 @@ class ProductSizesController < ApplicationController
   def show
     @product_size = ProductSize.find(params[:id])
     authorize @product_size
-
   end
 
   def index

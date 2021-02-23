@@ -7,24 +7,24 @@
         <div class="brand_products">
             <div class="container">
                 <div class="row">
-                  <h1 class="p-3">Select Your Brand</h1>
+                  <h1 class="p-3">Ready for More?</h1>
                 </div>
                 <br>
-                <div class="row">
-                  <div class="index-grid">
-                    <%= link_to 'New', new_brand_path, class: "btn-white"%>
-                    <%= link_to 'Returning', new_brand_path, class: "btn-white"%>
-                    </div>
-                    </div>
+                <%# <div class="row d-flex justify-content-center"> %>
+                <div class= "d-flex justify-content-between align-items-center container p-3">
+                  <%# <div class="index-grid"> %>
+                   
+                    <%= link_to 'New', new_brand_path, class: "btn-white-2"%>
+
+                    <br>
+                    <br>
+                    <%= link_to 'Returning', new_brand_path, class: "btn-white-2"%>
+                  <%# </div> %>
+                </div>
                   </div> 
                 </div>
                 <br>
                 <br>
-                <div class="row">
-                  <div class="container">
-                    <p><%= link_to 'New Here? No Problem.', new_brand_path %></p>
-                  </div>
-                </div>
             </div>
 
         </div>
