@@ -19,21 +19,43 @@
             <div class="container">
                 <div class="row">
                   <h1 class="p-3">
-                    <h1>Product</h1>
+                    <h1>Product Size</h1>
                   </h1>
                 </div>
                 <br>
                 <div class="row">
                   <div class="index-grid">
-                    <%= simple_form_for [@product, @product_size] do |f| %>
-                      <%= f.input :size_name, class: 'btn-white' %>
-                      <%= f.input :hip_measurement, class: 'btn-white' %>
-                      <%= f.input :bust_measurement, class: 'btn-white' %>
-                      <%= f.input :waist_measurement, class: 'btn-white' %>
-                      <%= f.input :length_measurement, class: 'btn-white' %>
-                      <%= f.button :submit, class: 'btn-brand-sign' %>
-                    <% end %>
-                  </div>
+                  
+                     </div>
+
+
+                    <form>
+                      <div class="row">
+                        <%= simple_form_for [@product, @product_size] do |f| %>
+                          <div class="col">
+                            <%= f.input :size_name, collection: ['XS', 'S', 'M', 'L', 'XL', 'XXL'] , prompt: "Select Size" %>
+                          </div>
+                          <div class="col">
+                            <%= f.input :hip_measurement, class: 'btn-white' %>
+                          </div>
+                          <div class="col">
+                            <%= f.input :bust_measurement, class: 'btn-white' %>
+                          </div>
+                          <div class="col">
+                            <%= f.input :waist_measurement, class: 'btn-white' %>
+                          </div>
+                          <div class="col">
+                            <%= f.input :length_measurement, class: 'btn-white' %>
+                          </div>
+                      </div>
+                      <div class="row">
+                        <%= f.button :submit, class: 'btn-brand-sign' %>
+                      </div>
+                      <% end %>
+                     </form>
+
+
+
                 </div>
                 <br>
                 <br>
