@@ -24,11 +24,6 @@
                 </div>
                 <br>
                 <div class="row">
-                  <div class="index-grid">
-                  
-                     </div>
-
-
                     <form>
                       <div class="row">
                         <%= simple_form_for [@product, @product_size] do |f| %>
@@ -36,20 +31,20 @@
                             <%= f.input :size_name, collection: ['XS', 'S', 'M', 'L', 'XL', 'XXL'] , prompt: "Select Size" %>
                           </div>
                           <div class="col">
-                            <%= f.input :hip_measurement, class: 'btn-white' %>
+                            <%= f.input :hip_measurement, class: 'btn-size' %>
                           </div>
                           <div class="col">
-                            <%= f.input :bust_measurement, class: 'btn-white' %>
+                            <%= f.input :bust_measurement, class: 'btn-size' %>
                           </div>
                           <div class="col">
-                            <%= f.input :waist_measurement, class: 'btn-white' %>
+                            <%= f.input :waist_measurement, class: 'btn-size' %>
                           </div>
                           <div class="col">
-                            <%= f.input :length_measurement, class: 'btn-white' %>
+                            <%= f.input :length_measurement, class: 'btn-size' %>
                           </div>
                       </div>
-                      <div class="row">
-                        <%= f.button :submit, class: 'btn-brand-sign' %>
+                      <div class="row d-flex justify-content-center p-5">
+                        <%= f.button :submit, class: 'btn-white' %>
                       </div>
                       <% end %>
                      </form>
@@ -61,7 +56,6 @@
                 <br>
                 <div class="row">
                   <div class="container">
-                    <p>hey<%#= link_to 'New Here? No Problem.', new_brand_path %></p>
                   </div>
                 </div>
             </div>
