@@ -16,7 +16,9 @@ class CustomerDataController < ApplicationController
     @customer_datum.save
 
     authorize @customer_datum
-    redirect_to user_product_path(customer_datum)
+
+    redirect_to user_product_path(@customer_datum)
+
   end
 
   private

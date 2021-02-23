@@ -1,14 +1,41 @@
-<div class="brand-card">
-  <h1>Product Page</h1>
+<!-- Start brand_product page Section-->
 
-  <%#= simple_form_for @product, url: new_brand_product_path, method: :post do |f| %>
-  <%= simple_form_for [@brand, @product] do |f| %>
-    <%= f.input :name %>
-    <%= f.input :garment_type %>
-    <%= f.input :fabric_type %>
-    <%= f.submit value="Add" %>
-  <% end %>
+    <section class="home">
+        <div class="main_container">
 
+        </div>
 
-  <%#= link_to 'Product Size', new_brand_product_size_path, class: "btn btn-nav" %>
-</div>
+        <div class="brand_products">
+            <div class="container">
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <%= image_tag 'leather4.jpg', style: "border-radius: 8px;
+                            width: 483px; margin: 20px; opacity: 1.0; border-color: $gray;"%>
+                    </div>
+                    <div class="col-md-6 ">
+                        <div class="brand-card-product">
+                        <p>
+                            <%= simple_form_for [@brand, @product] do |f| %>
+                                <%= f.input :name %>
+
+                                <%#= f.input :garment_type %>
+                                <%= f.input :garment_type, collection: ["shirt", "pants", "jacket", "skirt", "dress", "sweater"] , prompt: "Garment type" %>
+                                <%#= f.input :fabric_type %>
+                                <%= f.input :fabric_type, collection: ["polyester", "cotton", "wool", "jersey", "modal", "silk", "spandex", "tweed", "twill", "viscose", "leather", "lace", "linen", "other natural", "other synthetic"] , prompt: "Fabric type" %>
+
+                                <%= f.button :submit %>
+
+                                
+                              <% end %>
+                        </p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- End Start brand_product page Section--> 
