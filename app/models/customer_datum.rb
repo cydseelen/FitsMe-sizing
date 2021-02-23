@@ -1,6 +1,8 @@
 class CustomerDatum < ApplicationRecord
   belongs_to :user
   before_save :convert_user_data
+  has_many :user_products
+  has_many :product_sizes, through: :user_products
 
 
   def convert_user_data
