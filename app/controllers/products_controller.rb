@@ -8,6 +8,7 @@ class ProductsController < ApplicationController
   def new
     @brand = Brand.find(params[:brand_id])
     @product = Product.new
+    @product.brand = @brand
     authorize @product
   end
   

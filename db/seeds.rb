@@ -32,12 +32,12 @@ puts "Adding some Brands :)"
 
 Brand.create!(
     user: User.first,
-    name: 'FirstBrand'
+    name: 'Tri-Tone'
 )
 puts "Creating a brand :)"
 Brand.create!(
     user: User.first,
-    name: 'SecondBrand'
+    name: 'Omega'
 )
 
 CustomerDatum.create!(

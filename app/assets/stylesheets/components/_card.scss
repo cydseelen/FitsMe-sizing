@@ -23,6 +23,18 @@
     margin: auto;
   }
 
+  .brand-card-product {
+    width: 400px;
+    height: 200px;
+    size: 20px;
+    position: absolute;
+    top: 70px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+  }
+
 .size-grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;

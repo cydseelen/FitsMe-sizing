@@ -7,21 +7,16 @@
         <div class="brand_products">
             <div class="container">
                 <div class="row">
-                  <h1 class="p-3">Welcome Back</h1>
+                  <h1 class="p-3">Select Your Brand</h1>
                 </div>
                 <br>
                 <div class="row">
                   <div class="index-grid">
-                    <% @brands.each do |brand| %>
-                      <%= link_to brand_path(brand) do %>
-                      <div class="btn-white">
-                         <h1><%= brand.name %></h1>
-                      </div>
-                      <%end %>
-                    <% end %>
-                  </div>
-                  <h1 class="p-3">ADD THE PRODUCTS HERE</h1>
-                  
+                    <%= link_to 'New', new_brand_path, class: "btn-white"%>
+                    <%= link_to 'Returning', new_brand_path, class: "btn-white"%>
+                    </div>
+                    </div>
+                  </div> 
                 </div>
                 <br>
                 <br>
