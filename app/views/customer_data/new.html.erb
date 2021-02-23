@@ -1,21 +1,21 @@
 <!-- Need to set up customer_data quiz pages -->
 <br>
-<div class="form-container">
-  <div class = "d-flex justify-content-center align-items-center container p-3">
-    <div class="form-card">
+<div class="card-transformation">
+  <div class="form-container">
+    <!-- <div class="form-card"> -->
       <h1>Enter your fit details</h1>
 
       <%= simple_form_for @customer_datum do |f| %>
-      <%= f.input :age %>
-      <%= f.input :height, label: 'Height in cm' %>
-      <%= f.input :weight, label: 'Weight in kg' %>
-      <%= f.input :body_shape, collection: ["circle", "triangle", "rectangle"] %>
-      <%= f.input :fit_preference, collection: ["loose", "medium", "tight"] %>
-      <%= f.button :submit %>
+      <%= f.input :age, collection: 16..80, prompt: "Select your age" %>
+      <%= f.input :height, collection: 90..240, prompt: 'Select your height in cm' %>
+      <%= f.input :weight, collection: 36..140, prompt: 'Select your weight in kg' %>
+      <%= f.input :body_shape, as: :radio_buttons, collection: [['0', 'circle'], ['1', 'triangle'], ['2', 'rectangle']], label_method: :second, value_method: :first %>
+      <%= f.input :fit_preference, as: :radio_buttons, collection: [['0', 'tight'], ['1', 'medium'], ['2', 'loose']], label_method: :second, value_method: :first %>
+      <%= f.button :submit, "Submit", class: "submit-button" %>
       <% end %>
-      <%= link_to 'Return home', root_path, class: "btn btn-lg" %>
       <br>
+      <%= link_to 'Return home', root_path, class: "btn btn-med" %>
+      <br>
+      <!-- </div> -->
     </div>
   </div>
-</div>
-

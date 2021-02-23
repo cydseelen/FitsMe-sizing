@@ -1,8 +1,28 @@
 .form-container {
-  color: white;
-  width: 400px;
+  background-color: white;
+  width: 700px;
+  margin: 0 auto;
+  z-index: 1000;
+  position: absolute;
+  top: 0;
+  transform: translate(20px, 20px);
+  padding: 20px;
 }
 
-.btn.btn-lg {
-  background-color: white;
+.card-transformation {
+  height: 670px;
+  position: relative;
+  background-color: #FFEDD6;
+  width: 700px;
+  margin: 0 auto;
+}
+
+.submit-button {
+  background-color: #CD7613;
+  border-radius: 8px;
+}
+
+.btn.btn-med {
+  background-color: #CD7613;
+  border-radius: 8px;
 }

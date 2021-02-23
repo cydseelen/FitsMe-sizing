@@ -11,11 +11,12 @@ class CustomerDataController < ApplicationController
   end
 
   def create
-    @customer_datum = CustomerDatum.find(params[:customer_datum_id])
+    @customer_datum = CustomerDatum.new(customer_data_params)
     @customer_datum.user = current_user
     @customer_datum.save
 
     authorize @customer_datum
+    redirect_to user_product_path(customer_datum)
   end
 
   private
