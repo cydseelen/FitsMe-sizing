@@ -18,9 +18,13 @@
                         <p>
                             <%= simple_form_for [@brand, @product] do |f| %>
                                 <%= f.input :name %>
-                                <%= f.input :garment_type %>
-                                <%= f.input :fabric_type %>
+                                <%#= f.input :garment_type %>
+                                <%= f.input :garment_type, collection: ["shirt", "pants", "jacket", "skirt", "dress", "sweater"] , prompt: "Garment type" %>
+                                <%#= f.input :fabric_type %>
+                                <%= f.input :fabric_type, collection: ["polyester", "cotton", "wool", "jersey", "modal", "silk", "spandex", "tweed", "twill", "viscose", "leather", "lace", "linen", "other natural", "other synthetic"] , prompt: "Fabric type" %>
                                 <%= f.button :submit %>
+
+                                
                               <% end %>
                         </p>
                         </div>
