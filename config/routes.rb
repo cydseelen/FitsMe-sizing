@@ -14,7 +14,6 @@ Rails.application.routes.draw do
   resources :products do
     resources :product_sizes, only: [:new, :create]
   end
-
   
 
   # resources :products do
