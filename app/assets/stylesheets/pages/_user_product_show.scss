@@ -1,6 +1,7 @@
 .form-container {
   background-color: white;
   width: 700px;
+  height: 670px;
   margin: 0 auto;
   z-index: 1000;
   position: absolute;
@@ -17,7 +18,23 @@
   margin: 0 auto;
 }
 
-.submit-button {
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h1 {
+  font-family: "open sans condensed";
+  font-size: 30px;
+}
+
+p {
+  font-family: "roboto";
+  font-size: 20px;
+}
+
+.btn.btn-med {
   justify-content: center;
   align-items: center;
   width: 200px;
@@ -29,13 +46,9 @@
   border-radius: 8px;
 
   &:hover {
-    filter: brightness(110%);
     font-style: italic;
+    filter: brightness(110%);
   }
-}
-
-.btn.btn-med:hover {
-  font-style: italic;
 }
 
 
