@@ -1,11 +1,24 @@
-<div class="d-flex justify-content-between align-items-center container p-5">
-  <div class="brand-card" >
+<%# <div class="d-flex justify-content-between container p-5"> %>
+<div class="home">
+  <div class="brand-card-2" >
     <br>
     <br>
-    <div class="brand-card-sm">
+    <div class ="row">
+    <div class="col-2">
+      <div class= "brand-card-sm-2">
        <h1>Brand Registration</h1>
        <%= render 'shared/brandform' %>
+      </div>
     </div>
+    <div class = "col-1">
+    </div>
+    <div class="col-6">
+      <%= image_tag 'FitQuiz1.jpg', style: "border-radius: 8px;
+         width: 800px; height: 300px; margin: 10px; opacity: 1.0; border-color: $gray; position: static;
+	top: 50px;"%>
+    </div>
+    </div>
+    
     <%#= link_to 'Add your products', brand_products_path %>
   </div>
 </div>
