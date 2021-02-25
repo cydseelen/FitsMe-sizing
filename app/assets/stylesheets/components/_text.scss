@@ -2,20 +2,27 @@
     color: $white;
     font-family: $headers-font;
     font-size: 72px;
-    font-weight: 300; 
+    font-weight: 300;
+    text-decoration: none
 }
 
 .h2 {
     color: $white;
     font-family: $headers-font;
     font-size: 60px;
-    font-weight: 300; 
+    font-weight: 300;
 }
 
 .p {
   color: $white;
   font-family: $body-font;
   font-size: 20px;
-  font-weight: 300;   
+  font-weight: 300;
 }
 
+.h1-nav {
+    color: $white;
+    font-family: $headers-font;
+    font-size: 72px;
+    font-weight: 300;
+}

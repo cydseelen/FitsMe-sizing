@@ -42,6 +42,13 @@
 	width: 200px;
 }
 
+.h1-nav {
+    color: $white;
+    font-family: $headers-font;
+    font-size: 72px;
+    font-weight: 300;
+}
+
 .main-container .btn:hover {
 	background-color: #001428;
 	text-transform: uppercase;

@@ -1,6 +1,6 @@
 <div class= "border-bottom border-warning navbar-blue">
   <div class="d-flex justify-content-between align-items-center container p-3">
-    <h1>FitsMe</h1>
+    <%= link_to 'FitsMe', root_path, class: "h1" %>
     <div>
       <% if user_signed_in? %>
         <%= link_to 'User', edit_user_registration_path, class: "btn btn-nav" %>
