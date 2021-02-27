@@ -32,12 +32,12 @@ puts "Adding some Brands :)"
 
 Brand.create!(
     user: User.first,
-    name: 'Tri-Tone'
+    name: 'saenguin'
 )
 puts "Creating a brand :)"
 Brand.create!(
     user: User.first,
-    name: 'Omega'
+    name: 'tri tone'
 )
 
 CustomerDatum.create!(
@@ -51,27 +51,55 @@ CustomerDatum.create!(
 puts "Creating a product :)"
 Product.create!(
     brand: Brand.first,
-    name: "Nice blue sweater",
-    fabric_type: "jersey",
-    garment_type:  "sweater",
+    name: "White Blouse",
+    fabric_type: "silk",
+    garment_type:  "shirt",
 )
 
 ProductSize.create!(
     product: Product.first,
-    size_name: "Medium",
-    hip_measurement: 90,
-    bust_measurement: 90,
-    waist_measurement:60,
-    length_measurement:80
+    size_name: "extra small",
+    hip_measurement: 50,
+    bust_measurement: 47.5,
+    waist_measurement: 48.5,
+    length_measurement: 67.5
+  )
+
+ProductSize.create!(
+    product: Product.first,
+    size_name: "small",
+    hip_measurement: 52.5,
+    bust_measurement: 50,
+    waist_measurement: 51,
+    length_measurement: 68.1
   )
 ProductSize.create!(
     product: Product.first,
-    size_name: "Large",
-    hip_measurement: 100,
-    bust_measurement: 100,
-    waist_measurement:70,
-    length_measurement:90
+    size_name: "medium",
+    hip_measurement: 56,
+    bust_measurement: 53.5,
+    waist_measurement: 54.5,
+    length_measurement: 69
   )
+
+ProductSize.create!(
+    product: Product.first,
+    size_name: "large",
+    hip_measurement: 59.5,
+    bust_measurement: 57,
+    waist_measurement: 58,
+    length_measurement: 69.9
+  )
+
+ProductSize.create!(
+    product: Product.first,
+    size_name: "extra large",
+    hip_measurement: 63,
+    bust_measurement: 60.5,
+    waist_measurement: 61.5,
+    length_measurement: 70.8
+  )
+
 UserProduct.create!(
   product_size: ProductSize.first,
   customer_datum: CustomerDatum.first
