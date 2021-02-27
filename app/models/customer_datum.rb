@@ -11,4 +11,7 @@ class CustomerDatum < ApplicationRecord
     self.hip_measurement_customer = 0.7 * self.waist_measurement_customer + 47.21
     self.length_measurement_customer = self.height / 2
   end
+
+
+
 end

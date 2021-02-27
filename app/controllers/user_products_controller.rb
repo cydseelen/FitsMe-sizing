@@ -12,6 +12,7 @@ class UserProductsController < ApplicationController
 
     authorize @customer_datum
     authorize @product_sizes
+
   end
 
 private
