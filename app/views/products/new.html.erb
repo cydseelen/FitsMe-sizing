@@ -16,7 +16,7 @@
                     <div class="col-md-6 ">
                         <div class="brand-card-product">
                         <p>
-                            <%= simple_form_for [@brand, @product] do |f| %>
+                            <%= simple_form_for @product do |f| %>
                                 <%= f.input :name %>
 
                                 <%#= f.input :garment_type %>
