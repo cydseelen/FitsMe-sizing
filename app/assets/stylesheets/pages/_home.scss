@@ -1,66 +1,117 @@
-// Specific CSS for your home-page
-/* start homepage section */
+// .banner {
+// 	height: 73vh;
+// 	width: 100%;
+// 	background: url('../app/assets/images/background.png');
+// 	background-position: top;
+// 	background-size: cover;
+// 	background-repeat: no-repeat;
+// }
 
-.home {
-	display: table;
-	background-color: #001428;
-	width: 100%;
-	height: 100vh;
+// .overlay {
+// 	background: rgba(0, 0, 0, 0.2);
+// 	position: absolute;
+// 	top: 0;
+// 	left: 0;
+// 	bottom: 0;
+// 	right: 0;
+// 	text-align: left;
+// }
+
+.banner .navbar {
+	margin-top: 2%;
 }
 
-.main-container .homepage {
-	background-color: #ffedd7;
-	width: 40%;
-	height: 38%;
-	text-align: center;
-	margin: 30px auto;
-	border-radius: 8px;
+.banner .navbar-brand {
+	color: #fff;
+	margin-left: 4%;
 }
 
-.homepage {
-	position: absolute;
-	top: 32%;
-	left: 32%;
+.banner .navbar-brand span {
+	font-weight: lighter;
 }
 
-.main-container .homepage h1 {
-	padding: 40px 40px 25px 40px;
+.banner .nav {
+	margin-right: 2%;
 }
 
-.main-container .btn {
-	background-color: #ce761f;
-	text-transform: uppercase;
-	font-weight: bold;
-	font-size: 24px;
-	letter-spacing: 1px;
-	display: inline-block;
-	text-decoration: none;
-	padding: 8px 20px;
-	border-radius: 4px;
-	color: black;
-	margin-bottom: 20px;
+.banner .nav li a {
+	color: #fff;
+}
+
+.banner .info {
+	color: #fff;
+}
+
+.banner .info a {
+	color: #fff;
+	border: 4px solid #fff;
+	border-radius: 28px;
 	width: 200px;
 }
 
-.h1-nav {
-    color: $white;
-    font-family: $headers-font;
-    font-size: 72px;
-    font-weight: 300;
-}
+// // Specific CSS for your home-page
+// /* start homepage section */
 
-.main-container .btn:hover {
-	background-color: #001428;
-	text-transform: uppercase;
-	font-weight: bold;
-	font-size: 24px;
-	letter-spacing: 1px;
-	display: inline-block;
-	text-decoration: none;
-	padding: 8px 20px;
-	border-radius: 4px;
-	color: #ce761f;
-	margin-bottom: 20px;
-}
+// .home {
+// 	display: table;
+// 	background-color: #001428;
+// 	width: 100%;
+// 	height: 100vh;
+// }
 
-/* End homepage section */
+// .main-container .homepage {
+// 	background-color: #ffedd7;
+// 	width: 40%;
+// 	height: 38%;
+// 	text-align: center;
+// 	margin: 30px auto;
+// 	border-radius: 8px;
+// }
+
+// .homepage {
+// 	position: absolute;
+// 	top: 32%;
+// 	left: 32%;
+// }
+
+// .main-container .homepage h1 {
+// 	padding: 40px 40px 25px 40px;
+// }
+
+// .main-container .btn {
+// 	background-color: #ce761f;
+// 	text-transform: uppercase;
+// 	font-weight: bold;
+// 	font-size: 24px;
+// 	letter-spacing: 1px;
+// 	display: inline-block;
+// 	text-decoration: none;
+// 	padding: 8px 20px;
+// 	border-radius: 4px;
+// 	color: black;
+// 	margin-bottom: 20px;
+// 	width: 200px;
+// }
+
+// .h1-nav {
+//     color: $white;
+//     font-family: $headers-font;
+//     font-size: 72px;
+//     font-weight: 300;
+// }
+
+// .main-container .btn:hover {
+// 	background-color: #001428;
+// 	text-transform: uppercase;
+// 	font-weight: bold;
+// 	font-size: 24px;
+// 	letter-spacing: 1px;
+// 	display: inline-block;
+// 	text-decoration: none;
+// 	padding: 8px 20px;
+// 	border-radius: 4px;
+// 	color: #ce761f;
+// 	margin-bottom: 20px;
+// }
+
+// /* End homepage section */
