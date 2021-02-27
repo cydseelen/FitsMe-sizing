@@ -6,15 +6,19 @@ class ProductsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:home, :new, :create]
 
   def new
-    @brand = Brand.find(params[:brand_id])
+    @user = current_user
+    @brand = @user.brand
+    # @brand = Brand.find(params[:brand_id])
     @product = Product.new
     @product.brand = @brand
     authorize @product
   end
   
   def create
+    @user = current_user
+    @brand = @user.brand
     @product = Product.new(product_params)
-    @brand = Brand.find(params[:brand_id])
+    # @brand = Brand.find(params[:brand_id])
     @product.brand = @brand
     authorize @product
 
@@ -37,6 +41,7 @@ class ProductsController < ApplicationController
   def index
     @product = policy_scope(Product)
     @product = Product.all
+ 
   end
 
   def edit
@@ -61,6 +66,6 @@ class ProductsController < ApplicationController
   private
   
   def product_params
-    params.require(:product).permit(:name, :garment_type, :fabric_type)
+    params.require(:product).permit(:name, :garment_type, :fabric_type, :brand_id)
   end  
 end
