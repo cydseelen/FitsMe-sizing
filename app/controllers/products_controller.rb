@@ -30,6 +30,8 @@ class ProductsController < ApplicationController
     @product = Product.find(params[:id])
     authorize @product
 
+    @product_size = ProductSize.new
+
   end
 
   def index
