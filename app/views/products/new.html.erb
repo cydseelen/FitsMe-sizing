@@ -1,41 +1,28 @@
-<!-- Start brand_product page Section-->
-
-    <section class="home">
-        <div class="main_container">
-
+<body>
+  <div class="container">
+    <div class="row1">
+      <div class="logo"><strong>Fits</strong>Me</div>
+      <ul>
+        <li>Product Name</li>
+        <li>Garment Type</li>
+        <li>Fabric Type</li>
+      </ul>
+    </div>
+    <div class="row2">
+      <div class="content">
+        <div class="image">
+          <%= image_tag 'leather4.jpg', style: "border-radius: 22px;
+          width: 425px; height: 500px; margin: 20px; opacity: 1.0; border-color: $gray;"%>
         </div>
-
-        <div class="brand_products">
-            <div class="container">
-
-                <div class="row">
-                    <div class="col-md-6">
-                        <%= image_tag 'leather4.jpg', style: "border-radius: 8px;
-                            width: 483px; margin: 20px; opacity: 1.0; border-color: $gray;"%>
-                    </div>
-                    <div class="col-md-6 ">
-                        <div class="brand-card-product">
-                        <p>
-                            <%= simple_form_for [@brand, @product] do |f| %>
-                                <%= f.input :name %>
-
-                                <%#= f.input :garment_type %>
-                                <%= f.input :garment_type, collection: ["shirt", "pants", "jacket", "skirt", "dress", "sweater"] , prompt: "Garment type" %>
-                                <%#= f.input :fabric_type %>
-                                <%= f.input :fabric_type, collection: ["polyester", "cotton", "wool", "jersey", "modal", "silk", "spandex", "tweed", "twill", "viscose", "leather", "lace", "linen", "other natural", "other synthetic"] , prompt: "Fabric type" %>
-
-                                <%= f.button :submit, class: 'btn-white-sm' %>
-
-                                
-                              <% end %>
-                        </p>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-
+        <div class="form">
+          <%= simple_form_for [@brand, @product] do |f| %>
+          <%= f.input :name, label: "Product Name" %>
+          <%= f.input :garment_type, collection: ["shirt", "pants", "jacket", "skirt", "dress", "sweater"] , prompt: "Garment type" %>
+          <%= f.input :fabric_type, collection: ["polyester", "cotton", "wool", "jersey", "modal", "silk", "spandex", "tweed", "twill", "viscose", "leather", "lace", "linen", "other natural", "other synthetic"] , prompt: "Fabric type" %>
+          <%= f.button :submit, class: 'new-medium-button' %>
+          <% end %>
         </div>
-    </section>
-
-    <!-- End Start brand_product page Section--> 
+      </div>
+    </div>
+  </div>
+</body>
