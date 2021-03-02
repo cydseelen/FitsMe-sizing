@@ -1,37 +1,36 @@
-<!-- Start brand_product page Section-->
-<!-- Start brand_product page Section-->
-
-    <section class="home">
-        <div class="main_container">
-
+<body>
+  <div class="container">
+    <div class="row1">
+      <div class="logo"><strong>Fits</strong>Me</div>
+      <%# <ul>
+        <li>Product Name</li>
+        <li>Garment Type</li>
+        <li>Fabric Type</li>
+      </ul> %>
+    </div>
+    <div class="row2">
+      <div class="content2">
+        <div class="image">
+          <%= image_tag 'leather4.jpg', style: "border-radius: 22px;
+          width: 425px; height: 500px; margin: 20px; opacity: 1.0; border-color: $gray;"%>
         </div>
-
-        <div class="brand_products">
-            <div class="container">
-
-                <div class="row">
-                    <div class="col-md-6">
-                        <%= image_tag 'leather4.jpg', style: "border-radius: 8px;
-                            width: 483px; margin: 20px; opacity: 1.0; border-color: $gray;"%>
-                    </div>
-                    <div class="col-md-6 ">
-                        <div class="brand-card-product">
-                        <p>
-                            <h1><%= @product.name %></h1>
-                            <p><%= @product.garment_type %>  <%= @product.fabric_type %></p>
-                            <h1>Available in the Current Sizes</h1>
-                            <% @product.product_sizes.each do |size| %>    
-                               <%= size.size_name %>
-                            <% end %>
-                            <p><%= link_to "Add Additional Sizes", new_product_product_size_path(@product) %></p>
-                        </p>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-
+        <div class="product-show">
+          <h1><em><%= @product.name %><em></h1>
+          <br>
+          <p><b>Garment Type:<b>  <%= @product.garment_type.capitalize %></p>
+          <p><b>Fabric Type:<b>  <%= @product.fabric_type.capitalize %></p>
+          <br>
+          <h3>Available in these Sizes</h3>
+          <br>
+          <% @product.product_sizes.each do |size| %>
+            <ol>    
+             <i class="fas fa-check-square"></i><%=size.size_name %>
+            </ol>
+          <% end %>
+          <p><%= link_to "Size Missing? Add Now", new_product_product_size_path(@product)  %></p>
         </div>
-    </section>
-
-    <!-- End Start brand_product page Section--> 
+        </div>
+      <%# </div> %>
+    </div>
+  </div>
+</body>

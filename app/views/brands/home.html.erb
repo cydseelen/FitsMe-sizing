@@ -1,19 +1,32 @@
-<!-- Start Homepage Section-->
 
-    <section class="home">
-        <div class="container">
 
-            <div class="main-container">
-              <%= image_tag 'fitsme.png', style: "height: 100vh;
-	                background-size: cover; margin: 60px; border-radius: 8px;opacity: 0.8;"%>
-              <div class="homepage">
-                <h1>Seamless Sizing. <br> Brand Agnostic. <br> Advancing E-commerce.</h1>
-                <a href="<%= products_path %>" class="btn">Here.</a>
-              </div>
+<div class="background">
+
+        <div class="overlay" style="    background-color: rgba(235, 115, 4, 0.4); position: absolute;width: 100%; height: 100vh;text-align: left;">
+
+            <div class="col-md-12">
+                <nav class="navbar" style="margin-top: 1%;">
+                    <div class="navbar-brand">
+                        <h1>Fits<span>Me</span></h1>
+                    </div>
+                    <ul class="nav" style="margin-right: 1%">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">Sign in</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="info">
+                <h2 class="text-left">Seamless Sizing, Brand Agnostic .</h2>
+                <p class="text-left mb-5">
+                    The World's top apparel companies use FitsMe to connect <br> clothing to customers, boost conversation and slash returns.
+                </p>
+
+                <a href="<%= products_path %>" class="button-main py-2 px-5 ">Join Us</a>
 
             </div>
 
         </div>
-    </section>
 
-    <!-- End Homepage Section-->
+    </div>

@@ -1,39 +1,30 @@
-<!-- Start brand_product page Section-->
-
-    <section class="home">
-        <div class="main_container">
-
+<body>
+  <div class="container">
+    <div class="row1">
+      <div class="logo"><strong>Fits</strong>Me</div>
+      <ul>
+        <li>Welcome Back</li>
+        <li><%= link_to "Add Additional Products", new_product_path(@brand), :style=>'color: white;' %></li>
+      </ul>
+    </div>
+    <div class="row2">
+      <div class="content">
+        <%# <div class="row">
+            <h1>Welcome Back</h1>
+        </div> %>
+        <div class="row">
+          <%# <div class = "container"> %>
+          <div class="size-grid">
+            <% @product.cycle.take(4).each do |product| %>
+              <%= link_to product_path(product) do %>
+                <%= image_tag 'leather4.jpg', style: "border-radius: 8px;
+                width: 300px; height: 300px; opacity: 1.0; border-color: $gray;"%>
+                <% end %>
+            <% end %>
+          </div>
+          <%# </div> %>
         </div>
+    </div>
+  </div>
+</body>
 
-        <div class="brand_products">
-            <div class="container">
-               <div class="row">
-                 <h1>Manage your products</h1>
-               </div>
-               
-
-
-                <div class="row">
-                  <div class="container">
-                  <br>
-                    <div class="size-grid">
-                      <% @product.cycle.take(4).each do |product| %>
-                        <%= link_to product_path(product) do %>
-                          <%= image_tag 'leather4.jpg', style: "border-radius: 8px;
-                            width: 250px; height: 250px; opacity: 1.0; border-color: $gray;"%>
-                        <% end %>
-                      <% end %>
-                    </div>
-                  </div>
-
-                  <div class="row">
-                    <p><%= link_to "Add Additional Products", new_product_path(@brand) %></p>
-                  </div>
-         
-
-                </div>
-                </div>
-            </div>
-
-        </div>
-    </section>
