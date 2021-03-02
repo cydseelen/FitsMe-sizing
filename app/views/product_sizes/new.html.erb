@@ -28,7 +28,7 @@
                       <div class="row">
                         <%= simple_form_for [@product, @product_size] do |f| %>
                           <div class="col">
-                            <%= f.input :size_name, collection: ['XS', 'S', 'M', 'L', 'XL', 'XXL'] , prompt: "Select Size" %>
+                            <%= f.input :size_name, collection: ['extra small', 'small', 'medium', 'large', 'extra large'] , prompt: "Select Size" %>
                           </div>
                           <div class="col">
                             <%= f.input :hip_measurement, class: 'btn-size' %>
@@ -63,4 +63,4 @@
         </div>
     </section>
 
-    <!-- End Start brand_product page Section--> 
+    <!-- End Start brand_product page Section-->

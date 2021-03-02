@@ -2,7 +2,7 @@ class ProductSize < ApplicationRecord
   belongs_to :product
   validates :size_name, inclusion: {in: ["extra small", "small", "medium", "large", "extra large"] }
 
-  #before_save :convert_product_size_data
+  before_save :convert_product_size_data
 
   def convert_product_size_data
 
@@ -42,6 +42,7 @@ class ProductSize < ApplicationRecord
 private
 
 def get_hip_range(measurement)
+p "get hip range"
 #hip_range start: smaller - (diff)   end: bigger - (diff)
 @hip_range_extra_small_start = (measurement.extra_small_product_size - (measurement.extra_small_product_size * 1.1)) *2,
 @hip_range_extra_small_end = (measurement.small_product_size - ((measurement.small_product_size - measurement.extra_small_product_size) / 2))*2,
@@ -57,6 +58,7 @@ def get_hip_range(measurement)
 end
 
 def get_bust_range(measurement)
+  p "get bust range"
 #bust_range start: smaller - (diff)   end: bigger - (diff)
 @bust_range_extra_small_start = (measurement.extra_small_product_size - (measurement.extra_small_product_size * 1.1)) *2,
 @bust_range_extra_small_end = (measurement.small_product_size - ((measurement.small_product_size - measurement.extra_small_product_size) / 2))*2,
@@ -72,6 +74,7 @@ def get_bust_range(measurement)
 end
 
 def get_waist_range(measurement)
+  p "get waist range"
 #waist_range start: smaller - (diff)   end: bigger - (diff)
 @waist_range_extra_small_start = (measurement.extra_small_product_size - (measurement.extra_small_product_size * 1.1)) *2,
 @waist_range_extra_small_end = (measurement.small_product_size - ((measurement.small_product_size - measurement.extra_small_product_size) / 2))*2,
@@ -86,6 +89,7 @@ def get_waist_range(measurement)
 end
 
 def get_length_range(measurement)
+  p "get length range"
 #hip_range start: smaller - (diff)   end: bigger - (diff)
 @length_range_extra_small_start = (measurement.extra_small_product_size - (measurement.extra_small_product_size * 1.1)) *2,
 @length_range_extra_small_end = (measurement.small_product_size - ((measurement.small_product_size - measurement.extra_small_product_size) / 2))*2,
