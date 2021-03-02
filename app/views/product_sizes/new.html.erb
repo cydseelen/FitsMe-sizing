@@ -3,11 +3,11 @@
   <div class="container">
     <div class="row1">
       <div class="logo"><strong>Fits</strong>Me</div>
-      <ul>
+      <%# <ul>
         <li>Product Name</li>
         <li>Garment Type</li>
         <li>Fabric Type</li>
-      </ul>
+      </ul> %>
     </div>
     <div class="row2">
       <div class="content">
@@ -32,8 +32,8 @@
                           <div class="col">
                             <%= f.input :length_measurement, class: 'btn-size' %>
                           </div>
-                          <div class="col justify-content: center">
-                            <%= f.button :submit, class: 'btn-white-sm' %>
+                          <div class="col d-flex justify-content-center p-5">
+                            <%= f.button :submit, label: "Add Size", class: 'btn-orange-big' %>
                           </div>
                       <% end %>
         </div>
