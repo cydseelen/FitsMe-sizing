@@ -24,7 +24,7 @@ puts "Creating a user :)"
 
 User.create!(
     email: "cydnie@mail.com",
-    password: "123456",
+    password: "123456"
 )
 
 puts "Adding some Brands :)"
@@ -69,7 +69,10 @@ ProductSize.create(
     hip_measurement: 50,
     bust_measurement: 47.5,
     waist_measurement: 48.5,
-    length_measurement: 67.5
+    length_measurement: 67.5,
+    hip_range: 45..51.12,
+    waist_range: 42..49.5,
+    bust_range: 40..48.75
   )
 
 ProductSize.create(
@@ -78,7 +81,10 @@ ProductSize.create(
     hip_measurement: 52.5,
     bust_measurement: 50,
     waist_measurement: 51,
-    length_measurement: 68.1
+    length_measurement: 68.1,
+    hip_range: 51.12..,
+    waist_range: 42..49.5,
+    bust_range: 40..48.75
   )
 ProductSize.create(
     product: Product.first,

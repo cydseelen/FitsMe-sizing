@@ -12,8 +12,9 @@ class ProductsController < ApplicationController
     @product = Product.new
     @product.brand = @brand
     authorize @product
+
   end
-  
+
   def create
     @user = current_user
     @brand = @user.brand
@@ -41,14 +42,14 @@ class ProductsController < ApplicationController
   def index
     @product = policy_scope(Product)
     @product = Product.all
- 
+
   end
 
   def edit
     @product = Product.find(params[:id])
     authorize @product
   end
-  
+
   def update
     @product = Product.find(params[:id])
     authorize @product
@@ -62,10 +63,10 @@ class ProductsController < ApplicationController
     redirect_to root_path
     authorize @product
   end
-  
+
   private
-  
+
   def product_params
     params.require(:product).permit(:name, :garment_type, :fabric_type, :brand_id)
-  end  
+  end
 end

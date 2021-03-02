@@ -18,7 +18,6 @@ class ProductSizesController < ApplicationController
 
     authorize @product_size
 
-    @product_size.user = current_user
     if @product_size.save
       redirect_to products_path
     else
@@ -54,6 +53,12 @@ class ProductSizesController < ApplicationController
     @product_size.destroy
     redirect_to root_path
     authorize @product_size
+  end
+
+  def method_name
+    #custom route
+    #all product sizes
+    #@convert_product_size_data
   end
 
   private
