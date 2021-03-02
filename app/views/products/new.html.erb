@@ -15,7 +15,7 @@
           width: 425px; height: 500px; margin: 20px; opacity: 1.0; border-color: $gray;"%>
         </div>
         <div class="form">
-          <%= simple_form_for [@brand, @product] do |f| %>
+          <%= simple_form_for @product do |f| %>
           <%= f.input :name, label: "Product Name" %>
           <%= f.input :garment_type, collection: ["shirt", "pants", "jacket", "skirt", "dress", "sweater"] , prompt: "Garment type" %>
           <%= f.input :fabric_type, collection: ["polyester", "cotton", "wool", "jersey", "modal", "silk", "spandex", "tweed", "twill", "viscose", "leather", "lace", "linen", "other natural", "other synthetic"] , prompt: "Fabric type" %>

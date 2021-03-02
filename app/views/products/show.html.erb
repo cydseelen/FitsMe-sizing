@@ -21,14 +21,9 @@
                             <p><%= @product.garment_type %>  <%= @product.fabric_type %></p>
                             <h1>Available in the Current Sizes</h1>
                             <% @product.product_sizes.each do |size| %>    
-                               <p><%= size.size_name %></p>
+                               <%= size.size_name %>
                             <% end %>
-    
-              
-            
-
-
-
+                            <p><%= link_to "Add Additional Sizes", new_product_product_size_path(@product) %></p>
                         </p>
                         </div>
 
