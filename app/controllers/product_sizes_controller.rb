@@ -9,21 +9,20 @@ class ProductSizesController < ApplicationController
     @product = Product.find(params[:product_id])
     @product_size = ProductSize.new
   end
-  
+
   def create
     @product_size = ProductSize.new(product_size_params)
     @product = Product.find(params[:product_id])
-   
+
     @product_size.product = @product
 
-    # @product_size.user = current_user
+    authorize @product_size
 
-     if @product_size.save!
-       redirect_to product_path(@product)
-    #  else
-    #    render 'new'
-     end
-
+    if @product_size.save
+      redirect_to products_path
+    else
+      render 'new'
+    end
 
   end
 
@@ -41,7 +40,7 @@ class ProductSizesController < ApplicationController
     @product_size = ProductSize.find(params[:id])
     authorize @product_size
   end
-  
+
   def update
     @product_size = Product_Size.find(params[:id])
     authorize @product_size
@@ -55,9 +54,15 @@ class ProductSizesController < ApplicationController
     redirect_to root_path
     authorize @product_size
   end
-  
+
+  def method_name
+    #custom route
+    #all product sizes
+    #@convert_product_size_data
+  end
+
   private
-  
+
   def product_size_params
     params.require(:product_size).permit(:product_id, :size_name, :hip_measurement, :bust_measurement, :waist_measurement, :length_measurement)
   end

@@ -7,15 +7,14 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 puts "Removing old customers, brands, product files and matches"
 
+UserProduct.destroy_all
 CustomerDatum.destroy_all
 ProductSize.destroy_all
 Product.destroy_all
 Brand.destroy_all
-UserProduct.destroy_all
 User.destroy_all
 
 #Customer_product_match.destroy_all
-
 
 puts "Adding some Customers & products :)"
 
@@ -25,7 +24,7 @@ puts "Creating a user :)"
 
 User.create!(
     email: "cydnie@mail.com",
-    password: "123456",
+    password: "123456"
 )
 
 puts "Adding some Brands :)"
@@ -62,24 +61,32 @@ Product.create!(
     garment_type:  "shirt",
 )
 
-ProductSize.create!(
+puts "Creating a product_sizes :)"
+
+ProductSize.create(
     product: Product.first,
     size_name: "extra small",
     hip_measurement: 50,
     bust_measurement: 47.5,
     waist_measurement: 48.5,
-    length_measurement: 67.5
+    length_measurement: 67.5,
+    hip_range: 45..51.12,
+    waist_range: 42..49.5,
+    bust_range: 40..48.75
   )
 
-ProductSize.create!(
+ProductSize.create(
     product: Product.first,
     size_name: "small",
     hip_measurement: 52.5,
     bust_measurement: 50,
     waist_measurement: 51,
-    length_measurement: 68.1
+    length_measurement: 68.1,
+    hip_range: 51.12..,
+    waist_range: 42..49.5,
+    bust_range: 40..48.75
   )
-ProductSize.create!(
+ProductSize.create(
     product: Product.first,
     size_name: "medium",
     hip_measurement: 56,
@@ -88,7 +95,7 @@ ProductSize.create!(
     length_measurement: 69
   )
 
-ProductSize.create!(
+ProductSize.create(
     product: Product.first,
     size_name: "large",
     hip_measurement: 59.5,
@@ -97,7 +104,7 @@ ProductSize.create!(
     length_measurement: 69.9
   )
 
-ProductSize.create!(
+ProductSize.create(
     product: Product.first,
     size_name: "extra large",
     hip_measurement: 63,
@@ -106,7 +113,7 @@ ProductSize.create!(
     length_measurement: 70.8
   )
 
-UserProduct.create!(
+UserProduct.create(
   product_size: ProductSize.first,
   customer_datum: CustomerDatum.first
   )
