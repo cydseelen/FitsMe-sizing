@@ -1,0 +1,37 @@
+<!-- Start brand_product page Section-->
+<!-- Start brand_product page Section-->
+
+    <section class="home">
+        <div class="main_container">
+
+        </div>
+
+        <div class="brand_products">
+            <div class="container">
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <%= image_tag 'leather4.jpg', style: "border-radius: 8px;
+                            width: 483px; margin: 20px; opacity: 1.0; border-color: $gray;"%>
+                    </div>
+                    <div class="col-md-6 ">
+                        <div class="brand-card-product">
+                        <p>
+                            <h1><%= @product.name %></h1>
+                            <p><%= @product.garment_type %>  <%= @product.fabric_type %></p>
+                            <h1>Available in the Current Sizes</h1>
+                            <% @product.product_sizes.each do |size| %>    
+                               <%= size.size_name %>
+                            <% end %>
+                            <p><%= link_to "Add Additional Sizes", new_product_product_size_path(@product) %></p>
+                        </p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- End Start brand_product page Section--> 

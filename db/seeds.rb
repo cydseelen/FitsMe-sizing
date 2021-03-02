@@ -24,7 +24,7 @@ puts "Creating a user :)"
 
 User.create!(
     email: "cydnie@mail.com",
-    password: "123456"
+    password: "123456",
 )
 
 puts "Adding some Brands :)"
@@ -39,12 +39,18 @@ Brand.create!(
     name: 'tri tone'
 )
 
+User.create!(
+    email: "a@mail.com",
+    password: "123456",
+    brand: Brand.first
+)
+
+
 CustomerDatum.create!(
     user: User.first,
     age: 20,
     height: 170,
     weight:  60,
-
     body_shape: 1
 )
 puts "Creating a product :)"

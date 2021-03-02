@@ -8,22 +8,23 @@ class ProductSizesController < ApplicationController
   def new
     @product = Product.find(params[:product_id])
     @product_size = ProductSize.new
-    authorize @product_size
   end
 
   def create
     @product_size = ProductSize.new(product_size_params)
     @product = Product.find(params[:product_id])
+
     @product_size.product = @product
+
     authorize @product_size
-    @product_size.save
 
     @product_size.user = current_user
-    if @product_size.save!
+    if @product_size.save
       redirect_to products_path
     else
       render 'new'
     end
+
   end
 
   def show
@@ -58,6 +59,6 @@ class ProductSizesController < ApplicationController
   private
 
   def product_size_params
-    params.require(:product_size).permit(:size_name, :hip_measurement, :bust_measurement, :waist_measurement, :length_measurement)
+    params.require(:product_size).permit(:product_id, :size_name, :hip_measurement, :bust_measurement, :waist_measurement, :length_measurement)
   end
 end
