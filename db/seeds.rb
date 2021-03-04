@@ -14,7 +14,6 @@ Product.destroy_all
 Brand.destroy_all
 User.destroy_all
 
-#Customer_product_match.destroy_all
 
 puts "Adding some Customers & products :)"
 
@@ -25,6 +24,12 @@ puts "Creating a user :)"
 User.create!(
     email: "cydnie@mail.com",
     password: "123456"
+)
+
+User.create!(
+    email: "g@mail.com",
+    password: "123456",
+    brand: Brand.first
 )
 
 puts "Adding some Brands :)"
