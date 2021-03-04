@@ -65,7 +65,8 @@ class ProductSizesController < ApplicationController
     size.convert_product_size_data
     end
 
-    redirect_to product_path(@product), notice: "your product sizes have been converted and submitted"
+    redirect_to product_path(@product)
+    flash[:notice] = "Your measurements have been converted"
   end
 
   private
