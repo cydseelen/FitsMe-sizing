@@ -7,6 +7,10 @@ require("@rails/ujs").start()
 require("turbolinks").start()
 require("@rails/activestorage").start()
 require("channels")
+import customerQuiz from './customerQuiz.js'
+window.addEventListener('turbolinks:load', () => {
+  customerQuiz();
+});
 
 
 // Uncomment to copy all static images under ../images to the output folder and reference

@@ -4,6 +4,8 @@ body {
 
 .background {
 	background-image: url(background.png);
+  background-color: rgb(230, 52, 98);
+  background-blend-mode: multiply;
 	background-size: cover;
 	height: 100vh;
 	width: 110%;
