@@ -2,7 +2,9 @@
 <body>
   <div class="container">
     <div class="row1">
-      <div class="logo"><strong>Fits</strong>Me</div>
+      <div class="logo">
+        <%= link_to "FitsMe", root_path, :style=>'color: white;' %>
+      </div>
       <%# <ul>
         <li>Product Name</li>
         <li>Garment Type</li>
@@ -13,25 +15,17 @@
       <div class="content">
         <div class="image">
           <%= image_tag 'leather4.jpg', style: "border-radius: 22px;
-          width: 425px; height: 500px; margin: 20px; opacity: 1.0; border-color: $gray;"%>
+          width: 425px; height: 500px; margin: 20px; opacity: 1.0; border-color: $gray;" %>
         </div>
         <div class="form">
-             <%= simple_form_for [@product, @product_size] do |f| %>
-              <div class="col">
-                <%= f.input :size_name, collection: ["extra small", "small", "medium", "large", "extra large"] , prompt: "Select Size" %>
-                </div>
-
+            
                 <br>
                 <div class="row">
-
                       <div class="row">
                         <%= simple_form_for [@product, @product_size] do |f| %>
                           <div class="col">
-
                             <%= f.input :size_name, collection: ["extra small", "small", "medium", "large", "extra large"] , prompt: "Select Size" %>
-
                           </div>
-
                           <div class="col">
                             <%= f.input :hip_measurement, class: 'btn-size' %>
                           </div>

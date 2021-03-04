@@ -1,10 +1,18 @@
 <body>
   <div class="container">
     <div class="row1">
-      <div class="logo"><strong>Fits</strong>Me</div>
+      <div class="logo">
+        <%= link_to "FitsMe", root_path, :style=>'color: white;' %>
+      </div>
       <ul>
-        <li>Welcome Back</li>
-        <li><%= link_to "Add Additional Products", new_product_path(@brand), :style=>'color: white;' %></li>
+        <li>Hi, There! Ready to find your customer their ultimate fit?</li>
+        <li><%= link_to "Add Additional Products", new_product_path(@brand), :style=>'color: white; font-size: 16px;' %></li>
+        <%# <li><%= link_to "", new_product_path(@brand), :style=>'color: white; font-size: 16px;' %>
+        <% if user_signed_in?  %>
+          <li><%= link_to 'Change Brand Login', edit_user_registration_path, :style=>'color: white; font-size: 16px;'%></li>
+        <% else %>
+          <li><%= link_to 'Sign in', new_user_session_path, :style=>'color: white; font-size: 16px;' %></li>
+        <% end %>
       </ul>
     </div>
     <div class="row2">
@@ -16,10 +24,15 @@
           <%# <div class = "container"> %>
           <div class="size-grid">
             <% @product.cycle.take(4).each do |product| %>
+              <div class="card-index">
               <%= link_to product_path(product) do %>
                 <%= image_tag 'leather4.jpg', style: "border-radius: 8px;
-                width: 300px; height: 300px; opacity: 1.0; border-color: $gray;"%>
+                width: 250px; height: 250px; opacity: 1.0; border-color: $gray; margin: 30px;"%>
                 <% end %>
+                <div>
+                  <p><%= product.name %></p>
+                </div>
+            </div>
             <% end %>
           </div>
           <%# </div> %>
