@@ -23,10 +23,16 @@
           <h3>Available in these Sizes</h3>
           <br>
           <% @product.product_sizes.each do |size| %>
-            <ol>    
+            <ol>
              <i class="fas fa-check-square"></i><%=size.size_name %>
             </ol>
           <% end %>
+
+          <% if @product.product_sizes.size >= 5%>
+          <%= link_to "convert sizes", convert_product_sizes_path(product_sizes: @product.product_sizes.map(&:id), product_id: @product)  %>
+            <%end %>
+
+
           <p><%= link_to "Size Missing? Add Now", new_product_product_size_path(@product)  %></p>
         </div>
         </div>

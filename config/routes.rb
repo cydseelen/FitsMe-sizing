@@ -14,7 +14,12 @@ Rails.application.routes.draw do
   resources :products do
     resources :product_sizes, only: [:new, :create]
   end
-  
+
+  resources :product_sizes do
+    collection do
+      get :convert
+    end
+  end
 
   # resources :products do
   #   resources :products_sizes, only: [:new, :create]
