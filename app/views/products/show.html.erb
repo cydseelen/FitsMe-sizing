@@ -4,6 +4,16 @@
       <div class="logo">
         <%= link_to "FitsMe", root_path, :style=>'color: white;' %>
       </div>
+       <ul>
+        
+        <li><%= link_to "Return to Products Page", products_path, :style=>'color: white; font-size: 16px;' %></li>
+        <%# <li><%= link_to "", new_product_path(@brand), :style=>'color: white; font-size: 16px;' %>
+        <% if user_signed_in?  %>
+          <li><%= link_to 'Change Brand Login', edit_user_registration_path, :style=>'color: white; font-size: 16px;'%></li>
+        <% else %>
+          <li><%= link_to 'Sign in', new_user_session_path, :style=>'color: white; font-size: 16px;' %></li>
+        <% end %>
+      </ul>
       <%# <ul>
         <li>Product Name</li>
         <li>Garment Type</li>
