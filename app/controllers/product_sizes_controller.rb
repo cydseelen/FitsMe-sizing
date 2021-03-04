@@ -33,7 +33,7 @@ class ProductSizesController < ApplicationController
 
   def index
     @product_size = policy_scope(Product)
-    @product_size = Product_Size.all
+    @product_size = ProductSize.all
   end
 
   def edit
@@ -42,7 +42,7 @@ class ProductSizesController < ApplicationController
   end
 
   def update
-    @product_size = Product_Size.find(params[:id])
+    @product_size = ProductSize.find(params[:id])
     authorize @product_size
     @product_size.update(product_params)
     redirect_to product_path(@product_size)
@@ -55,10 +55,17 @@ class ProductSizesController < ApplicationController
     authorize @product_size
   end
 
-  def method_name
-    #custom route
-    #all product sizes
-    #@convert_product_size_data
+#/product_sizes/convert(.:format)
+  def convert
+    #@product_size = ProductSize.find(params[:id])
+    @product = Product.find(params[:product_id])
+    @all_sizes = ProductSize.where(id: params[:product_sizes])
+
+    @all_sizes.each do |size|
+    size.convert_product_size_data
+    end
+
+    redirect_to product_path(@product), notice: "your product sizes have been converted and submitted"
   end
 
   private
