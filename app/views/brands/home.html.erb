@@ -10,8 +10,14 @@
                         <h1>Fits<span>Me</span></h1>
                     </div>
                     <ul class="nav" style="margin-right: 1%">
+                        <%= link_to 'Size Quiz', new_customer_datum_path, class: "nav-link"%>
                         <li class="nav-item">
-                            <a href="#" class="nav-link">Sign in</a>
+                            <%# <a href="#" class="nav-link">Sign in</a> %>
+                            <% if user_signed_in?  %>
+                              <%= link_to 'Log Out', edit_user_registration_path, class: "nav-link"%>
+                            <% else %>
+                              <%= link_to 'Sign in', new_user_session_path, class: "nav-link" %>
+                            <% end %>
                         </li>
                     </ul>
                 </nav>
