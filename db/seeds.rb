@@ -14,42 +14,35 @@ Product.destroy_all
 Brand.destroy_all
 User.destroy_all
 
-
 puts "Adding some Customers & products :)"
-
-
 
 puts "Creating a user :)"
 
 User.create!(
     email: "cydnie@mail.com",
     password: "123456"
-)
+  )
 
 User.create!(
     email: "g@mail.com",
     password: "123456",
     brand: Brand.first
-)
+  )
 
 puts "Adding some Brands :)"
 
 Brand.create!(
     user: User.first,
     name: 'saenguin'
-)
+  )
+
 puts "Creating a brand :)"
-Brand.create!(
-    user: User.first,
-    name: 'tri tone'
-)
 
 User.create!(
     email: "a@mail.com",
     password: "123456",
     brand: Brand.first
-)
-
+  )
 
 CustomerDatum.create!(
     user: User.first,
@@ -57,14 +50,16 @@ CustomerDatum.create!(
     height: 170,
     weight:  60,
     body_shape: 1
-)
+  )
+
 puts "Creating a product :)"
+
 Product.create!(
     brand: Brand.first,
     name: "White Blouse",
     fabric_type: "silk",
     garment_type:  "shirt",
-)
+  )
 
 puts "Creating a product_sizes :)"
 
@@ -91,6 +86,7 @@ ProductSize.create(
     waist_range: 42..49.5,
     bust_range: 40..48.75
   )
+
 ProductSize.create(
     product: Product.first,
     size_name: "medium",
