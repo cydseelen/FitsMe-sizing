@@ -22,11 +22,14 @@
         <div class="row">
           <%# <div class = "container"> %>
           <div class="size-grid">
-            <% @product.each do |product| %>
+            <% @product.cycle.take(4).each do |product| %>
               <div class="card-index">
               <%= link_to product_path(product) do %>
-                <h1>Hello</h1>
-                <div>
+                <% if product.photo.attached?%>
+                  <%=cl_image_tag product.photo.key%>
+                <%end%>
+              <%end%>
+                <div class="row justify-content-center">
                   <p><%= product.name %></p>
                 </div>
             </div>
@@ -36,4 +39,3 @@
         </div>
     </div>
   </div>
-
