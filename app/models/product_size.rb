@@ -122,5 +122,4 @@ def get_length_range
 @length_range_extra_large_end = (@extra_large_product_size.length_measurement + (@extra_large_product_size.length_measurement * 1.1)) *2
 end
 
-
 end
