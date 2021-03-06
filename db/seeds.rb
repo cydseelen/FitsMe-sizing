@@ -18,6 +18,7 @@ User.create!(
     email: "cydnie@mail.com",
     password: "123456"
   )
+
 puts "Adding some Brands :)"
 Brand.create!(
     user: User.first,
@@ -44,12 +45,14 @@ Product.create!(
     fabric_type: "tight less than 5cm allowance",
     garment_type:  "shirt",
   )
+
   Product.create!(
     brand: Brand.first,
     name: "White Dress",
     fabric_type: "tight less than 5cm allowance",
     garment_type:  "dress",
   )
+
 puts "Creating a product_sizes :)"
 ProductSize.create(
     product: Product.first,
