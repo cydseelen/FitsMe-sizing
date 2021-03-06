@@ -20,7 +20,7 @@
           <%= simple_form_for @product do |f| %>
           <%= f.input :name, label: "Product Name" %>
           <%= f.input :garment_type, collection: ["shirt", "pants", "jacket", "skirt", "dress", "sweater"] , prompt: "Garment type" %>
-          <%= f.input :fabric_type, collection: ["polyester", "cotton", "wool", "jersey", "modal", "silk", "spandex", "tweed", "twill", "viscose", "leather", "lace", "linen", "other natural", "other synthetic"] , prompt: "Fabric type" %>
+          <%= f.input :fabric_type, collection: ["tight less than 5cm allowance", "medium +5 to 10cm allowance", "loose + 10cm allowance"] , prompt: "Design Fit" %>
           <%= f.button :submit, class: 'new-medium-button' %>
           <% end %>
         </div>
