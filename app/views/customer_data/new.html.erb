@@ -16,13 +16,18 @@
     </div>
       <%= simple_form_for @customer_datum, html: { id: "sizeForm" } do |f| %>
       <div class="tab">
+        <%= f.input :product, value: Product.find_by(name: "White Blouse"), :as => :hidden, :input_html => { :value => "some value" } %>
+      </div>
+      <div class="tab">
         <%#= f.input :age, as: :slider, min: 0, max: 10, step: 2, orientation: 'vertical',
                      range: true, ticks: [0, 5, 10] %>
         <%= f.input :age, label: "How old are you?", placeholder: "Type your answer here..." %>
       </div>
+
       <div class="tab">
         <%= f.input :height, label: 'What is your height in cm?', placeholder: "Type your answer here..." %>
       </div>
+
       <div class="tab">
         <%= f.input :weight, label: 'What is your weight in kg?', placeholder: 'Type your answer here...' %>
       </div>
