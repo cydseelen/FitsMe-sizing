@@ -1,5 +1,10 @@
+require 'httparty'
 class CustomerDataController < ApplicationController
+
+  include HTTParty
+
   before_action :authenticate_user!
+
   include Pundit
   # Pundit: white-list approach.
   after_action :verify_authorized, except: :index, unless: :skip_pundit?
@@ -17,13 +22,13 @@ class CustomerDataController < ApplicationController
 
     authorize @customer_datum
 
-    redirect_to user_product_path(@customer_datum)
+    HTTParty.post('http://localhost:3000/user_products', body:{ customer_datum: @customer_datum.id, product: params[:product]})
   end
 
   private
 
   def customer_data_params
-    params.require(:customer_datum).permit(:age, :height, :weight, :body_shape, :fit_preference)
+    params.require(:customer_datum).permit(:age, :height, :weight, :body_shape, :fit_preference, :product)
   end
 
   def skip_pundit?
