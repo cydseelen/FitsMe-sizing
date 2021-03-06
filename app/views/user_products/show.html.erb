@@ -1,11 +1,24 @@
-<br>
-<div class="card-transformation">
-  <div class="form-container">
-    <img src="https://img01.ztat.net/article/spp-media-p1/c4efdf10dd943019b611ab545eee1b6f/cc76477b8b88481eb31dcb44ee1a3500.jpg?imwidth=1800" height="400" width="300">
-    <br>
-    <h1>Based on your fit details we recommend a size <strong>XS</strong> in the Bershka <strong>Leather Jacket</strong>. </h1>
-    <p>Click below to shop this product:</p>
-    <%= link_to 'Add to cart', root_path, class: "btn btn-med" %>
-    <br>
+<div class="background">
+
+  <div class="overlay" style=" position: absolute;width: 100%; height: 100vh;text-align: left;">
+    <nav class="navbar" style="margin-top: 1%;">
+      <div class="navbar-brand">
+        <%= link_to "FitsMe", root_path, :style=>'color: white;' %>
+      </div>
+      <div class="col-md-12">
+        <div class="recommendation-container">
+          <br>
+          <h1>FitsMe recommends a size <strong>M</strong> in the <italic>Saenguin</italic> <strong>Ivory Blouse</strong>. </h1>
+          <br>
+          <%= image_tag "Schwarz-100-scaled.jpg", alt: "Ivory blouse", height: 250, width: 200, style: "object-fit: cover" %>
+          <br>
+          <p>Thank you for completing our quiz!</p>
+          <h1>Click bellow to shop this product:</h1>
+          <div style="width: 150px; margin: 0 auto;">
+          <br>
+          <a class="new-medium-button text-center pl-0" href="https://saenguin.com/product/blouse-ivory/">Add to cart</a>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-</div>
