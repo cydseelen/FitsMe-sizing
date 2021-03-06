@@ -64,7 +64,7 @@ end
 
 def get_hip_range
 #hip_range start: smaller - (diff)   end: bigger - (diff)
-@hip_range_extra_small_start = (@extra_small_product_size.hip_measurement - 20) *2
+@hip_range_extra_small_start = (@extra_small_product_size.hip_measurement - 20)*2
 @hip_range_extra_small_end = (@small_product_size.hip_measurement - (@small_product_size.hip_measurement - @extra_small_product_size.hip_measurement / 2))*2
 @hip_range_small_start = (@small_product_size.hip_measurement - ((@small_product_size.hip_measurement - @extra_small_product_size.hip_measurement) / 2))*2
 @hip_range_small_end = (@medium_product_size.hip_measurement - ((@medium_product_size.hip_measurement - @small_product_size.hip_measurement) / 2))*2
@@ -73,7 +73,7 @@ def get_hip_range
 @hip_range_large_start = (@large_product_size.hip_measurement - ((@large_product_size.hip_measurement - @medium_product_size.hip_measurement) / 2))*2
 @hip_range_large_end = (@extra_large_product_size.hip_measurement - ((@extra_large_product_size.hip_measurement - @large_product_size.hip_measurement) / 2))*2
 @hip_range_extra_large_start = (@extra_large_product_size.hip_measurement - ((@extra_large_product_size.hip_measurement - @large_product_size.hip_measurement) / 2))*2
-@hip_range_extra_large_end = (@extra_large_product_size.hip_measurement + 20) *2
+@hip_range_extra_large_end = (@extra_large_product_size.hip_measurement + 20)*2
 end
 
 def get_bust_range
