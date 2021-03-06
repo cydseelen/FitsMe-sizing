@@ -1,4 +1,4 @@
-h# This file should contain all the record creation needed to seed the database with its default values.
+# This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
 #
 # Examples:
@@ -23,11 +23,6 @@ User.create!(
     password: "123456"
   )
 
-User.create!(
-    email: "g@mail.com",
-    password: "123456",
-    brand: Brand.first
-  )
 
 puts "Adding some Brands :)"
 
@@ -58,8 +53,15 @@ puts "Creating a product :)"
 Product.create!(
     brand: Brand.first,
     name: "White Blouse",
-    fabric_type: "silk",
+    fabric_type: "tight less than 5cm allowance",
     garment_type:  "shirt",
+  )
+
+  Product.create!(
+    brand: Brand.first,
+    name: "White Dress",
+    fabric_type: "tight less than 5cm allowance",
+    garment_type:  "dress",
   )
 
 puts "Creating a product_sizes :)"
