@@ -1,5 +1,4 @@
-<body>
-  <div class="container">
+<div class="container">
     <div class="row1">
       <div class="logo">
         <%= link_to "FitsMe", root_path, :style=>'color: white;' %>
@@ -26,9 +25,7 @@
             <% @product.each do |product| %>
               <div class="card-index">
               <%= link_to product_path(product) do %>
-                <% if product.photo.attached? %>
-                  <%= cl_image_tag product.photo.key, style: "border-radius: 8px; height: 150px; width: 150px; margin: 5px; box-shadow: 0 10px 20px 0 $grey;" %>
-                <% end %>
+                <h1>Hello</h1>
                 <div>
                   <p><%= product.name %></p>
                 </div>
@@ -39,5 +36,4 @@
         </div>
     </div>
   </div>
-</body>
 
