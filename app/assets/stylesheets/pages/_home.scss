@@ -3,8 +3,7 @@ body {
 }
 
 .background {
-	background-image: url(background.png);
-
+	background-image: url(asset_path('background.png'));
 	background-color: rgba(235, 115, 4, 0.8);
 	background-blend-mode: multiply;
 
