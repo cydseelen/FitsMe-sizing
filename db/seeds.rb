@@ -1,4 +1,4 @@
-# This file should contain all the record creation needed to seed the database with its default values.
+h# This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
 #
 # Examples:
@@ -49,7 +49,8 @@ CustomerDatum.create!(
     age: 20,
     height: 170,
     weight:  60,
-    body_shape: 1
+    body_shape: 1,
+    fit_preference: 0
   )
 
 puts "Creating a product :)"

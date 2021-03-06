@@ -23,10 +23,10 @@
         <%= f.input :weight, placeholder: 'What is your weight in kg?' %>
       </div>
       <div class="tab">
-        <%= f.input :body_shape, collection: [['0', 'circle'], ['1', 'triangle'], ['2', 'rectangle']], label_method: :second, value_method: :first %>
+        <%= f.input :body_shape, collection: [[0, 'slim'], [1, 'athletic'], [2, 'full']], label_method: :second, value_method: :first %>
       </div>
       <div class="tab">
-        <%= f.input :fit_preference, collection: [['0', 'tight'], ['1', 'medium'], ['2', 'loose']], label_method: :second, value_method: :first %>
+        <%= f.input :fit_preference, collection: [[0, 'tight'], [1, 'medium'], [2, 'loose']], label_method: :second, value_method: :first %>
         <%= f.button :submit, "Get your recommendation", class: "submit-button" %>
       </div>
       <% end %>
