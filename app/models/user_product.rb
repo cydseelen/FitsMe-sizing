@@ -4,12 +4,4 @@ class UserProduct < ApplicationRecord
 
 
 
-#waist calculation based on belly
-
-
-
-#product type
-
-
-
 end

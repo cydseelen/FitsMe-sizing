@@ -11,6 +11,15 @@ const customerQuiz = () => {
       nextPrev(1)
     }
   })
+
+  // document.addEventListener('keyup', (e) => {
+  //   if(e.keyCode == 13) {
+  //     showTab(currentTab); // Display the current tab
+  //     nextPrev(1)
+  //     e.preventDefault()
+  //     return false
+  //   }
+  // })
   function showTab(n) {
     // This function will display the specified tab of the form ...
     var x = document.getElementsByClassName("tab");
