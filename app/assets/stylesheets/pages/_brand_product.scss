@@ -63,6 +63,19 @@ body {
   border-bottom-left-radius: 50px 50px;
 }
 
+.content3 {
+  // This is the white box
+  display: flex;
+  justify-content: space-evenly;
+  padding-top: 68px;
+  padding-left: 40px;
+  height: 30vh;
+  width: 82vw;
+  background-color: white;
+  border-top-left-radius: 50px 50px;
+  border-bottom-left-radius: 50px 50px;
+}
+
 .form {
   margin-top: 10px;
   color: black;
