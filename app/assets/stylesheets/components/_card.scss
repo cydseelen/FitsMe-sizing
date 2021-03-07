@@ -1,14 +1,16 @@
-// .brand-card {
-//   background: #FFEDD6;
-//   border-radius: 8px;
-//   width: 681px;
-//   height: 643px;
-//   border: $gray;
-//   justify-content: center;
-//   align-items: center;
-//   text-align: center;
-//   margin: auto;
-// }
+ .brand-card {
+   background: $white;
+   color: black;
+   font-size: 14px;
+   border-radius: 8px;
+   width: 681px;
+   height: 643px;
+   border: $gray;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+   margin: auto;
+ }
 
 // .brand-card-2 {
 //   //border-radius: 8px;
@@ -65,7 +67,7 @@
 
 .size-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap:16px;
 }
 
@@ -116,6 +118,14 @@
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   border-radius: 5px;
   box-shadow: 0 0 2px rgba(0,0,0,0.2);
+}
+
+.card-left {
+  background-color: white;
+  height: 400px;
+  display: flex;
+  justify-content: top;
+  align-items: normal;
 }
 
 

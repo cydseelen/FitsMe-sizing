@@ -1,12 +1,14 @@
 .btn-orange-big {
-    // padding: 8px 24px;
+    padding: 8px 24px;
     border-radius: 8px;
     background: $burntorange;
     color: $white;
-    font-size: 50;
+    font-size: 20px;
+    opacity: .8;
     transition: background 0.3s ease;
-    width: 247px;
-    height: 85px;
+    justify-content: center;
+    width: auto;
+    height: 60px;
   }
 
   .btn-orange-big:hover {

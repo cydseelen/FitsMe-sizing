@@ -36,14 +36,24 @@
             <br>
             <h3><%= @brand.name.capitalize %> Product History</h3>
           <div class ="row">
-            <div class = "col-6">
-              </h3>Product Stats Overview</h3>
-            <%= image_tag 'brand_graph.png', style: "border-radius: 8px;
-                width: 400px; height: 400px; margin: 2px; opacity: 1.0; border-color: $gray; box-shadow: 0 10px 20px 0 $grey;"%>
+            <div class = "col-5">
+              </h3>Product Quick Stats<h3>
+              <div class = "card-left">
+                <div>
+                <br>
+                <br>
+                <p> <i class="far fa-arrow-alt-circle-up"></i> Medium is your most commonly ordered size</p>
+                <br>
+                <p><i class="fas fa-bomb"></i> Extra Large is your most commonly returned size</p>
+                <br>
+                <%= link_to "Add More Products", new_product_path(@brand), :class=>'btn-orange-big' %>
+              </div>
             </div>
-            <div class = "col-6">
+            </div>
+            <div class = "col-7">
               </h3>Product Gallery</h3>
-              <%= link_to "Add Additional Products", new_product_path(@brand), :style=>'color: black; font-size: 16px;' %>
+               <br>
+               <br>
              <div class="size-grid">
             <% @product.each do |product| %>
               <div class="card-index">

@@ -53,6 +53,28 @@ Product.create!(
     garment_type:  "dress",
   )
 
+  Product.create!(
+    brand: Brand.first,
+    name: "Black Shirt",
+    fabric_type: "tight less than 5cm allowance",
+    garment_type:  "shirt",
+  )
+
+  Product.create!(
+    brand: Brand.first,
+    name: "Red Pants",
+    fabric_type: "tight less than 5cm allowance",
+    garment_type:  "pants",
+  )
+
+  Product.create!(
+    brand: Brand.first,
+    name: "Pink Blouse",
+    fabric_type: "tight less than 5cm allowance",
+    garment_type:  "shirt",
+  )
+
+
 puts "Creating a product_sizes :)"
 ProductSize.create(
     product: Product.first,
