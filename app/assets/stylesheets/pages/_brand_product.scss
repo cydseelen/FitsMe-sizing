@@ -38,11 +38,11 @@ body {
   }
 
 .content {
-  // This is the white box
+  // This is the white box - original padding top 68px and padding left 40px
   display: flex;
   justify-content: space-evenly;
-  padding-top: 68px;
-  padding-left: 40px;
+  padding-top: 40px;
+  padding-left: 20px;
   height: 100vh;
   width: 82vw;
   background-color: white;
@@ -63,18 +63,18 @@ body {
   border-bottom-left-radius: 50px 50px;
 }
 
-.content3 {
-  // This is the white box
-  display: flex;
-  justify-content: space-evenly;
-  padding-top: 68px;
-  padding-left: 40px;
-  height: 30vh;
-  width: 82vw;
-  background-color: white;
-  border-top-left-radius: 50px 50px;
-  border-bottom-left-radius: 50px 50px;
-}
+// .content3 {
+//   // This is the white box
+//   display: flex;
+//   justify-content: space-evenly;
+//   padding-top: 68px;
+//   padding-left: 40px;
+//   height: 30vh;
+//   width: 82vw;
+//   background-color: white;
+//   border-top-left-radius: 50px 50px;
+//   border-bottom-left-radius: 50px 50px;
+// }
 
 .form {
   margin-top: 10px;
@@ -104,4 +104,9 @@ ul2 {
 
 li2 {
   margin-bottom: 1px;
+}
+
+.index-grid2 div p {
+  color: $gray;
+  font-size: 14px;
 }
