@@ -72,6 +72,6 @@ class ProductSizesController < ApplicationController
   private
 
   def product_size_params
-    params.require(:product_size).permit(:product_id, :size_name, :hip_measurement, :bust_measurement, :waist_measurement, :length_measurement)
+    params.require(:product_size).permit(:product_id, :size_name, :hip_measurement, :bust_measurement, :waist_measurement, :length_measurement, :photo)
   end
 end
