@@ -37,14 +37,14 @@
             <div class="card-new">
               <%# <div class="card-inside"> %>
                 <%= simple_form_for @product do |f| %>
-                <%= f.input :name, label: "Product Name", :input_html => {:style=> 'width: 100px'} %>
-                <%= f.input :garment_type, label: "Garment Type", collection: ["shirt", "pants", "jacket", "skirt", "dress", "sweater"] , :input_html => {:style=> 'width: 100px'} %>
-                <%= f.input :fabric_type, label: "Fit Type", collection: ["tight less than 5cm allowance", "medium +5 to 10cm allowance", "loose + 10cm allowance"] , :input_html => {:style=> 'width: 100px'} %>
+                <%= f.input :name, label: "Product Name",prompt: "Product Name" %>
+                <%= f.input :garment_type, label: "Garment Type", collection: ["shirt", "pants", "jacket", "skirt", "dress", "sweater"] %>
+                <%= f.input :fabric_type, label: "Fit Type", collection: ["tight less than 5cm allowance", "medium +5 to 10cm allowance", "loose + 10cm allowance"] %>
                 <%= f.input :photo, as: :file %>
                 <%= f.button :submit, class: 'new-medium-button' %>
               <% end %>
-              <%# </div> %>
-          </div>
+            </div>
+          <%# </div> %>
           </div>
         </div>
       </div>
