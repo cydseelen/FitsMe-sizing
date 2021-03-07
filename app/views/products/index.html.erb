@@ -34,10 +34,6 @@
                <p><i class="fas fa-exclamation-circle"></i> Size Large for <%= @product.name.first %> almost out of stock  </p>
             </div>
           </div>
-            </h3>Product Stats and Overview</h3>
-            <%= image_tag 'brand_graph2.png', style: "border-radius: 8px;
-                width: 600px; height: 150px; margin: 2px; opacity: 1.0; border-color: $gray; box-shadow: 0 10px 20px 0 $grey;"%>
-            <br>
           <div>
             <h3><%= @brand.name.capitalize %> Product History</h3>
             <br>
@@ -58,5 +54,8 @@
             <% end %>
           </div>
           </div>
+          </h3>Product Stats and</h3>
+            <%= image_tag 'brand_graph2.png', style: "border-radius: 8px;
+                width: 600px; height: 150px; margin: 2px; opacity: 1.0; border-color: $gray; box-shadow: 0 10px 20px 0 $grey;"%>
     </div>
   </div>
