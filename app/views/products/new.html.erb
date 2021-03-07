@@ -5,24 +5,47 @@
         <%= link_to "FitsMe", root_path, :style=>'color: white;' %>
       </div>
       <ul>
-        <li>Product Name</li>
-        <li>Garment Type</li>
-        <li>Fabric Type</li>
+        <li></h3>Add New Product and Sizes</h3></li>
+        <% if user_signed_in?  %>
+          <li><%= link_to 'Not you? Change Brand Login', edit_user_registration_path, :style=>'color: white; font-size: 16px;'%></li>
+        <% else %>
+          <li><%= link_to 'Sign in', new_user_session_path, :style=>'color: white; font-size: 16px;' %></li>
+        <% end %>
       </ul>
     </div>
     <div class="row2">
       <div class="content">
-        <div class="image">
-          <%= image_tag 'leather4.jpg', style: "border-radius: 22px;
-          width: 425px; height: 500px; margin: 20px; opacity: 1.0; border-color: $gray;"%>
-        </div>
-        <div class="form">
-          <%= simple_form_for @product do |f| %>
-          <%= f.input :name, label: "Product Name" %>
-          <%= f.input :garment_type, collection: ["shirt", "pants", "jacket", "skirt", "dress", "sweater"] , prompt: "Garment type" %>
-          <%= f.input :fabric_type, collection: ["tight less than 5cm allowance", "medium +5 to 10cm allowance", "loose + 10cm allowance"] , prompt: "Design Fit" %>
-          <%= f.button :submit, class: 'new-medium-button' %>
-          <% end %>
+        <div class="index-grid2">
+          <div class= "row">
+            <div class = "col-8">
+                <h1 style="color:grey;">Product Upload</h1>
+                <h3> <em><%= @brand.name.capitalize %><em></h3>
+               <p> <i class="fas fa-location-arrow"></i> 10 Spring Lane Cleveland, Ohio 10889  
+                &nbsp; &nbsp; <i class="fas fa-user"> </i> User Since: October 2020
+               </p>
+            </div>
+            <div class = "col-4 justify-contents-center">  
+              <%= image_tag 'logo2.png', style: "border-radius: 8px;
+                width: 200px; height: auto; margin: 2px; opacity: 1.0; border-color: $gray; box-shadow: 0 10px 20px 0 $grey;"%>
+            </div>
+          </div>
+          <div class="row">
+              <%= image_tag 'brandtime1.jpg', style: "
+            width: 90%; height: auto; margin: 5px;"%>
+          </div>
+          <div class="row">
+            <div class="card-new">
+              <%# <div class="card-inside"> %>
+                <%= simple_form_for @product do |f| %>
+                <%= f.input :name, label: "Product Name", :input_html => {:style=> 'width: 100px'} %>
+                <%= f.input :garment_type, label: "Garment Type", collection: ["shirt", "pants", "jacket", "skirt", "dress", "sweater"] , :input_html => {:style=> 'width: 100px'} %>
+                <%= f.input :fabric_type, label: "Fit Type", collection: ["tight less than 5cm allowance", "medium +5 to 10cm allowance", "loose + 10cm allowance"] , :input_html => {:style=> 'width: 100px'} %>
+                <%= f.input :photo, as: :file %>
+                <%= f.button :submit, class: 'new-medium-button' %>
+              <% end %>
+              <%# </div> %>
+          </div>
+          </div>
         </div>
       </div>
     </div>
