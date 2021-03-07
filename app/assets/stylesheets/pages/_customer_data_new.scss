@@ -29,6 +29,12 @@ p {
   font-weight: bold;
 }
 
+.form-control:focus {
+  border-color: inherit;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
 .form-control {
   display: block;
   width: 100%;
