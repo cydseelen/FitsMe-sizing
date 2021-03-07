@@ -11,7 +11,7 @@
       <div class="tab">
       <h1>Welcome to the <strong>Fits</strong>Me size finder!</h1>
       <p>Answer a few questions to get your size recommendation</p>
-      <p>Takes 1 min <i class="far fa-clock"></i></p>
+      <!-- <p>Takes 1 min <i class="far fa-clock"></i></p> -->
     </div>
       <%= simple_form_for @customer_datum, html: { id: "sizeForm" } do |f| %>
       <div class="tab">
@@ -27,10 +27,10 @@
       </div>
       <div class="tab">
 
-        <%= f.input :body_shape, label: '4→ Please select your build.', collection: [[0, 'slim'], [1, 'athletic'], [2, 'full']], label_method: :second, value_method: :first %>
+        <%#= f.input :body_shape, label: '4→ Please select your build.', collection: [[0, 'slim'], [1, 'athletic'], [2, 'full']], label_method: :second, value_method: :first %>
       </div>
       <div class="tab">
-        <%= f.input :fit_preference, label: '4→ How would you like this item to fit?', collection: [[0, 'tight'], [1, 'medium'], [2, 'loose']], label_method: :second, value_method: :first %>
+        <%#= f.input :fit_preference, label: '4→ How would you like this item to fit?', collection: [[0, 'tight'], [1, 'medium'], [2, 'loose']], label_method: :second, value_method: :first %>
         <%= f.button :submit, "Get your recommendation", class: "submit-button" %>
       </div>
       <% end %>
