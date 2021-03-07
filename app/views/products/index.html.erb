@@ -27,14 +27,17 @@
             <div class = "col-8 justify-contents-center">
               <h1>Welcome Back <em><%= @brand.name.capitalize %><em></h1>
                <p> <i class="fas fa-location-arrow"></i> 10 Spring Lane Cleveland, Ohio 10889  
-                <i class="fas fa-user"> </i>User Since: October 2020
+                &nbsp; &nbsp; <i class="fas fa-user"> </i> User Since: October 2020
                </p>
                <h3>Alerts and Updates<em></h3>
-               <p><i class="fas fa-exclamation-circle"></i> Increased Returns of <%= @product.first.product_sizes.first %> for <%= @product.name.first %> </p>
-               <p><i class="fas fa-exclamation-circle"></i> Size Large for <%= @product.name.last %> almost out of stock  </p>
+               <p><i class="fas fa-exclamation-circle"></i> Increased Returns of <%= @product.first.product_sizes.name.first %> for <%= @product.name.first %> </p>
+               <p><i class="fas fa-exclamation-circle"></i> Size Large for <%= @product.name.first %> almost out of stock  </p>
             </div>
           </div>
-            <h1>Welcome 2</h1>
+            </h3>Product Stats and Overview</h3>
+            <%= image_tag 'brand_graph2.png', style: "border-radius: 8px;
+                width: 600px; height: 150px; margin: 2px; opacity: 1.0; border-color: $gray; box-shadow: 0 10px 20px 0 $grey;"%>
+            <br>
           <div>
             <h3><%= @brand.name.capitalize %> Product History</h3>
             <br>
