@@ -104,5 +104,5 @@ def convert_size_to_value
     size_name = "extra small"
   end
 end
-
+end
 end
