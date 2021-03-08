@@ -18,7 +18,7 @@
         <div class="index-grid2">
           <div class= "row">
             <div class = "col-8">
-                <h1 style="color:grey;">Product Upload</h1>
+                <h1 style="color:grey;">Product Sizes</h1>
                 <h3> <em><%= @brand.name.capitalize %><em></h3>
                <p> <i class="fas fa-location-arrow"></i> 10 Spring Lane Cleveland, Ohio 10889  
                 &nbsp; &nbsp; <i class="fas fa-user"> </i> User Since: October 2020
@@ -30,21 +30,26 @@
             </div>
           </div>
           <div class="row">
-              <%= image_tag 'brandtime1.jpg', style: "
+              <%= image_tag 'brandtime1a.png', style: "
             width: 90%; height: auto; margin: 5px;"%>
           </div>
           <div class="row">
+            <div class="container">
             <div class="card-new">
               <%# <div class="card-inside"> %>
                 <%= simple_form_for @product do |f| %>
-                <%= f.input :name, label: "Product Name",prompt: "Product Name" %>
-                <%= f.input :garment_type, label: "Garment Type", collection: ["shirt", "pants", "jacket", "skirt", "dress", "sweater"] %>
-                <%= f.input :fabric_type, label: "Fit Type", collection: ["tight less than 5cm allowance", "medium +5 to 10cm allowance", "loose + 10cm allowance"] %>
-                <%= f.input :photo, as: :file %>
+                <%= f.input :name, label: "Product Name", :input_html => { class: "form-input"}, prompt: "Product Name" %>
+                <%= f.input :garment_type, label: "Garment Type", collection: ["shirt", "pants", "jacket", "skirt", "dress", "sweater"], :input_html => { class: "form-input"} %>
+                <%= f.input :fabric_type, label: "Fit Type", collection: ["tight less than 5cm allowance", "medium +5 to 10cm allowance", "loose + 10cm allowance"], :input_html => { class: "form-input"} %>
+                <div class = "row">
+                  <%# <%= f.input :photo, as: :file %> %>
+                </div>
+                <div class= "row">
                 <%= f.button :submit, class: 'new-medium-button' %>
+                </div>
               <% end %>
             </div>
-          <%# </div> %>
+            </div>
           </div>
         </div>
       </div>

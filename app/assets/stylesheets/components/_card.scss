@@ -131,25 +131,30 @@
 .card-new {
   background-color: white;
   border-radius: 8px;
-  height: 400px;
-  width: auto;
-// display: flex;
-//   justify-content: top;
+  height: 500px;
+  width: 300px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
 //   align-items: normal;  
 }
 
 .card-inside {
-  background-color: red;
-  height: 200px;
-  width: 400px;
+  background-color: white;
+  justify-content: center;
 }
-
-
-
-
 
 .card-index > img {
   height: 200px;
   width: 300px;
   object-fit: cover;
 }
+
+.form-input {
+  height: 25px;
+  font-size: 12px;
+  padding: 10px;
+  color: black;
+  font-family: Raleway;
+  border: 2px solid #8a8484;
+  }
