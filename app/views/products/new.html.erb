@@ -18,11 +18,11 @@
         <div class="index-grid2">
           <div class= "row">
             <div class = "col-8">
-                <h1 style="color:grey;">Product Sizes</h1>
-                <h3> <em><%= @brand.name.capitalize %><em></h3>
-               <p> <i class="fas fa-location-arrow"></i> 10 Spring Lane Cleveland, Ohio 10889  
+              <h1 style="color:black;">Product Sizes</h1>
+              <h3> <em><%= @brand.name.capitalize %><em></h3>
+              <p> <i class="fas fa-location-arrow"></i> 10 Spring Lane Cleveland, Ohio 10889  
                 &nbsp; &nbsp; <i class="fas fa-user"> </i> User Since: October 2020
-               </p>
+              </p>
             </div>
             <div class = "col-4 justify-contents-center">  
               <%= image_tag 'logo2.png', style: "border-radius: 8px;
@@ -30,25 +30,33 @@
             </div>
           </div>
           <div class="row">
-              <%= image_tag 'brandtime1a.png', style: "
-            width: 90%; height: auto; margin: 5px;"%>
+              <%= image_tag 'brandtime1b.png', 
+              style: "width: 90%; height: auto; margin: 5px; opacity: .7;"%>
           </div>
           <div class="row">
-            <div class="container">
-            <div class="card-new">
-              <%# <div class="card-inside"> %>
+            <div class="col-5">
+              <h3>Product Basic Information</h3>
+              <p>Begin by entering a few details about the product being uploaded.</p>
+              <div class="card-new">
                 <%= simple_form_for @product do |f| %>
-                <%= f.input :name, label: "Product Name", :input_html => { class: "form-input"}, prompt: "Product Name" %>
-                <%= f.input :garment_type, label: "Garment Type", collection: ["shirt", "pants", "jacket", "skirt", "dress", "sweater"], :input_html => { class: "form-input"} %>
-                <%= f.input :fabric_type, label: "Fit Type", collection: ["tight less than 5cm allowance", "medium +5 to 10cm allowance", "loose + 10cm allowance"], :input_html => { class: "form-input"} %>
-                <div class = "row">
-                  <%# <%= f.input :photo, as: :file %> %>
-                </div>
-                <div class= "row">
-                <%= f.button :submit, class: 'new-medium-button' %>
-                </div>
-              <% end %>
+                  <%= f.input :name, label: "Product Name", :input_html => { class: "form-input"}, prompt: "Product Name" %>
+                  <%= f.input :garment_type, label: "Garment Type", collection: ["shirt", "pants", "jacket", "skirt", "dress", "sweater"], :input_html => { class: "form-input"} %>
+                  <%= f.input :fabric_type, label: "Fit Type", collection: ["tight less than 5cm allowance", "medium +5 to 10cm allowance", "loose + 10cm allowance"], :input_html => { class: "form-input"} %>
+                  <%= f.input :photo, as: :file %>
+              </div>
             </div>
+            <div class="col-7 d-flex justify-content-flex-start align-items-center">
+              <div class="index-grid2">
+                <div class="row" >
+                  <%= f.button :submit, class: 'btn-orange-big', style: "margin-left: 90px;" %>
+                  <% end %>
+                </div>
+                <div class="row">
+                  <%= link_to "Product Gallery", products_path, :class=>'btn-orange-big', style: "margin-left: 90px; margin-top: 20px;" %>
+                </div>
+              </div>
+              <%# <%= image_tag 'sewing2.jpg', 
+              style: "width: 90%; height: auto; margin: 5px; opacity: .9;"%>
             </div>
           </div>
         </div>

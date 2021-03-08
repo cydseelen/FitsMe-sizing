@@ -31,26 +31,39 @@
             </div>
           </div>
           <div class="row">
-              <%= image_tag 'brandtime2a.png', style: "
+              <%= image_tag 'brandtime2b.png', style: "
             width: 90%; height: auto; margin: 5px;"%>
           </div>
+
           <div class="row">
-            <div class="card-new">
-              <%= simple_form_for [@product, @product_size] do |f| %>
-                <%= f.input :size_name, collection: ["extra small", "small", "medium", "large", "extra large"] , prompt: "Select Size" %>
-                <%= f.input :hip_measurement, class: 'btn-size' %>
-                <%= f.input :bust_measurement, class: 'btn-size' %>
-                <%= f.input :waist_measurement, class: 'btn-size' %>
-                <%= f.input :length_measurement, class: 'btn-size' %>
-                  <%= f.button :submit, label: "Add Size", class: 'btn-orange-big' %>  
-              <% end %>
-            <%# </div> %>
+            <div class="col-5">
+              <h3>Size Information</h3>
+              <p>This Information will be used for customer fit recommendations.</p>
+              <div class="card-new">
+                <%= simple_form_for [@product, @product_size] do |f| %>
+                  <%= f.input :size_name, collection: ["extra small", "small", "medium", "large", "extra large"] , prompt: "Select Size" %>
+                  <%= f.input :hip_measurement, class: 'btn-size' %>
+                  <%= f.input :bust_measurement, class: 'btn-size' %>
+                  <%= f.input :waist_measurement, class: 'btn-size' %>
+                  <%= f.input :length_measurement, class: 'btn-size' %>
+              </div>
             </div>
+            <div class="col-7 d-flex justify-content-flex-start align-items-center">
+              <div class="index-grid2">
+                <div class="row" >
+                  <%= f.button :submit, class: 'btn-orange-big', style: "margin-left: 90px;" %>
+                  <% end %>
+                </div>
+                <div class="row">
+                  <%= link_to "Product Gallery", products_path, :class=>'btn-orange-big', style: "margin-left: 90px; margin-top: 20px;" %>
+                </div>
+              </div>
+              <%# <%= image_tag 'sewing2.jpg', 
+              style: "width: 90%; height: auto; margin: 5px; opacity: .9;"%>
+         </div>
           </div>
         </div>
       </div>
     </div>
   </div>
 </body>
-
-    <!-- End Start brand_product page Section-->

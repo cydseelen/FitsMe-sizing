@@ -59,8 +59,9 @@
               <div class="card-index">
               <%= link_to product_path(product) do %>
                 <% if product.photo.attached?%>
-                  <%=cl_image_tag product.photo.key%>
-                  <p><%= product.name %></p>
+                  <%= cl_image_tag product.photo.key, style: "border-radius: 8px;
+          width: 95px; height: 90px; margin: 2px; opacity: 1.0; border-color: $gray;" %>
+                    <p><%= product.name %></p>
                 <%else%>
                   <%= image_tag 'noimage.jpg', style: "border-radius: 8px;
           width: 95px; height: 90px; margin: 2px; opacity: 1.0; border-color: $gray;"%>
