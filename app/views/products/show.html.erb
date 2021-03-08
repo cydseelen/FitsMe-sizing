@@ -4,51 +4,75 @@
       <div class="logo">
         <%= link_to "FitsMe", root_path, :style=>'color: white;' %>
       </div>
-       <ul>
-        
-        <li><%= link_to "Return to Products Page", products_path, :style=>'color: white; font-size: 16px;' %></li>
-        <%# <li><%= link_to "", new_product_path(@brand), :style=>'color: white; font-size: 16px;' %>
+      <ul>
+        <li></h3>Product Spotlight</h3></li>
         <% if user_signed_in?  %>
-          <li><%= link_to 'Change Brand Login', edit_user_registration_path, :style=>'color: white; font-size: 16px;'%></li>
+          <li><%= link_to 'Not you? Change Brand Login', edit_user_registration_path, :style=>'color: white; font-size: 16px;'%></li>
         <% else %>
           <li><%= link_to 'Sign in', new_user_session_path, :style=>'color: white; font-size: 16px;' %></li>
         <% end %>
       </ul>
-      <%# <ul>
-        <li>Product Name</li>
-        <li>Garment Type</li>
-        <li>Fabric Type</li>
-      </ul> %>
     </div>
-    <div class="row2">
-      <div class="content2">
-        <div class="image">
-          <%= image_tag 'leather4.jpg', style: "border-radius: 22px;
-          width: 425px; height: 500px; margin: 20px; opacity: 1.0; border-color: $gray;"%>
+  <div class="row2">
+    <div class="content">
+      <div class="index-grid2">
+        <div class= "row">
+          <div class = "col-8">
+            <h1 style="color:grey;">Product Spotlight - <%= @product.name %></h1>
+            <h3> <em>Sanguene<em></h3>
+            <p> <i class="fas fa-location-arrow"></i> 10 Spring Lane Cleveland, Ohio 10889  
+              &nbsp; &nbsp; <i class="fas fa-user"> </i> User Since: October 2020
+            </p>
+          </div>
+          <div class = "col-4 justify-contents-center">  
+            <%= image_tag 'logo2.png', style: "border-radius: 8px;
+                width: 200px; height: auto; margin: 2px; opacity: 1.0; border-color: $gray; box-shadow: 0 10px 20px 0 $grey;"%>
+          </div>
         </div>
-        <div class="product-show">
-          <h1><em><%= @product.name %><em></h1>
-          <br>
-          <p><b>Garment Type:<b>  <%= @product.garment_type.capitalize %></p>
-          <p><b>Fabric Type:<b>  <%= @product.fabric_type.capitalize %></p>
-          <br>
-          <h3>Available in these Sizes</h3>
-          <br>
-          <% @product.product_sizes.each do |size| %>
-            <ol>
-             <i class="fas fa-check-square"></i><%=size.size_name %>
-            </ol>
-          <% end %>
-
+        <div class="row">
+          <h3>Product Snapshot</h3>
+        </div>
+        <div class="row">
+          <div class="row">
+            <div class="col-6">
+              <% if @product.photo.attached?%>
+                <%= cl_image_tag @product.photo.key, style: "border-radius: 8px;
+                 width: 300px; height: auto; margin: 20px 20px; opacity: 1.0; border-color: $gray;" %>
+              <%else%>
+                <%= image_tag 'noimage.jpg', style: "border-radius: 8px;
+                  width: 300px; height: auto; margin: 20px 20px; opacity: 1.0; border-color: $gray;"%>
+              <%end%>
+            </div>
+          </div>
+          <div class="col-6 ">
+            <div class="row justify-content-center align-items-flex-start p-5">
+              <h3>Product Details</h3>
+              </p><b>Product Name: <b><%= @product.name %></p>
+            
+                <p><b><i class="fas fa-tshirt"></i><b>  <%= @product.garment_type.capitalize %>  
+                   &nbsp; &nbsp;<b><i class="fas fa-cut"></i><b>  <%= @product.fabric_type.capitalize %></p>
+              </h3>Available in these Sizes</h3>
+              <br>
+              <% @product.product_sizes.each do |size| %>
+                <div class="psize-grid">
+                  <p><i class="fas fa-check-square"></i><%=size.size_name %></p>
+                </div>
+              <% end %>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <h1>Stuff about Converting Ranges</h1>
           <% if @product.product_sizes.size >= 5%>
           <%= link_to "convert sizes", convert_product_sizes_path(product_sizes: @product.product_sizes.map(&:id), product_id: @product)  %>
             <%end %>
-
-
-          <p><%= link_to "Size Missing? Add Now", new_product_product_size_path(@product)  %></p>
-        </div>
-        </div>
-      <%# </div> %>
+          <p><%= link_to "Size Missing? Add Now", new_product_product_size_path(@product), :style=>"color:black;"  %></p>
+        </div> 
+      </div>
     </div>
   </div>
+  </div>
+    <%# </div>
+  </div> %>
 </body>
+
