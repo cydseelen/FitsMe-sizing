@@ -11,7 +11,7 @@
         <div class="size-rec">
           <%= image_tag "Schwarz-100-scaled.jpg", alt: "Ivory blouse", height: 200, width: 150, style: "object-fit: cover" %>
           <div class="animation">
-            <h1> <%= @user_product.product_size.size_name %></h1>
+            <h1> <%= display_abbreviation(@user_product.product_size.size_name) %></h1>
           </div>
         </div>
         <span>in the Saenguin <%= @user_product.product_size.product.name %></span>

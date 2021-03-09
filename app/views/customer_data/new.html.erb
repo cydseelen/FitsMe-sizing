@@ -31,8 +31,9 @@
         <%= f.input :body_shape, label: '4→ Please select your build', collection: [[0, 'slim'], [1, 'athletic'], [2, 'full']], label_method: :second, value_method: :first %>
       </div>
       <div class="tab">
-        <%= f.input :fit_preference, label: '4→ How would you like this item to fit?', collection: [[0, 'tight'], [1, 'medium'], [2, 'loose']], label_method: :second, value_method: :first %>
-        <%= f.button :submit, "Get your recommendation", class: "submit-button" %>
+        <%= f.input :fit_preference, label: '4→ How would you like this item to fit?', collection: [[0, 'tight'], [1, 'medium'], [2, 'loose']], label_method: :second, value_method: :first, :input_html => {
+        :id => "formSelection"} %>
+        <%#= f.button :submit, "Get your recommendation", class: "submit-button" %>
       </div>
       <% end %>
       <div style="overflow:auto;">
