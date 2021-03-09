@@ -1,15 +1,42 @@
 .btn-orange-big {
     padding: 8px 24px;
     border-radius: 8px;
-    border-color: $burntorange;
+    border: 1px solid $burntorange;
+    // border-color: $burntorange;
     color: grey;
     font-size: 20px;
-    opacity: 1;
+    opacity: .8;
     transition: background 0.3s ease;
     justify-content: center;
     width: 400px;
     height: 60px;
   }
+
+  .btn-orange-big2 {
+    padding: 8px 24px;
+    border-radius: 8px;
+    border-color: $burntorange;
+    background-color: $burntorange;
+    color: $white;
+    font-size: 30px;
+    opacity: 1;
+    transition: background 0.3s ease;
+    justify-content: center;
+    width: 500px;
+    height: 90px;
+  }
+
+  .btn-orange-big2:hover {
+    background: $white;
+    color: $burntorange;
+    border: 2px solid $burntorange;
+    font-size: 20px;
+    opacity: 1;
+    width: 500px;
+    height: 90px;
+  }
+
+  
 
   .btn-orange-big:hover {
     background: $burntorange;

@@ -34,23 +34,32 @@
           </div>
           <div>
             <br>
-            <h3><%= @brand.name.capitalize %> Product History</h3>
+          <div class="row" style="border-bottom: 1px solid grey; border-top: 1px solid grey;" >
+          <%# style="border-bottom: 2px solid grey; border-top: 2px solid grey;" %>
+            <h3><b><%= @brand.name.capitalize %> Product History<b></h3>
+          </div>
           <div class ="row">
-            <div class = "col-5">
-              </h3>Product Quick Stats<h3>
+            <div class = "col-5", style="justify-content: flex-end;">
+              <br>
+              <br>
+              <%= link_to "Add More Products", new_product_path(@brand), :class=>'btn-orange-big2' %>
               <div class = "card-left">
-                <div>
-                <br>
-                <br>
-                <p> <i class="far fa-arrow-alt-circle-up"></i> Medium is your most commonly ordered size</p>
-                <br>
-                <p><i class="fas fa-bomb"></i> Extra Large is your most commonly returned size</p>
-                <br>
-                <%= link_to "Add More Products", new_product_path(@brand), :class=>'btn-orange-big' %>
+                <div style="justify-content: right;">
+                 <br>
+                 <br>
+                 <div class="row">
+                   </h3>Product Quick Stats<h3>
+                 </div>
+                 <div>
+                    <p style="size:18px; color: black;"> <i class="far fa-arrow-alt-circle-up"></i> Medium is your most commonly ordered size</p>
+                    <p style="size:18px; color: black;"><i class="fas fa-bomb"></i> Extra Large is your most commonly returned size</p>
+                    <p style="size:18px; color: black;"><i class="fas fa-exclamation"></i> Sales Volumes are lower than in Prevous Quarter</p>
+                  </div>
               </div>
             </div>
             </div>
             <div class = "col-7">
+              <br>
               </h3>Product Gallery</h3>
                <br>
                <br>
