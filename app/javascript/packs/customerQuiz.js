@@ -31,7 +31,13 @@ const customerQuiz = () => {
       document.getElementById("prevBtn").style.display = "inline";
     }
     if (n == (x.length - 1)) {
-      document.getElementById("nextBtn").innerHTML = "Submit";
+      document.getElementById("nextBtn").innerHTML = "Get Your Recommendation";
+      const submitButton = document.getElementById("nextBtn");
+      const formSelect = document.getElementById("formSelection");
+      submitButton.style.display="none"
+      formSelect.addEventListener('change', () => {
+        submitButton.style.display = "inline-block";
+      })
     } else {
       document.getElementById("nextBtn").innerHTML = "Next";
     }
