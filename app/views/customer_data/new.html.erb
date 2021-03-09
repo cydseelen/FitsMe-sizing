@@ -14,10 +14,9 @@
       <p>Takes 1 min</p>
       <button>Start</button>Press <strong>Enter &#x21B2;</strong>
     </div>
-      <%= simple_form_for @customer_datum, product: Product.find_by(name: "White Blouse"), html: { id: "sizeForm" } do |f| %>
-      <div class="tab">
-        <%#= f.input :product, value: Product.find_by(name: "White Blouse") %>
-      </div>
+
+      <%= simple_form_for @customer_datum, html: { id: "sizeForm" } do |f| %>
+        <%#= f.hidden_field :product, value: @product %>
       <div class="tab">
         <%#= f.input :age, as: :slider, min: 0, max: 10, step: 2, orientation: 'vertical',
                      range: true, ticks: [0, 5, 10] %>

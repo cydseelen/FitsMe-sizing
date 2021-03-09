@@ -3,7 +3,7 @@
   <div class="form-container">
     <img src="https://img01.ztat.net/article/spp-media-p1/c4efdf10dd943019b611ab545eee1b6f/cc76477b8b88481eb31dcb44ee1a3500.jpg?imwidth=1800" height="400" width="300">
     <br>
-    <h1>Based on your fit details we recommend a size <strong>xxx</strong> in the Bershka <strong>Leather Jacket</strong>. </h1>
+    <h1>Based on your fit details we recommend a size <strong><%= @user_product.product_size.size_name %></strong> in the <%= @user_product.product_size.product.name %> <strong></strong>. </h1>
     <p>Click below to shop this product:</p>
     <%= link_to 'Add to cart', root_path, class: "btn btn-med" %>
     <br>

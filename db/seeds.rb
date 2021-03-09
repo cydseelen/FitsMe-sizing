@@ -1,4 +1,4 @@
-h# This file should contain all the record creation needed to seed the database with its default values.
+# This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
 #
 # Examples:
@@ -10,9 +10,11 @@ puts "Removing old customers, brands, product files and matches"
 UserProduct.destroy_all
 CustomerDatum.destroy_all
 ProductSize.destroy_all
-Product.destroy_all
 Brand.destroy_all
+Product.destroy_all
 User.destroy_all
+
+
 
 puts "Adding some Customers & products :)"
 
@@ -23,17 +25,19 @@ User.create!(
     password: "123456"
   )
 
-User.create!(
-    email: "g@mail.com",
-    password: "123456",
-    brand: Brand.first
-  )
+
 
 puts "Adding some Brands :)"
 
 Brand.create!(
     user: User.first,
     name: 'saenguin'
+  )
+
+User.create!(
+    email: "g@mail.com",
+    password: "123456",
+    brand: Brand.first
   )
 
 puts "Creating a brand :)"
@@ -58,7 +62,7 @@ puts "Creating a product :)"
 Product.create!(
     brand: Brand.first,
     name: "White Blouse",
-    fabric_type: "medium",
+    fabric_type: "tight less than 5cm allowance",
     garment_type:  "shirt",
   )
 

@@ -18,11 +18,17 @@ class CustomerDataController < ApplicationController
   def create
     @customer_datum = CustomerDatum.new(customer_data_params)
     @customer_datum.user = current_user
-    @customer_datum.save
 
+    @customer_datum.convert_user_data
+    @customer_datum.save
     authorize @customer_datum
 
+
     HTTParty.post('http://localhost:3000/user_products', body:{ customer_datum: @customer_datum.id, product: params[:product]})
+
+    @user_product = UserProduct.where(customer_datum: @customer_datum).last
+
+    redirect_to user_product_path(@user_product)
   end
 
   private
