@@ -18,7 +18,7 @@ skip_before_action :verify_authenticity_token, only: :create
 
   def create
     customer_datum = CustomerDatum.find(params[:customer_datum])
-    @product = Product.find_by(name: "White Blouse") #this is where you have to add API logic(passed in the simple_form)
+    @product = Product.find_by(name: "Navy Blazer") #this is where you have to add API logic(passed in the simple_form)
 
     winning_size = []
     @product.product_sizes.each do |product_size|
