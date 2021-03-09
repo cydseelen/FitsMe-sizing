@@ -42,6 +42,8 @@ class ProductsController < ApplicationController
   def index
     @product = policy_scope(Product)
     @product = Product.all
+    @user = current_user
+    @brand = @user.brand
 
   end
 
@@ -67,6 +69,6 @@ class ProductsController < ApplicationController
   private
 
   def product_params
-    params.require(:product).permit(:name, :garment_type, :fabric_type, :brand_id)
+    params.require(:product).permit(:name, :garment_type, :fabric_type, :brand_id, :photo)
   end
 end
