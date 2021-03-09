@@ -9,9 +9,10 @@ puts "Removing old customers, brands, product files and matches"
 UserProduct.destroy_all
 CustomerDatum.destroy_all
 ProductSize.destroy_all
-Product.destroy_all
 Brand.destroy_all
+Product.destroy_all
 User.destroy_all
+
 puts "Adding some Customers & products :)"
 puts "Creating a user :)"
 User.create!(
@@ -52,6 +53,28 @@ Product.create!(
     fabric_type: "tight less than 5cm allowance",
     garment_type:  "dress",
   )
+
+  Product.create!(
+    brand: Brand.first,
+    name: "Black Shirt",
+    fabric_type: "tight less than 5cm allowance",
+    garment_type:  "shirt",
+  )
+
+  Product.create!(
+    brand: Brand.first,
+    name: "Red Pants",
+    fabric_type: "tight less than 5cm allowance",
+    garment_type:  "pants",
+  )
+
+  Product.create!(
+    brand: Brand.first,
+    name: "Pink Blouse",
+    fabric_type: "tight less than 5cm allowance",
+    garment_type:  "shirt",
+  )
+
 
 puts "Creating a product_sizes :)"
 ProductSize.create(

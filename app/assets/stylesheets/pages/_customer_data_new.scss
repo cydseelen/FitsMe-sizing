@@ -9,11 +9,7 @@
   height: 88vh;
   }
 
-h1 {
-  font-weight: bold;
-}
-
-a {
+.navbar-brand a {
   color: white;
   font-size: 30px;
   padding-left: 15px;
@@ -24,15 +20,43 @@ a {
   }
 }
 
-p {
-  color: #F1ECE2;
+.log-1 {
+  font-size: 42px;
   font-weight: bold;
+  font-family: 'open sans condensed';
 }
 
-.form-control {
+.tab h1 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.tab span {
+  font-size: 20px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.tab p {
+  // color: #F1ECE2;
+  font-size: 16px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.7);
+  margin-top: 10px;
+}
+
+label {
+  font-weight: 700;
+  font-size: 24px;
+  color: white;
+  padding-right: 20px;
+}
+
+.tab .form-control {
   display: block;
   width: 100%;
-  font-family: inherit;
+  font-family: "Open sans condensed";
   color: rgb(241, 236, 226);
   padding: 0px 0px 8px;
   border: none;
@@ -48,6 +72,7 @@ p {
   background-clip: initial;
   transform: translateZ(0px);
   font-size: 30px;
+  font-weight: 700;
   -webkit-font-smoothing: antialiased;
   line-height: unset;
   -webkit-text-fill-color: rgba(241, 236, 226, 0.3);
@@ -55,6 +80,12 @@ p {
   transition: background-color 1e+08s ease 0s, box-shadow 0.1s ease-out 0s;
   box-shadow: rgba(241, 236, 226, 0.3) 0px 1px;
   background-color: transparent !important;
+}
+
+.form-control:focus {
+  border-color: inherit;
+  -webkit-box-shadow: none;
+  box-shadow: none;
 }
 
 button {
@@ -67,19 +98,6 @@ button {
   margin-right: 10px;
 }
 
-#sizeForm {
-    background-color: transparent !important;
-    margin: 100px auto;
-    padding: 40px;
-    width: 70%;
-    min-width: 300px;
-    font-family: "Open sans condensed";
-}
-
-.navbar-brand {
-  color: #fff;
-}
-
 .submit-button {
   background-color: #F1ECE2;
   border: 2px solid #F1ECE2;
@@ -88,17 +106,14 @@ button {
   font-weight: bold;
 }
 
-.btn.btn-med:hover {
-  font-style: italic;
-}
-
 /* Style the form */
 #sizeForm {
-  background-color: #ffffff;
-  margin: 100px auto;
-  padding: 40px;
-  width: 70%;
-  min-width: 300px;
+    background-color: transparent !important;
+    margin: 100px auto;
+    padding: 40px;
+    width: 100%;
+    min-width: 300px;
+    font-family: "Open sans condensed";
 }
 
 #prevBtn {
@@ -129,7 +144,7 @@ input {
   padding: 10px;
   width: 100%;
   font-size: 17px;
-  font-family: Raleway;
+  font-family: "Open sans condensed";
   border: 1px solid #aaaaaa;
 }
 

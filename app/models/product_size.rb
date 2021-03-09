@@ -65,7 +65,7 @@ end
 
 def get_hip_range
 #hip_range start: smaller - (diff)   end: bigger - (diff)
-@hip_range_extra_small_start = (@extra_small_product_size.hip_measurement - 20)*2
+@hip_range_extra_small_start = (@extra_small_product_size.hip_measurement - 40)*2
 @hip_range_extra_small_end = (@small_product_size.hip_measurement - (@small_product_size.hip_measurement - @extra_small_product_size.hip_measurement / 2))*2
 @hip_range_small_start = (@small_product_size.hip_measurement - ((@small_product_size.hip_measurement - @extra_small_product_size.hip_measurement) / 2))*2
 @hip_range_small_end = (@medium_product_size.hip_measurement - ((@medium_product_size.hip_measurement - @small_product_size.hip_measurement) / 2))*2
@@ -80,7 +80,7 @@ end
 def get_bust_range
   p "get bust range"
 #bust_range start: smaller - (diff)   end: bigger - (diff)
-@bust_range_extra_small_start = (@extra_small_product_size.bust_measurement - 20) *2
+@bust_range_extra_small_start = (@extra_small_product_size.bust_measurement - 40) *2
 @bust_range_extra_small_end = (@small_product_size.bust_measurement - ((@small_product_size.bust_measurement - @extra_small_product_size.bust_measurement) / 2))*2
 @bust_range_small_start = (@small_product_size.bust_measurement - ((@small_product_size.bust_measurement - @extra_small_product_size.bust_measurement) / 2))*2
 @bust_range_small_end = (@medium_product_size.bust_measurement - ((@medium_product_size.bust_measurement - @small_product_size.bust_measurement) / 2))*2
@@ -96,7 +96,7 @@ end
 def get_waist_range
   p "get waist range"
 #waist_range start: smaller - (diff)   end: bigger - (diff)
-@waist_range_extra_small_start = (@extra_small_product_size.waist_measurement - 20) *2
+@waist_range_extra_small_start = (@extra_small_product_size.waist_measurement - 40) *2
 @waist_range_extra_small_end = (@small_product_size.waist_measurement - ((@small_product_size.waist_measurement - @extra_small_product_size.waist_measurement) / 2))*2
 @waist_range_small_start = (@small_product_size.waist_measurement - ((@small_product_size.waist_measurement - @extra_small_product_size.waist_measurement) / 2))*2
 @waist_range_small_end = (@medium_product_size.waist_measurement - ((@medium_product_size.waist_measurement - @small_product_size.waist_measurement) / 2))*2
@@ -111,7 +111,7 @@ end
 def get_length_range
   p "get length range"
 #hip_range start: smaller - (diff)   end: bigger - (diff)
-@length_range_extra_small_start = (@extra_small_product_size.length_measurement - 20) *2
+@length_range_extra_small_start = (@extra_small_product_size.length_measurement - 40) *2
 @length_range_extra_small_end = (@small_product_size.length_measurement - ((@small_product_size.length_measurement - @extra_small_product_size.length_measurement) / 2))*2
 @length_range_small_start = (@small_product_size.length_measurement - ((@small_product_size.length_measurement - @extra_small_product_size.length_measurement) / 2))*2
 @length_range_small_end = (@medium_product_size.length_measurement - ((@medium_product_size.length_measurement - @small_product_size.length_measurement) / 2))*2
