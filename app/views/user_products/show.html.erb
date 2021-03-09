@@ -1,24 +1,26 @@
-<div class="background">
 
+<div class="background">
   <div class="overlay" style=" position: absolute;width: 100%; height: 100vh;text-align: left;">
-    <nav class="navbar" style="margin-top: 1%;">
-      <div class="navbar-brand">
-        <%= link_to "FitsMe", root_path, :style=>'color: white;' %>
-      </div>
-      <div class="col-md-12">
-        <div class="recommendation-container">
-          <br>
-          <h1>FitsMe recommends a size <strong>M</strong> in the <italic>Saenguin</italic> <strong>Ivory Blouse</strong>. </h1>
-          <br>
-          <%= image_tag "Schwarz-100-scaled.jpg", alt: "Ivory blouse", height: 250, width: 200, style: "object-fit: cover" %>
-          <br>
-          <p>Thank you for completing our quiz!</p>
-          <h1>Click bellow to shop this product:</h1>
-          <div style="width: 150px; margin: 0 auto;">
-          <br>
-          <a class="new-medium-button text-center pl-0" href="https://saenguin.com/product/blouse-ivory/">Add to cart</a>
+
+    <div class="navbar-brand">
+      <a class="log-1" href="http://www.fitsmesizing.com/">Fits<span>Me</span></a>
+    </div>
+    <div class="col-md-12">
+      <div class="recommendation-container">
+        <h1>FitsMe recommends size:</h1>
+        <div class="size-rec">
+          <%= image_tag "Schwarz-100-scaled.jpg", alt: "Ivory blouse", height: 200, width: 150, style: "object-fit: cover" %>
+          <div class="animation">
+            <h1> <%= @user_product.product_size.size_name %></h1>
           </div>
+        </div>
+        <span>in the Saenguin <%= @user_product.product_size.product.name %></span>
+        <p>Thank you for completing our quiz!</p>
+        <p>Click bellow to shop this product:</p>
+        <div style="width: 150px; margin: 0 auto;">
+          <a class="new-medium-button text-center pl-0" href="https://saenguin.com/product/blouse-ivory/">Add to cart</a>
         </div>
       </div>
     </div>
   </div>
+</div>
