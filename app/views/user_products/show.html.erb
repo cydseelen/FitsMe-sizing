@@ -1,11 +1,26 @@
-<br>
-<div class="card-transformation">
-  <div class="form-container">
-    <img src="https://img01.ztat.net/article/spp-media-p1/c4efdf10dd943019b611ab545eee1b6f/cc76477b8b88481eb31dcb44ee1a3500.jpg?imwidth=1800" height="400" width="300">
-    <br>
-    <h1>Based on your fit details we recommend a size <strong><%= @user_product.product_size.size_name %></strong> in the <%= @user_product.product_size.product.name %> <strong></strong>. </h1>
-    <p>Click below to shop this product:</p>
-    <%= link_to 'Add to cart', root_path, class: "btn btn-med" %>
-    <br>
+
+<div class="background">
+  <div class="overlay" style=" position: absolute;width: 100%; height: 100vh;text-align: left;">
+
+    <div class="navbar-brand">
+      <a class="log-1" href="http://www.fitsmesizing.com/">Fits<span>Me</span></a>
+    </div>
+    <div class="col-md-12">
+      <div class="recommendation-container">
+        <h1>FitsMe recommends size:</h1>
+        <div class="size-rec">
+          <%= image_tag "Schwarz-100-scaled.jpg", alt: "Ivory blouse", height: 200, width: 150, style: "object-fit: cover" %>
+          <div class="animation">
+            <h1>@user_product.product_size.size_name</h1>
+          </div>
+        </div>
+        <span>in the Saenguin @user_product.product_size.product.name</span>
+        <p>Thank you for completing our quiz!</p>
+        <p>Click bellow to shop this product:</p>
+        <div style="width: 150px; margin: 0 auto;">
+          <a class="new-medium-button text-center pl-0" href="https://saenguin.com/product/blouse-ivory/">Add to cart</a>
+        </div>
+      </div>
+    </div>
   </div>
 </div>

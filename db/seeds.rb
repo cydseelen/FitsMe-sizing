@@ -6,7 +6,6 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 puts "Removing old customers, brands, product files and matches"
-
 UserProduct.destroy_all
 CustomerDatum.destroy_all
 ProductSize.destroy_all
@@ -14,40 +13,24 @@ Brand.destroy_all
 Product.destroy_all
 User.destroy_all
 
-
-
 puts "Adding some Customers & products :)"
-
 puts "Creating a user :)"
-
 User.create!(
     email: "cydnie@mail.com",
     password: "123456"
   )
 
-
-
 puts "Adding some Brands :)"
-
 Brand.create!(
     user: User.first,
     name: 'saenguin'
   )
-
-User.create!(
-    email: "g@mail.com",
-    password: "123456",
-    brand: Brand.first
-  )
-
 puts "Creating a brand :)"
-
 User.create!(
     email: "a@mail.com",
     password: "123456",
     brand: Brand.first
   )
-
 CustomerDatum.create!(
     user: User.first,
     age: 20,
@@ -56,9 +39,7 @@ CustomerDatum.create!(
     body_shape: 1,
     fit_preference: 0
   )
-
 puts "Creating a product :)"
-
 Product.create!(
     brand: Brand.first,
     name: "White Blouse",
@@ -66,26 +47,58 @@ Product.create!(
     garment_type:  "shirt",
   )
 
-puts "Creating a product_sizes :)"
+  Product.create!(
+    brand: Brand.first,
+    name: "White Dress",
+    fabric_type: "tight less than 5cm allowance",
+    garment_type:  "dress",
+  )
 
+  Product.create!(
+    brand: Brand.first,
+    name: "Black Shirt",
+    fabric_type: "tight less than 5cm allowance",
+    garment_type:  "shirt",
+  )
+
+  Product.create!(
+    brand: Brand.first,
+    name: "Red Pants",
+    fabric_type: "tight less than 5cm allowance",
+    garment_type:  "pants",
+  )
+
+  Product.create!(
+    brand: Brand.first,
+    name: "Pink Blouse",
+    fabric_type: "tight less than 5cm allowance",
+    garment_type:  "shirt",
+  )
+
+
+puts "Creating a product_sizes :)"
 ProductSize.create(
     product: Product.first,
     size_name: "extra small",
     hip_measurement: 50,
     bust_measurement: 47.5,
     waist_measurement: 48.5,
-    length_measurement: 67.5
+    length_measurement: 67.5,
+    hip_range: 45..51.12,
+    waist_range: 42..49.5,
+    bust_range: 40..48.75
   )
-
 ProductSize.create(
     product: Product.first,
     size_name: "small",
     hip_measurement: 52.5,
     bust_measurement: 50,
     waist_measurement: 51,
-    length_measurement: 68.1
+    length_measurement: 68.1,
+    hip_range: 51.12..,
+    waist_range: 42..49.5,
+    bust_range: 40..48.75
   )
-
 ProductSize.create(
     product: Product.first,
     size_name: "medium",
@@ -94,7 +107,6 @@ ProductSize.create(
     waist_measurement: 54.5,
     length_measurement: 69
   )
-
 ProductSize.create(
     product: Product.first,
     size_name: "large",
@@ -103,7 +115,6 @@ ProductSize.create(
     waist_measurement: 58,
     length_measurement: 69.9
   )
-
 ProductSize.create(
     product: Product.first,
     size_name: "extra large",
@@ -112,7 +123,6 @@ ProductSize.create(
     waist_measurement: 61.5,
     length_measurement: 70.8
   )
-
 UserProduct.create(
   product_size: ProductSize.first,
   customer_datum: CustomerDatum.first

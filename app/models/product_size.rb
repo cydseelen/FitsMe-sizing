@@ -3,6 +3,7 @@ class ProductSize < ApplicationRecord
 
 
   belongs_to :product
+  has_one_attached :photo
   validates :size_name, inclusion: {in: ["extra small", "small", "medium", "large", "extra large"] }
 
 
