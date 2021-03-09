@@ -25,6 +25,14 @@ body {
 	font-family: 'open sans condensed';
 }
 
+.nav-link {
+	color: #fff;
+}
+
+.nav-link:hover {
+	color: #fff;
+}
+
 .navbar-brand span {
 	font-weight: lighter;
 }
@@ -55,7 +63,7 @@ body {
 
 .info h2 {
 	font-size: 4rem;
-  font-weight: 700;
+	font-weight: 700;
 }
 
 .info p {
@@ -68,14 +76,14 @@ body {
 	font-size: 28px;
 	color: #fff;
 	background-color: transparent;
-	border: 3px solid #fff;
+	border: 2px solid #fff;
 	font-weight: bold;
 	border-radius: 32px;
 	width: 200px;
 	margin-top: 35px;
 	padding: 4px;
 	// font-family: 'Roboto';
-  letter-spacing: 3px;
+	letter-spacing: 3px;
 }
 a.button-main {
 	text-decoration: none;
