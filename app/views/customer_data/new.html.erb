@@ -14,9 +14,6 @@
             <p>Takes 1 min <i class="far fa-clock"></i></p>
           </div>
           <%= simple_form_for @customer_datum, html: { id: "sizeForm" } do |f| %>
-      <!-- <div class="tab"> This is for the product matching, still a work in progress
-        <%= f.input :product, value: Product.find_by(name: "White Blouse"), :as => :hidden, :input_html => { :value => "some value" } %>
-      </div> -->
       <div class="tab">
         <%#= f.input :age, as: :slider, min: 0, max: 10, step: 2, orientation: 'vertical',
         range: true, ticks: [0, 5, 10] %>

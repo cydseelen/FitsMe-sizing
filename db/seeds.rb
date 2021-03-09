@@ -9,9 +9,10 @@ puts "Removing old customers, brands, product files and matches"
 UserProduct.destroy_all
 CustomerDatum.destroy_all
 ProductSize.destroy_all
-Product.destroy_all
 Brand.destroy_all
+Product.destroy_all
 User.destroy_all
+
 puts "Adding some Customers & products :)"
 puts "Creating a user :)"
 User.create!(
