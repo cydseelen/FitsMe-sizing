@@ -4,13 +4,13 @@ class CustomerDatum < ApplicationRecord
   has_many :user_products
   has_many :product_sizes, through: :user_products
 
-  validates :age, presence: true, inclusion: { in: (15..100),
+  validates :age, presence: true, inclusion: { in: (15..110),
     message: "Invalid entry. Please choose a value between 16 and 90." }
 
   validates :height, presence: true, inclusion: { in: (120..210),
     message: "Invalid entry. Please choose a value between 120 and 210." }
 
-  validates :weight, presence: true, inclusion: { in: (20..135),
+  validates :weight, presence: true, inclusion: { in: (20..160),
     message: "Invalid entry. Please choose a value between 80 and 135." }
 
   #validates :body_shape, presence: true

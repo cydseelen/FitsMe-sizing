@@ -7,10 +7,16 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 puts "Removing old customers, brands, product files and matches"
 UserProduct.destroy_all
+puts "1"
 CustomerDatum.destroy_all
+puts "2"
 ProductSize.destroy_all
+puts "3 a user :)"
 Brand.destroy_all
+
+puts "4 a user :)"
 Product.destroy_all
+puts "5 a user :)"
 User.destroy_all
 
 puts "Adding some Customers & products :)"
@@ -39,7 +45,7 @@ CustomerDatum.create!(
     body_shape: 1,
     fit_preference: 0
   )
-puts "Creating a product :)"
+puts "Creating products :)"
 Product.create!(
     brand: Brand.first,
     name: "White Blouse",
@@ -54,51 +60,6 @@ Product.create!(
     garment_type:  "jacket"
   )
 
-<<<<<<< HEAD
-puts "Creating a blazer :)"
-ProductSize.create(
-    product: Product.last,
-    size_name: "extra small",
-    hip_measurement: 45.40,
-    bust_measurement: 46.00,
-    waist_measurement: 35.90,
-    length_measurement: 69.10
-  )
-ProductSize.create(
-    product: Product.last,
-    size_name: "small",
-    hip_measurement: 47.90,
-    bust_measurement: 46.00,
-    waist_measurement: 38.40,
-    length_measurement: 69.70
-  )
-ProductSize.create(
-    product: Product.last,
-    size_name: "medium",
-    hip_measurement: 51.40,
-    bust_measurement: 52.00,
-    waist_measurement: 41.90,
-    length_measurement: 69.70
-  )
-ProductSize.create(
-    product: Product.last,
-    size_name: "large",
-    hip_measurement: 54.90,
-    bust_measurement: 55.50,
-    waist_measurement: 45.40,
-    length_measurement: 71.50
-  )
-ProductSize.create(
-    product: Product.last,
-    size_name: "extra large",
-    hip_measurement: 58.40,
-    bust_measurement: 59.00,
-    waist_measurement: 48.90,
-    length_measurement: 72.40
-  )
-
-puts "Creating a blouse :)"
-=======
   Product.create!(
     brand: Brand.first,
     name: "Black Shirt",
@@ -120,9 +81,9 @@ puts "Creating a blouse :)"
     garment_type:  "shirt",
   )
 
+puts "Creating a blouse :)"
 
 puts "Creating a product_sizes :)"
->>>>>>> master
 ProductSize.create(
     product: Product.first,
     size_name: "extra small",
@@ -163,6 +124,49 @@ ProductSize.create(
     waist_measurement: 61.5,
     length_measurement: 70.8
   )
+
+puts "Creating a blazer :)"
+ProductSize.create(
+    product: Product.second,
+    size_name: "extra small",
+    hip_measurement: 45.40,
+    bust_measurement: 46.00,
+    waist_measurement: 35.90,
+    length_measurement: 69.10
+  )
+ProductSize.create(
+    product: Product.second,
+    size_name: "small",
+    hip_measurement: 47.90,
+    bust_measurement: 46.00,
+    waist_measurement: 38.40,
+    length_measurement: 69.70
+  )
+ProductSize.create(
+    product: Product.second,
+    size_name: "medium",
+    hip_measurement: 51.40,
+    bust_measurement: 52.00,
+    waist_measurement: 41.90,
+    length_measurement: 69.70
+  )
+ProductSize.create(
+    product: Product.second,
+    size_name: "large",
+    hip_measurement: 54.90,
+    bust_measurement: 55.50,
+    waist_measurement: 45.40,
+    length_measurement: 71.50
+  )
+ProductSize.create(
+    product: Product.second,
+    size_name: "extra large",
+    hip_measurement: 58.40,
+    bust_measurement: 59.00,
+    waist_measurement: 48.90,
+    length_measurement: 72.40
+  )
+
 UserProduct.create(
   product_size: ProductSize.first,
   customer_datum: CustomerDatum.first
