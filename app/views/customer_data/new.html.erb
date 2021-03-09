@@ -1,41 +1,40 @@
   <div class="background">
 
-  <div class="overlay" style=" position: absolute;width: 100%; height: 100vh;text-align: left;">
-    <nav class="navbar" style="margin-top: 1%;">
-      <div class="navbar-brand">
-        <%= link_to "FitsMe", root_path, :style=>'color: white;' %>
-      </div>
-  </nav>
-  <div class="col-md-12">
-    <div class="quiz-container">
-      <div class="tab">
-      <h1>Welcome to the <strong>Fits</strong>Me size finder!</h1>
-      <p>Answer a few questions to get your size recommendation</p>
-      <p>Takes 1 min</p>
-      <button>Start</button>Press <strong>Enter &#x21B2;</strong>
-    </div>
-      <%= simple_form_for @customer_datum, html: { id: "sizeForm" } do |f| %>
-      <div class="tab">
+    <div class="overlay" style=" position: absolute;width: 100%; height: 100vh;text-align: left;">
+      <nav class="navbar" style="margin-top: 1%;">
+        <div class="navbar-brand">
+          <a class="log-1" href="http://www.fitsmesizing.com/">Fits<span>Me</span></a>
+        </div>
+      </nav>
+      <div class="col-md-12">
+        <div class="quiz-container">
+          <div class="tab">
+            <h1>Welcome to the FitsMe size finder!</h1>
+            <span>Answer a few questions to get your size recommendation</span>
+            <p>Takes 1 min <i class="far fa-clock"></i></p>
+          </div>
+          <%= simple_form_for @customer_datum, html: { id: "sizeForm" } do |f| %>
+      <!-- <div class="tab"> This is for the product matching, still a work in progress
         <%= f.input :product, value: Product.find_by(name: "White Blouse"), :as => :hidden, :input_html => { :value => "some value" } %>
-      </div>
+      </div> -->
       <div class="tab">
         <%#= f.input :age, as: :slider, min: 0, max: 10, step: 2, orientation: 'vertical',
-                     range: true, ticks: [0, 5, 10] %>
-        <%= f.input :age, label: "How old are you?", placeholder: "Type your answer here..." %>
+        range: true, ticks: [0, 5, 10] %>
+        <%= f.input :age, label: "1→ How old are you?", placeholder: "Type your answer here..." %>
       </div>
 
       <div class="tab">
-        <%= f.input :height, label: 'What is your height in cm?', placeholder: "Type your answer here..." %>
+        <%= f.input :height, label: '2→ What is your height in cm?', placeholder: "Type your answer here..." %>
       </div>
 
       <div class="tab">
-        <%= f.input :weight, label: 'What is your weight in kg?', placeholder: 'Type your answer here...' %>
+        <%= f.input :weight, label: '3→ What is your weight in kg?', placeholder: 'Type your answer here...' %>
       </div>
       <div class="tab">
-        <%= f.input :body_shape, collection: [[0, 'slim'], [1, 'athletic'], [2, 'full']], label_method: :second, value_method: :first %>
+        <%= f.input :body_shape, label: '4→ Please select your build', collection: [[0, 'slim'], [1, 'athletic'], [2, 'full']], label_method: :second, value_method: :first %>
       </div>
       <div class="tab">
-        <%= f.input :fit_preference, collection: [[0, 'tight'], [1, 'medium'], [2, 'loose']], label_method: :second, value_method: :first %>
+        <%= f.input :fit_preference, label: '4→ How would you like this item to fit?', collection: [[0, 'tight'], [1, 'medium'], [2, 'loose']], label_method: :second, value_method: :first %>
         <%= f.button :submit, "Get your recommendation", class: "submit-button" %>
       </div>
       <% end %>
@@ -55,5 +54,5 @@
       </div>
     </div>
   </div>
-  </div>
-  </div>
+</div>
+</div>
