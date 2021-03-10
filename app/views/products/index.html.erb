@@ -1,16 +1,25 @@
 <div class="container">
     <div class="row1">
+        <div class="bottom d-flex justify-content-flex-start">
+          <ul>
+          <% if user_signed_in?  %>
+            <li style="font-size: 15px; padding: 5px 5px; color:white;"> <i class="far fa-user"></i> <%= link_to 'Log Out', edit_user_registration_path, :style=>'color: white; font-size: 15px; justify-content:center;'%></li>
+          <% else %>
+            <li style="font-size: 15px; padding: 5px 5px; color: white;"><i class="far fa-user"></i><%= link_to 'Sign in', new_user_session_path, :style=>'color: white; font-size: 15px;' %></li>
+          <% end %> 
+          </ul>   
+        </div>
       <div class="logo">
         <h1><%= link_to "Fits", root_path, :style=>'color: white; font-weight: bold;' %>Me</h1>
       </div>
       <ul>
-        <li></h3>Brand Profile and Setup</h3></li>
-        <li style="font-size: 15px;"><i class="fas fa-coins"></i> Purchase History</li>
-        <% if user_signed_in?  %>
-          <li><%= link_to 'Not you? Change Brand Login', edit_user_registration_path, :style=>'color: white; font-size: 16px;'%></li>
-        <% else %>
-          <li><%= link_to 'Sign in', new_user_session_path, :style=>'color: white; font-size: 16px;' %></li>
-        <% end %>
+        <li></h3>Brand Profile and Setup</h3></li> 
+        <div class="d-flex justify-content-center">
+          <li style="font-size: 15px; padding: 5px 5px;"><i class="fas fa-coins"></i> Payment Center</li>
+        </div>
+        <div class="d-flex justify-content-center">
+          <li style="font-size: 15px; padding: 5px 5px;"><i class="fas fa-chart-area"></i> Product Analytics</li>
+        </div>
       </ul>
     </div>
     <div class="row2">
@@ -36,7 +45,6 @@
           <div>
             <br>
           <div class="row" style="border-bottom: 1px solid grey; border-top: 1px solid grey;" >
-          <%# style="border-bottom: 2px solid grey; border-top: 2px solid grey;" %>
             <h3><b><%= @brand.name.capitalize %> Product History<b></h3>
           </div>
           <div class ="row">

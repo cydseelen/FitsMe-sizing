@@ -183,11 +183,16 @@
   object-fit: cover;
 }
 
-.form-input {
-  height: auto;
-  font-size: 12px;
-  padding: 10px;
-  color: black;
-  font-family: Raleway;
-  border: 2px solid #8a8484;
-  }
+.bottom {
+  position: absolute;
+  bottom: 10px;
+} 
+
+// .form-input {
+//   height: auto;
+//   font-size: 12px;
+//   padding: 10px;
+//   color: black;
+//   font-family: Raleway;
+//   border: 2px solid #8a8484;
+//   }

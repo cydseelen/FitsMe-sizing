@@ -2,16 +2,26 @@
 <body>
   <div class="container">
     <div class="row1">
+        <div class="bottom d-flex justify-content-flex-start">
+          <ul>
+          <% if user_signed_in?  %>
+            <li style="font-size: 15px; padding: 5px 5px; color:white;"> <i class="far fa-user"></i> <%= link_to 'Log Out', edit_user_registration_path, :style=>'color: white; font-size: 15px; justify-content:center;'%></li>
+          <% else %>
+            <li style="font-size: 15px; padding: 5px 5px; color: white;"><i class="far fa-user"></i><%= link_to 'Sign in', new_user_session_path, :style=>'color: white; font-size: 15px;' %></li>
+          <% end %> 
+          </ul>   
+        </div>
       <div class="logo">
         <h1><%= link_to "Fits", root_path, :style=>'color: white; font-weight: bold;' %>Me</h1>
       </div>
       <ul>
-        <li></h3>Add New Product and Sizes</h3></li>
-        <% if user_signed_in?  %>
-          <li><%= link_to 'Not you? Change Brand Login', edit_user_registration_path, :style=>'color: white; font-size: 16px;'%></li>
-        <% else %>
-          <li><%= link_to 'Sign in', new_user_session_path, :style=>'color: white; font-size: 16px;' %></li>
-        <% end %>
+        <li></h3>New Product Setup</h3></li> 
+        <div class="d-flex justify-content-center">
+          <li style="font-size: 15px; padding: 5px 5px;"><i class="fas fa-coins"></i> Payment Center</li>
+        </div>
+        <div class="d-flex justify-content-center">
+          <li style="font-size: 15px; padding: 5px 5px;"><i class="fas fa-chart-area"></i> Product Analytics</li>
+        </div>
       </ul>
     </div>
   <div class="row2">
@@ -55,8 +65,8 @@
                   <%= f.button :submit, class: 'btn-orange-big', style: "margin-left: 90px;" %>
                   <% end %>
                 </div>
-                <div class="row">
-                  <%= link_to "Product Gallery", products_path, :class=>'btn-orange-big', style: "margin-left: 90px; margin-top: 20px;" %>
+               <div class="row bottom">
+                  <p><%= link_to "Return to Product Gallery     ", products_path, style: "color: grey; margin-left: 300px; margin-top: 20px; font-size: 15px;" %> <i class="fas fa-long-arrow-alt-right"></i></p>
                 </div>
               </div>
               <%# <%= image_tag 'sewing2.jpg', 
