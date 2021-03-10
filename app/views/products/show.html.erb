@@ -2,7 +2,7 @@
   <div class="container">
     <div class="row1">
       <div class="logo">
-        <%= link_to "FitsMe", root_path, :style=>'color: white;' %>
+        <h1><%= link_to "Fits", root_path, :style=>'color: white; font-weight: bold;' %>Me</h1>
       </div>
       <ul>
         <li></h3>Product Spotlight</h3></li>
@@ -17,8 +17,8 @@
     <div class="content">
       <div class="index-grid2">
         <div class= "row">
-          <div class = "col-8">
-            <h1 style="color:grey;">Product Spotlight - <%= @product.name %></h1>
+          <div class = "col-8" >
+            <h1 style="color:$burntorange;">Snapshot: <b><%= @product.name %><b></h1>
             <h3> <em>Sanguene<em></h3>
             <p> <i class="fas fa-location-arrow"></i> 10 Spring Lane Cleveland, Ohio 10889  
               &nbsp; &nbsp; <i class="fas fa-user"> </i> User Since: October 2020
@@ -29,25 +29,15 @@
                 width: 200px; height: auto; margin: 2px; opacity: 1.0; border-color: $gray; box-shadow: 0 10px 20px 0 $grey;"%>
           </div>
         </div>
-        <div class="row">
-          <h3>Product Snapshot</h3>
+        <div class="row" style="border-bottom: 1px solid grey; border-top: 1px solid grey;">
+          <h3><b> <b></h3>
         </div>
         <div class="row">
-          <div class="col-4">
+          <%# <div class="col-4">
             <%= image_tag 'brand_graph3.png', style: "border-radius: 8px;
               width: auto; height: 400px; margin: 20px 20px; opacity: 1.0; border-color: $gray;"%>
-          </div>
-          <div class="col-3 justify-content-center align-items-flex-start p-5">
-            <% if @product.photo.attached?%>
-              <%= cl_image_tag @product.photo.key, style: "border-radius: 8px;
-                 width: 200px; height: auto; margin: 5px 5px; opacity: 1.0; border-color: $gray;" %>
-              <%# </p><b>Product Name: <b><%= @product.name %>
-            <%else%>
-              <%= image_tag 'noimage.jpg', style: "border-radius: 8px;
-                  width: 200px; height: auto; margin: 5px 5px; opacity: 1.0; border-color: $gray;"%>
-             <%end%>
-            </div>
-          <div class="col-5 justify-content-center align-items-flex-start p-5">
+          <%# </div> %>
+          <div class="col-6 justify-content-center align-items-center p-3">
             <h3>Product Details</h3>
                 <p><b><i class="fas fa-tshirt"></i><b>  <%= @product.garment_type.capitalize %>  
                    &nbsp; &nbsp;<b><i class="fas fa-cut"></i><b>  <%= @product.fabric_type.capitalize %></p>
@@ -58,11 +48,23 @@
                   <p><i class="fas fa-check-square"></i><%=size.size_name %></p>
                 </div>
               <% end %>
-                <%= link_to "Add More Sizes Now", new_product_product_size_path(@product), :style=>"color:black;", :class=>'btn-orange-big'  %>
+              
+                <%= link_to "+Size", new_product_product_size_path(@product), :style=>"color:black;", :class=>'btn-orange-big'  %>
+            
                 <% if @product.product_sizes.size >= 5%>
-                  <%= link_to "convert sizes", convert_product_sizes_path(product_sizes: @product.product_sizes.map(&:id), product_id: @product), :class=>"btn-orange-big" %>
+                  <%= link_to "Convert", convert_product_sizes_path(product_sizes: @product.product_sizes.map(&:id), product_id: @product), :class=>"btn-orange-big" %>
                 <%end %>
-            <%# </div> %>
+              
+            </div>
+          <div class="col-6 d-flex justify-content-center align-items-center p-3">
+            <% if @product.photo.attached?%>
+              <%= cl_image_tag @product.photo.key, style: "border-radius: 8px;
+                 width: 250px; height: auto; margin: 5px 5px; opacity: 1.0; border-color: $gray;" %>
+              <%# </p><b>Product Name: <b><%= @product.name %>
+            <%else%>
+              <%= image_tag 'noimage.jpg', style: "border-radius: 8px;
+                  width: 250px; height: auto; margin: 5px 5px; opacity: 1.0; border-color: $gray;"%>
+             <%end%>
             </div>
           </div>
         </div>

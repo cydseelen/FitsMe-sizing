@@ -3,7 +3,7 @@
   <div class="container">
     <div class="row1">
       <div class="logo">
-        <%= link_to "FitsMe", root_path, :style=>'color: white;' %>
+        <h1><%= link_to "Fits", root_path, :style=>'color: white; font-weight: bold;' %>Me</h1>
       </div>
       <ul>
         <li></h3>Add New Product and Sizes</h3></li>
@@ -34,7 +34,6 @@
               <%= image_tag 'brandtime2b.png', style: "
             width: 90%; height: auto; margin: 5px;"%>
           </div>
-
           <div class="row">
             <div class="col-5">
               <h3>Size Information</h3>
@@ -42,10 +41,12 @@
               <div class="card-new">
                 <%= simple_form_for [@product, @product_size] do |f| %>
                   <%= f.input :size_name, collection: ["extra small", "small", "medium", "large", "extra large"] , prompt: "Select Size" %>
-                  <%= f.input :hip_measurement, class: 'btn-size' %>
-                  <%= f.input :bust_measurement, class: 'btn-size' %>
-                  <%= f.input :waist_measurement, class: 'btn-size' %>
-                  <%= f.input :length_measurement, class: 'btn-size' %>
+                  <%= f.input :hip_measurement %>
+                
+                  <%= f.input :bust_measurement %>
+
+                  <%= f.input :waist_measurement %>
+                  <%= f.input :length_measurement %>
               </div>
             </div>
             <div class="col-7 d-flex justify-content-flex-start align-items-center">
