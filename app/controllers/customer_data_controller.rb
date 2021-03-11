@@ -24,7 +24,7 @@ class CustomerDataController < ApplicationController
     authorize @customer_datum
 
 
-    HTTParty.post('http://localhost:3000/user_products', body:{ customer_datum: @customer_datum.id, product: params[:product]})
+    HTTParty.post('http://www.fitsmesizing.com/user_products', body:{ customer_datum: @customer_datum.id, product: params[:product]})
 
     @user_product = UserProduct.where(customer_datum: @customer_datum).last
 
