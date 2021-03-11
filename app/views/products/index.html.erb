@@ -44,14 +44,14 @@
           </div>
           <div>
             <br>
-          <div class="row" style="border-bottom: 1px solid grey; border-top: 1px solid grey;" >
-            <h3><b><%= @brand.name.capitalize %> Product History<b></h3>
+          <div class="row" style="border-bottom: 1px solid grey; border-top: 1px solid grey; width: 80vw;" >
+            <h3 style="margin-left: 30px;"><b><%= @brand.name.capitalize %> Product History<b></h3>
           </div>
           <div class ="row">
             <div class = "col-3">
               <div class = "card-left">
                 <div class="d-flex justify-content-right align-items-center">
-                 <div class="row d-flex justify-content-right align-items-center">
+                 <div class="row d-flex justify-content-right align-items-center" style="margin-left: 30px;">
                    </h3>Product Quick Stats<h3>
                    <br>
                     <p style="size:18px; color: black;"> <i class="far fa-arrow-alt-circle-up"></i> Medium is your most commonly ordered size</p>
@@ -63,12 +63,10 @@
             </div>
             <div class = "col-9">
               <br>
-              </h3 style="font-size: 50px;">Product Gallery  </h3>
-              <br>
-              <%= link_to "+Add", new_product_path(@brand), :class=>'btn-orange-big2', :style=>'margin: 20px 0px; ' %> 
+              </h3 style="font-size: 50px;">Product Gallery  </h3> <%= link_to "+", new_product_path(@brand), :style=>'margin: 20px 0px; color: $burntorange; font-size:30px;' %> 
                <br>
                <br>
-             <div class="size-grid">
+             <div class="size-grid" style="margin-left:20px;">
             <% @product.each do |product| %>
               <div class="card-index d-flex justify-content-center">
               <%= link_to product_path(product) do %>
