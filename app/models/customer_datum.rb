@@ -1,7 +1,7 @@
 class CustomerDatum < ApplicationRecord
   belongs_to :user
   #before_save :convert_user_data
-  has_many :user_products
+  has_many :user_products, dependent: :destroy
   has_many :product_sizes, through: :user_products
 
   validates :age, presence: true, inclusion: { in: (15..110),

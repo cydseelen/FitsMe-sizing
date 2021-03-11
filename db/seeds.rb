@@ -13,7 +13,6 @@ puts "2"
 ProductSize.destroy_all
 puts "3 a user :)"
 Brand.destroy_all
-
 puts "4 a user :)"
 Product.destroy_all
 puts "5 a user :)"
@@ -28,15 +27,16 @@ User.create!(
 
 puts "Adding some Brands :)"
 Brand.create!(
-    user: User.first,
     name: 'saenguin'
   )
 puts "Creating a brand :)"
+
 User.create!(
     email: "a@mail.com",
     password: "123456",
     brand: Brand.first
   )
+
 CustomerDatum.create!(
     user: User.first,
     age: 20,

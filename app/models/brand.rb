@@ -1,3 +1,4 @@
 class Brand < ApplicationRecord
-  belongs_to :user, optional: true
+  has_many :users, dependent: :nullify
+  has_many :products, dependent: :destroy
 end
