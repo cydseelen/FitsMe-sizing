@@ -19,7 +19,7 @@ class ProductSizesController < ApplicationController
     authorize @product_size
 
     if @product_size.save
-      redirect_to product_path(:id)
+      redirect_to product_path(@product.id)
     else
       render 'new'
     end
