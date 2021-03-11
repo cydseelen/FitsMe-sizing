@@ -22,7 +22,7 @@
 
 .log-1 {
   font-size: 42px;
-  font-weight: bold;
+  font-weight: 700;
   font-family: 'open sans condensed';
 }
 
@@ -39,7 +39,6 @@
 }
 
 .tab p {
-  // color: #F1ECE2;
   font-size: 16px;
   font-weight: 700;
   color: rgba(255, 255, 255, 0.7);
@@ -56,7 +55,7 @@ label {
 .tab .form-control {
   display: block;
   width: 100%;
-  font-family: "Open sans condensed";
+  font-family: "roboto";
   color: rgb(241, 236, 226);
   padding: 0px 0px 8px;
   border: none;
@@ -110,10 +109,10 @@ button {
 #sizeForm {
     background-color: transparent !important;
     margin: 100px auto;
-    padding: 40px;
+    padding: 20px;
     width: 100%;
     min-width: 300px;
-    font-family: "Open sans condensed";
+    font-family: "roboto";
 }
 
 #prevBtn {
@@ -144,7 +143,7 @@ input {
   padding: 10px;
   width: 100%;
   font-size: 17px;
-  font-family: "Open sans condensed";
+  font-family: "roboto";
   border: 1px solid #aaaaaa;
 }
 

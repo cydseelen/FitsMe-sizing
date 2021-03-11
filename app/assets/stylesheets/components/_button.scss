@@ -34,7 +34,7 @@
    
   }
 
-  
+
 
   .btn-orange-big:hover {
     background: $burntorange;
@@ -151,6 +151,7 @@
     border: 2px solid $burntorange;
     box-sizing: border-box;
     border-radius: 31px;
+    background-color: white;
     color: $burntorange;
     transition: background 0.3s ease;
     width: 150px;
@@ -159,6 +160,11 @@
     text-align: center;
     display: table-cell;
     vertical-align: middle;
-    font-size: 16px;
-    font-family: "helvetica";
+    font-size: 18px;
+    font-family: "roboto";
+
+    &:hover {
+    text-decoration: underline;
+    color: $burntorange !important;
+  }
   }
