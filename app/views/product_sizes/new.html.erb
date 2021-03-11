@@ -51,12 +51,12 @@
               <div class="card-new">
                 <%= simple_form_for [@product, @product_size] do |f| %>
                   <%= f.input :size_name, collection: ["extra small", "small", "medium", "large", "extra large"] , prompt: "Select Size" %>
-                  <%= f.input :hip_measurement %>
+                  <%= f.input :hip_measurement, as: :string %>
                 
-                  <%= f.input :bust_measurement %>
+                  <%= f.input :bust_measurement, as: :string %>
 
-                  <%= f.input :waist_measurement %>
-                  <%= f.input :length_measurement %>
+                  <%= f.input :waist_measurement, as: :string %>
+                  <%= f.input :length_measurement, as: :string %>
               </div>
             </div>
             <div class="col-7 d-flex justify-content-flex-start align-items-center">

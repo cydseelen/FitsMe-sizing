@@ -59,7 +59,7 @@
                 <%= link_to " Add Size", new_product_product_size_path(@product), :style=>"color:black;", :class=>'btn-orange-big'  %>
             
                 <% if @product.product_sizes.size >= 5%>
-                  <%= link_to "Convert", convert_product_sizes_path(product_sizes: @product.product_sizes.map(&:id), product_id: @product), :class=>"btn-orange-big" %>
+                  <%= link_to "Activate", convert_product_sizes_path(product_sizes: @product.product_sizes.map(&:id), product_id: @product), :class=>"btn-orange-big", :style=>"color:black;" %>
                 <%end %>
               
             </div>
