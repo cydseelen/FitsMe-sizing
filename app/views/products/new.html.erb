@@ -28,7 +28,7 @@
         <div class="index-grid2">
           <div class= "row">
             <div class = "col-8">
-              <h1 style="color:black;">Product Upload</h1>
+              <h1 style="color:$burntorange;"><b>Product Upload<b></h1>
               <h3> <em><%= @brand.name.capitalize %><em></h3>
               <p> <i class="fas fa-location-arrow"></i> 10 Spring Lane Cleveland, Ohio 10889  
                 &nbsp; &nbsp; <i class="fas fa-user"> </i> User Since: October 2020
@@ -58,11 +58,11 @@
             <div class="col-7 d-flex justify-content-flex-start align-items-center">
               <div class="index-grid2">
                 <div class="row" >
-                  <%= f.button :submit, class: 'btn-orange-big', style: "margin-left: 90px;" %>
+                  <h3><%= f.button :submit, label: false, wrapper_html: { class: 'fas fa-long-arrow-alt-right' }, style: "margin-left: 30px; font-size: 50px; font-style: bold;" %><i class="fas fa-long-arrow-alt-right"></i></h3>
                   <% end %>
                 </div>
                 <div class="row bottom">
-                  <p><%= link_to "Return to Product Gallery     ", products_path, style: "color: grey; margin-left: 300px; margin-top: 20px; font-size: 15px;" %> <i class="fas fa-long-arrow-alt-right"></i></p>
+                  <p><%= link_to "Return to Product Gallery", products_path, style: "color: grey; margin-left: 300px; margin-top: 20px; font-size: 15px;" %> </p>
                 </div>
               </div>
               <%# <%= image_tag 'sewing2.jpg', 
