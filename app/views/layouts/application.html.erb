@@ -2,6 +2,7 @@
 <html>
   <head>
     <title>Fitsme</title>
+    <%= favicon_link_tag %>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -9,6 +10,26 @@
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
 
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
+
+
+    <title><%= meta_title %></title>
+    <meta name="FitsMe Sizing" content="<%= seamless sizing, brand agnostics. %>">
+
+<!-- Facebook Open Graph data -->
+    <meta property="og:title" content="<%= meta_title %>" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="<%= request.original_url %>" />
+    <meta property="og:image" content="<%= meta_image %>" />
+    <meta property="og:description" content="<%= meta_description %>" />
+    <meta property="og:site_name" content="<%= meta_title %>" />
+
+    <!-- Twitter Card data -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="<%= DEFAULT_META["twitter_account"] %>">
+    <meta name="twitter:title" content="<%= meta_title %>">
+    <meta name="twitter:description" content="<%= meta_description %>">
+    <meta name="twitter:creator" content="<%= DEFAULT_META["twitter_account"] %>">
+    <meta name="twitter:image:src" content="<%= meta_image %>">
   </head>
 
   <body>
@@ -17,12 +38,9 @@
 
 
 
-
-  
-
     <%= yield %>
 
-  <footer class="text-center text-lg-start d-flex justify-content-around align-items-center" style="background-color: #da6f2a;">    
+  <footer class="text-center text-lg-start d-flex justify-content-around align-items-center" style="background-color: #da6f2a;">
     <div class="footer-col">
                     <h4>FitsMe</h4>
                     <ul>
@@ -52,18 +70,18 @@
 
 <%
 =begin%>
- 
+
 
 
 
 
     <div class="d-flex justify-content-center py-3 social-media">
-     
+
       <a href="#" class="social-media"><i class="fab fa-facebook-f"></i> </a>
       <a href="#" class="social-media"><i class="fab fa-youtube"></i> </a>
       <a href="#" class="social-media"><i class="fab fa-instagram"></i> </a>
       <a href="#" class="social-media"><i class="fab fa-twitter"></i> </a>
-      
+
     </div>
 
     <!-- Copyright -->
@@ -74,7 +92,7 @@
     <!-- Copyright -->
   </footer>
 
-   
+
 <%
 =end%>
 
