@@ -13,17 +13,17 @@
   }
 
   .btn-orange-big2 {
-    padding: 8px 24px;
+    padding: 8px 8px;
     border-radius: 8px;
     border-color: $burntorange;
     background-color: $burntorange;
     color: $white;
-    font-size: 30px;
+    // font-size: 12px;
     opacity: 1;
-    transition: background 0.3s ease;
+    // transition: background 0.3s ease;
     justify-content: center;
-    width: 500px;
-    height: 90px;
+    width: 50px;
+    height: 50px;
   }
 
   .btn-orange-big2:hover {
@@ -31,9 +31,7 @@
     color: $burntorange;
     border: 2px solid $burntorange;
     font-size: 20px;
-    opacity: 1;
-    width: 500px;
-    height: 90px;
+   
   }
 
 

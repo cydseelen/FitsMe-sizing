@@ -4,7 +4,9 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap');
+
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
 
 // Define fonts for body and headers
 //$body-font: "Work Sans", "Helvetica", "sans-serif";
@@ -12,8 +14,10 @@
 
 $headers-font: 'Open Sans Condensed', sans-serif;
 // Weight 700
+
 $body-font: 'Roboto', sans-serif;
 // Weight 300 or 400
+
 
 // To use a font file (.woff) uncomment following lines
 // @font-face {
