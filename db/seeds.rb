@@ -5,6 +5,10 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+require "open-uri"
+file = URI.open('https://res.cloudinary.com/dlm1ovapv/image/upload/v1615491172/NavyBlazer_fcjena.jpg')
+
+
 puts "Removing old customers, brands, product files and matches"
 UserProduct.destroy_all
 puts "1"
