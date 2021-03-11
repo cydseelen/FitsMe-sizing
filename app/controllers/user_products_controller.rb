@@ -1,4 +1,3 @@
-require "pry-byebug"
 class UserProductsController < ApplicationController
 
   before_action :authenticate_user!, except: [:create, :show]
