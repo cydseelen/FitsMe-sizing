@@ -31,6 +31,14 @@ body {
   justify-content: flex-end;
 }
 
+.plus-link {
+  color: $burntorange;
+
+  &:hover {
+    color: $burntorange;
+  }
+}
+
 .logo {
   color: white;
   justify-self: center !important;
@@ -42,7 +50,7 @@ body {
   display: flex;
   justify-content: space-evenly;
   padding-top: 40px;
-  padding-left: 20px;
+  padding-left: 40px;
   padding-bottom: 50px;
   //height: 100vh;
   width: 82vw;
@@ -117,7 +125,6 @@ li2 {
 }
 
 .card-new .form-group {
-  margin-left: 30px;
   font-size: 14px;
   color: black;
   width: 100%;
@@ -130,6 +137,7 @@ li2 {
   font-size: 24px;
   color: rgb(5, 5, 5);
   padding-right: 20px;
+  margin-bottom: 0 !important;
 }
 
 .card-new form-input {
@@ -143,4 +151,8 @@ li2 {
   color: black;
   font-family: Raleway;
   border: 2px solid #8a8484;
+}
+
+.form-group {
+  margin-bottom: 1.5rem !important;
 }

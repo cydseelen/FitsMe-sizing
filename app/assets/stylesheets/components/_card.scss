@@ -105,7 +105,7 @@
   height: 125px;
   width: 125px;
   display: flex;
-  color: black; 
+  color: black;
   font-size: 12px;
   font-weight: bold;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
@@ -118,7 +118,7 @@
   height: 210px;
   width: 210px;
   display: flex;
-  color: black; 
+  color: black;
   font-size: 14px;
   font-weight: bold;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
@@ -135,7 +135,6 @@
 }
 
 .card-new {
-  margin-left: 20px;
   background-color: white;
   border: $burntorange;
   opacity: .5;
@@ -145,7 +144,7 @@
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-//   align-items: normal;  
+//   align-items: normal;
 }
 
 // .card-new2 {
@@ -157,7 +156,7 @@
 //   display: flex;
 //   align-items: center;
 //   justify-content: space-between;
-// //   align-items: normal;  
+// //   align-items: normal;
 // }
 
 // .card-new3 {
@@ -169,7 +168,7 @@
 //   display: flex;
 //   align-items: flex-end;
 //   justify-content: space-between;
-// //   align-items: normal;  
+// //   align-items: normal;
 // }
 
 .card-inside {
@@ -186,7 +185,7 @@
 .bottom {
   position: absolute;
   bottom: 10px;
-} 
+}
 
 // .form-input {
 //   height: auto;
