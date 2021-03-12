@@ -61,17 +61,29 @@
                 <% if @product.product_sizes.size >= 5%>
                   <%= link_to "Activate", convert_product_sizes_path(product_sizes: @product.product_sizes.map(&:id), product_id: @product), :class=>"btn-orange-big", :style=>"color:black;" %>
                 <%end %>
+
+                
               
             </div>
-          <div class="col-6 d-flex justify-content-center align-items-center">
+          <div class="col-6">
+           <div class="index-grid2 justify-contents-center align-items-center p-3">
             <% if @product.photo.attached?%>
               <%= cl_image_tag @product.photo.key, style: "border-radius: 8px;
                  width: 300px; height: auto; margin: 5px 5px; opacity: 1.0; border-color: $gray; justify-content:center; align-items: center;" %>
+                 <div class="row">
+                   <%= link_to "Update #{@product.name}",
+                   edit_product_path(@product), style: "color: grey; font-size:12px; margin-top: 20px; margin-left: 10px;"%>
+                 </div>
               <%# </p><b>Product Name: <b><%= @product.name %>
             <%else%>
               <%= image_tag 'noimage.jpg', style: "border-radius: 8px;
                   width: 300px; height: auto; margin: 5px 5px; opacity: 1.0; border-color: $gray; justify-content:center; align-items: center;"%>
+                  <div class="row">
+                    <%= link_to "Update #{@product.name}",
+                    edit_product_path(@product), style: "color: grey; font-size:12px; margin-top: 20px; margin-left: 10px;"%>
+                  </div>
              <%end%>
+            </div>
             </div>
           </div>
         </div>

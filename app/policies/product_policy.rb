@@ -18,18 +18,18 @@ class ProductPolicy < ApplicationPolicy
   end
 
   def index?
-    record.user == user
+    true
   end
 
   def edit?
-    record.user == user
+    true
   end
   
   def update?
-    record.user == user
+    true
   end
 
   def destroy?
-    record.user == user
+    true
   end
 end
