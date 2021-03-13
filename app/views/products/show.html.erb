@@ -73,6 +73,13 @@
                  <div class="row">
                    <%= link_to "Update #{@product.name}",
                    edit_product_path(@product), style: "color: grey; font-size:12px; margin-top: 20px; margin-left: 10px;"%>
+                   <%= link_to "Delete #{@product.name}",
+                      product_path(@product), style: "color: grey; font-size:12px; margin-top: 20px; margin-left: 10px;",
+                      method: :delete,
+                      data: { confirm: "Are you sure" } %>
+                 </div>
+                 <div class="row">
+                   <%= link_to "Back to Gallery", products_path, style: "margin-left: 20px; color: black; font-size: 20px;"%>
                  </div>
               <%# </p><b>Product Name: <b><%= @product.name %>
             <%else%>
@@ -81,7 +88,14 @@
                   <div class="row">
                     <%= link_to "Update #{@product.name}",
                     edit_product_path(@product), style: "color: grey; font-size:12px; margin-top: 20px; margin-left: 10px;"%>
+                    <%= link_to "Delete #{@product.name}",
+                      product_path(@product), style: "color: grey; font-size:12px; margin-top: 20px; margin-left: 10px;",
+                      method: :delete,
+                      data: { confirm: "Are you sure" } %>
                   </div>
+                  <div class="row">
+                   <%= link_to "Back to Gallery", products_path, style: "margin-left: 20px; color: black; font-size: 20px;"%>
+                 </div>
              <%end%>
             </div>
             </div>
