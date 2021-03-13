@@ -46,9 +46,10 @@
           </div>
           <div class="row">
             <div class="col-5">
-              <h3>Size Information</h3>
+              <h3>Product Size Updates</h3>
               <p>This Information will be used for customer fit recommendations.</p>
-              <div class="card-new">
+              <%# <div class="card-new"> %>
+              <div class="card-new ml-0">
                 <%= simple_form_for [@product, @product_size] do |f| %>
                   <%= f.input :size_name, collection: ["extra small", "small", "medium", "large", "extra large"] , prompt: "Select Size" %>
                   <%= f.input :hip_measurement, as: :string, placeholder: "cm" %>
