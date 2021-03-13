@@ -8,7 +8,8 @@
     // opacity: .8;
     transition: background 0.3s ease;
     justify-content: center;
-    width: 400px;
+    align-items: center;
+    width: 200px;
     height: 60px;
     background: $burntorange;
     color: $white;
@@ -28,16 +29,42 @@
     color: $white;
     // font-size: 12px;
     opacity: 1;
+    display: flex;
     // transition: background 0.3s ease;
     justify-content: center;
-    width: 50px;
-    height: 50px;
+    width: 200px;
+    height: 60px;
+  }
+
+  .btn-orange3 {
+    padding: 1px 10px;
+    //border-radius: 8px;
+    //border: 1px solid $burntorange;
+    // border-color: $burntorange;
+    color: $burntorange;
+    font-size: 20px;
+    // opacity: .8;
+    transition: background 0.3s ease;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: auto;
+    background: white;
+    color: grey;
   }
 
   .btn-orange-big2:hover {
     border: 2px solid $burntorange;
     font-size: 20px;
+  }
 
+  .btn-border {
+    border-radius: 8px;
+    padding: 10px 10px;
+    border: 1px solid white;
+    height: auto;
+    width: 200px;
+    color: $burntorange;
   }
 
   .btn-nav {

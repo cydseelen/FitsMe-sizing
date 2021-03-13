@@ -14,12 +14,20 @@
         <h1><%= link_to "Fits", root_path, :style=>'color: white; font-weight: bold;' %>Me</h1>
       </div>
       <ul>
-        <li></h3>New Product Setup</h3></li>
+        <li></h3>Brand Dashboard</h3></li>
         <div class="d-flex justify-content-center">
-          <li style="font-size: 15px; padding: 5px 5px;"><i class="fas fa-coins"></i> Payment Center</li>
+          <li style="font-size: 18px; padding: 5px 5px;"><b> Product Setup<b></li>
         </div>
         <div class="d-flex justify-content-center">
-          <li style="font-size: 15px; padding: 5px 5px;"><i class="fas fa-chart-area"></i> Product Analytics</li>
+           <br>
+           <br>
+          <li style="font-size: 18px; padding: 5px 5px;"><b>Size Setup<b></li>
+        </div>
+        <div class="d-flex justify-content-center">
+          <li style="font-size: 15px; padding: 5px 5px;"> Payment Center</li>
+        </div>
+        <div class="d-flex justify-content-center">
+          <li style="font-size: 15px; padding: 5px 5px;">Product Analytics</li>
         </div>
       </ul>
     </div>
@@ -44,7 +52,7 @@
               style: "width: 90%; height: auto; margin: 5px; opacity: .7;"%>
           </div>
           <div class="row">
-            <div class="col-5">
+            <div class="col-8">
               <h3>Product Basic Information</h3>
               <p>Begin by entering a few details about the product being uploaded.</p>
               <div class="card-new ml-0">
@@ -55,12 +63,12 @@
                   <%= f.input :photo, as: :file %>
               </div>
             </div>
-            <div class="col-7 d-flex justify-content-flex-start align-items-center">
+            <div class="col-4 d-flex justify-content-flex-start align-items-center">
               <div class="index-grid2">
-                <div class="row" >
-                  <%= f.button :submit, value: "Save Product", class: "btn-orange-big",style: "margin-left: 90px; font-size: 20px; font-style: bold;" %>
+                <div class="row d-flex justify-content-flex-start align-items-center" >
+                  <%= f.button :submit, value: "Save Product", class: "btn-orange-big",style: "margin-left: 0px; font-size: 20px; font-style: bold;" %>
+                  <% end %>
                 </div>
-                <% end %>
                 <div class="row bottom">
                   <%= link_to products_path, style: "color: grey; margin-left: 300px; margin-top: 20px; font-size: 15px;" do %>
                 <i class="fas fa-long-arrow-alt-left"></i> Back to Brand
