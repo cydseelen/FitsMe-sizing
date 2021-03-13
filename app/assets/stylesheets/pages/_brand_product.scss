@@ -1,9 +1,9 @@
 body {
   font-size: 20px;
-  // background-image: url(asset_path('background.png'));
-  // background-color: rgba(235, 115, 4, 0.8);
-  // background-blend-mode: multiply;
-  // background-size: cover;
+  background-image: url(asset_path('background.png'));
+  background-color: rgba(235, 115, 4, 0.8);
+  background-blend-mode: multiply;
+  background-size: cover;
 }
 
 .container {
@@ -24,7 +24,6 @@ body {
 
 .row2 {
   display: inline-block;
-  background-color: $burntorange;
   min-width: 80vw;
 }
 
@@ -44,7 +43,7 @@ body {
 
 .logo {
   color: white;
-  justify-self: center !important;
+  // justify-self: center !important;
   font-size: 40px;
   }
 
