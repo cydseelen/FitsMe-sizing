@@ -1,0 +1,26 @@
+.background {
+  background-image: url(asset_path('background.png'));
+  background-color: rgba(235, 115, 4, 0.8);
+  background-blend-mode: multiply;
+  background-size: cover;
+  height: 100vh;
+  width: 110%;
+  background-position: top;
+  background-repeat: no-repeat;
+}
+
+label {
+  font-weight: 700;
+  font-size: 24px;
+  color: $burntorange;
+  padding-right: 20px;
+}
+
+body {
+  font-family: "roboto";
+}
+
+.brand-card {
+  border-radius: 22px;
+  padding: 20px 70px;
+}
