@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   end
 
   resources :products do
-    resources :product_sizes, only: [:new, :create]
+    resources :product_sizes, only: [:new, :create, :update, :destroy]
   end
 
   resources :product_sizes do
