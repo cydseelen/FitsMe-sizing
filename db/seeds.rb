@@ -56,8 +56,7 @@ Product.create!(
     fabric_type: "tight less than 5cm allowance",
     garment_type:  "shirt"
   )
-  product.photo.attach(io: file, filename: 'NavyBlazer.jpg', content_type: 'image/jpg')
-  product.save
+
 
   Product.create!(
     brand: Brand.first,
