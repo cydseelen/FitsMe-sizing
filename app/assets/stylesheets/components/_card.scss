@@ -69,6 +69,8 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap:16px;
+  width: 600px;
+  margin-top: 8px;
 }
 
 .psize-grid {
@@ -89,6 +91,13 @@
   display: grid;
   grid-template-columns: 1fr;
   align-items: start;
+  justify-content: center;
+}
+
+.index-grid2 div p {
+  align-items: center;
+  justify-content: center;
+  margin-left: 3px;
 }
 
 .grid3 {
@@ -112,8 +121,8 @@
 
 .card-index {
   background-color: white;
-  height: 125px;
-  width: 125px;
+  height: 150px;
+  width: 150px;
   display: flex;
   color: black;
   font-size: 12px;
