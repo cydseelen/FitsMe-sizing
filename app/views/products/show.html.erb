@@ -46,24 +46,29 @@
         <div class="row">
           <div class="col-6 justify-content-center align-items-center p-3">
             <h3><b><%= @product.name %><b>: Product Details</h3>
-                <p><b><i class="fas fa-tshirt"></i><b>  <%= @product.garment_type.capitalize %>  
+               <div>
+                 <p><b><i class="fas fa-tshirt"></i><b>  <%= @product.garment_type.capitalize %>  
                    &nbsp; &nbsp;<b><i class="fas fa-cut"></i><b>  <%= @product.fabric_type.capitalize %></p>
-              <h3>Available in these Sizes</h3>
-              <br>
-              <% @product.product_sizes.each do |size| %>
-                <div class="psize-grid">
-                  <p><i class="fas fa-check-square"></i><%=size.size_name %></p>
                 </div>
+                <div>
+              <h3>Available in these Sizes</h3>
+              <div class="row p-3">
+                <div class="psize-grid">
+              <% @product.product_sizes.each do |size| %>
+                  <p style="align-content: center;"><i class="fas fa-check-square">&nbsp;</i><%=size.size_name %></p>
               <% end %>
+                </div>
+              </div>
+              </div>
+
+              <div class="row d-flex justify-content-flex-start">
               
-                <%= link_to " Add Size", new_product_product_size_path(@product), :style=>"color:black;", :class=>'btn-orange-big'  %>
+                <%= link_to " Add Size", new_product_product_size_path(@product), :style=>"color:black; margin-right: 30px;", :class=>'btn-orange-big'  %>
             
                 <% if @product.product_sizes.size >= 5%>
                   <%= link_to "Activate", convert_product_sizes_path(product_sizes: @product.product_sizes.map(&:id), product_id: @product), :class=>"btn-orange-big", :style=>"color:black;" %>
                 <%end %>
-
-                
-              
+            </div>
             </div>
           <div class="col-6">
            <div class="index-grid2 justify-contents-center align-items-center p-3">
@@ -79,7 +84,7 @@
                       data: { confirm: "Are you sure" } %>
                  </div>
                  <div class="row">
-                   <%= link_to "Back to Gallery", products_path, style: "margin-left: 20px; color: black; font-size: 20px;"%>
+                   <%= link_to "Back to Gallery", products_path, style: "margin-left: 10px; color: black; font-size: 20px;"%>
                  </div>
               <%# </p><b>Product Name: <b><%= @product.name %>
             <%else%>

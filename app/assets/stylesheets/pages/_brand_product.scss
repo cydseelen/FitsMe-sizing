@@ -121,7 +121,7 @@ li2 {
 .card-new .form-control {
   font-size: 14px;
   color: black;
-  width: 100%;
+  width: 600px;
   height: 30px;
   border-color: black;
   padding: 0px 5px;
@@ -158,4 +158,12 @@ li2 {
 
 .form-group {
   margin-bottom: 1.5rem !important;
+}
+
+.form-group select optional product_size_size_name {
+  width: 100%;
+}
+
+.simple_form new_product_size {
+  width:100%;
 }
