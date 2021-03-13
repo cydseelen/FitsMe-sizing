@@ -95,10 +95,10 @@
                   <div class="card-index d-flex justify-content-center">
                     <%= link_to product_path(product) do %>
                       <% if product.photo.attached? %>
-                        <%= cl_image_tag product.photo.key, style: "border-radius: 8px; width: 105px; height: 110px; margin: 8px; opacity: 1.0; border-color: $gray;" %>
+                        <%= cl_image_tag product.photo.key, style: "object-fit: cover; border-radius: 8px; width: 105px; height: 110px; margin: 8px; opacity: 1.0; border-color: $gray;" %>
                         <p><%= product.name %></p>
                       <% else %>
-                        <%= image_tag 'noimage.jpg', style: "border-radius: 8px;  width: 105px; height: 110px; margin: 8px; opacity: 1.0; border-color: $gray;" %>
+                        <%= image_tag 'noimage.jpg', style: "object-fit: cover; border-radius: 8px;  width: 105px; height: 110px; margin: 8px; opacity: 1.0; border-color: $gray;" %>
                         <p><%= product.name %></p>
                       <% end %>
                     <% end %>
