@@ -1,98 +1,123 @@
 <div class="container">
-    <div class="row1">
-        <div class="bottom d-flex justify-content-flex-start">
-          <ul>
-          <% if user_signed_in?  %>
-            <li style="font-size: 15px; padding: 5px 5px; color:white;"> <i class="far fa-user"></i> <%= link_to 'Log Out', edit_user_registration_path, :style=>'color: white; font-size: 15px; justify-content:center;'%></li>
-          <% else %>
-            <li style="font-size: 15px; padding: 5px 5px; color: white;"><i class="far fa-user"></i><%= link_to 'Sign in', new_user_session_path, :style=>'color: white; font-size: 15px;' %></li>
-          <% end %>
-          </ul>
-          </div>
-          <!-- <div class="footer-col bottom">
-          <div class="social-links d-flex">
-                        <a href="#" class="d-block"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                    </div>
-                    </div> -->
+  <div class="row1">
+    <div class="bottom d-flex justify-content-flex-start">
+      <ul>
+        <% if user_signed_in?  %>
+          <li style="font-size: 15px; padding: 5px 5px; color:white;">
+            <i class="far fa-user"></i>
+            <%= link_to 'Log Out', edit_user_registration_path, :style=>'color: white; font-size: 15px; justify-content:center;'%>
+          </li>
+        <% else %>
+          <li style="font-size: 15px; padding: 5px 5px; color: white;">
+            <i class="far fa-user"></i>
+            <%= link_to 'Sign in', new_user_session_path, :style=>'color: white; font-size: 15px;' %>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+        <!-- <div class="footer-col bottom">
+        <div class="social-links d-flex">
+                      <a href="#" class="d-block"><i class="fab fa-facebook-f"></i></a>
+                      <a href="#"><i class="fab fa-twitter"></i></a>
+                      <a href="#"><i class="fab fa-instagram"></i></a>
+                      <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                  </div>
+                </div> -->
+    <div>
       <div class="logo">
-        <h1><%= link_to "Fits", root_path, :style=>'color: white; font-weight: bold;' %>Me</h1>
+        <h1 style="margin-top: 24px;"><%= link_to "Fits", root_path, :style=>'color: white; font-weight: bold;' %>Me</h1>
       </div>
       <ul>
-        <li></h3>Brand Profile & Setup</h3></li>
-        <div class="d-flex justify-content-center">
-          <li style="font-size: 15px; padding: 5px 5px;"><i class="fas fa-coins"></i> Payment Center</li>
+        <li><h3>Brand Dashboard</h3></li>
+        <div class="d-flex">
+          <li style="font-size: 15px;"> Upload Steps:</li>
         </div>
-        <div class="d-flex justify-content-center">
-          <li style="font-size: 15px; padding: 5px 5px;"><i class="fas fa-chart-area"></i> Product Analytics</li>
+        <div class="d-flex">
+          <li style="font-size: 15px; padding: 5px 5px;"> 1. Upload products</li>
+        </div>
+        <div class="d-flex">
+          <li style="font-size: 15px; padding: 5px 15px;">2. Add available sizes</li>
+        </div>
+        <div class="d-flex">
+          <li style="font-size: 15px; padding: 5px 30px;"> 3. Activate your products</li>
+        </div>
+        <div class="d-flex">
+          <li style="font-size: 15px;"> Payment Center</li>
+        </div>
+         <div class="d-flex">
+          <li style="font-size: 15px;"> Reports</li>
         </div>
       </ul>
     </div>
-    <div class="row2">
-      <div class="content">
-        <div class="index-grid2">
-          <div class= "row">
-            <div class = "col-3">
-              <div class = "card-brand">
-                <%= image_tag 'brand2.jpg', style: "border-radius: 8px;
-                width: 200px; height: 200px; margin: 2px; opacity: 1.0; border-color: white;"%>
-              </div>
-            </div>
-            <div class = "col-9 justify-contents-center">
-              <h1><b>Welcome Back,<b> <em><%= @brand.name.capitalize %></em></b></h1>
-               <p> <i class="fas fa-location-arrow"></i> 10 Spring Lane Cleveland, Ohio 10889
+  </div>
 
-                &nbsp; &nbsp; <i class="fas fa-user"> </i> User Since: October 2020
-               </p>
-               <h3>Alerts and Updates</h3>
-               <p><i class="fas fa-exclamation-circle"></i> Increased Returns of Medium for Navy Blazer </p>
-               <p><i class="fas fa-exclamation-circle"></i> Size Large for White Blouse almost out of stock  </p>
+  <div class="row2">
+    <div class="content">
+      <div class="index-grid2">
+        <div class="row">
+          <div class="col-3">
+            <div class="card-brand">
+              <%= image_tag 'brand2.jpg', style: "border-radius: 8px;
+              width: 200px; height: 200px; margin: 2px; opacity: 1.0; border-color: white;"%>
             </div>
           </div>
-          <div>
-            <br>
+          <div class="col-9 justify-contents-center">
+            <h1><b>Welcome Back,<em><%= @brand.name.capitalize %></em></b></h1>
+            <p>
+              <i class="fas fa-location-arrow"></i> 10 Spring Lane Cleveland, Ohio 10889
+              &nbsp; &nbsp;
+              <i class="fas fa-user"></i> User Since: October 2020
+            </p>
+            <h3>Alerts and Updates</h3>
+            <p><i class="fas fa-exclamation-circle"></i> Increased Returns of Medium for Navy Blazer </p>
+            <p><i class="fas fa-exclamation-circle"></i> Size Large for White Blouse almost out of stock  </p>
+          </div>
+        </div>
+
+        <div>
+          <br>
           <div class="row" style="border-top: 1px solid lightgrey; width: 80vw; padding-top: 8px;" >
             <h3 style="margin-left: 30px;"><b><%= @brand.name.capitalize %> Product History</b></h3>
           </div>
-          <div class ="row mt-5">
-            <div class = "col-3">
-              <div class = "card-left mr-3">
+          <div class="row mt-5">
+            <div class="col-3">
+              <div class="card-left mr-3">
                 <div class="justify-content-right align-items-center">
-                 <div class="row justify-content-right align-items-center" style="margin-left: 30px;">
-                   </h3>Product Quick Stats<h3>
-                   <br>
+                  <div class="row justify-content-right align-items-center" style="margin-left: 30px;">
+                    <h3>Product Quick Stats</h3>
+                    <br>
                     <p style="size:18px; color: grey; font-weight: bold;"> <i class="far fa-arrow-alt-circle-up"></i> Medium is your most commonly ordered size</p>
                     <p style="size:18px; color: grey; font-weight: bold;"><i class="fas fa-bomb"></i> Extra Large is your most commonly returned size</p>
                     <p style="size:18px; color: grey; font-weight: bold;"><i class="fas fa-exclamation"></i>  Sales Volumes are lower than in Prevous Quarter</p>
                   </div>
+                </div>
               </div>
             </div>
-            </div>
-            <div class = "col-9">
-                </h3 style="font-size: 50px;">Products  </h3> <%= link_to "+", new_product_path(@brand), class: "plus-link" %>
-               <br>
-               <br>
-             <div class="size-grid">
-            <% @product.each do |product| %>
-              <div class="card-index d-flex justify-content-center">
-              <%= link_to product_path(product) do %>
-                <% if product.photo.attached?%>
-                  <%= cl_image_tag product.photo.key, style: "border-radius: 8px;
-          width: 95px; height: 90px; margin: 2px 2px; opacity: 1.0; border-color: $gray;" %>
-                    <p><%= product.name %></p>
-                <%else%>
-                  <%= image_tag 'noimage.jpg', style: "border-radius: 8px;
-          width: 95px; height: 90px; margin: 2px; opacity: 1.0; border-color: $gray;"%>
-                  <p><%= product.name %></p>
-                <%end%>
-              <%end%>
-            </div>
-            <% end %>
-          </div>
-          </div>
+
+            <div class="col-9">
+              <h3 style="font-size: 50px;">Products  </h3> <%= link_to "+", new_product_path(@brand), class: "plus-link" %>
+              <br>
+              <br>
+              <div class="size-grid">
+                <% @product.each do |product| %>
+                  <div class="card-index d-flex justify-content-center">
+                    <%= link_to product_path(product) do %>
+                      <% if product.photo.attached? %>
+                        <%= cl_image_tag product.photo.key, style: "border-radius: 8px; width: 95px; height: 90px; margin: 2px 2px; opacity: 1.0; border-color: $gray;" %>
+                        <p><%= product.name %></p>
+                      <% else %>
+                        <%= image_tag 'noimage.jpg', style: "border-radius: 8px; width: 95px; height: 90px; margin: 2px; opacity: 1.0; border-color: $gray;" %>
+                        <p><%= product.name %></p>
+                      <% end %>
+                    <% end %>
+                  </div>
+                <% end %>
+              </div>
             </div>
           </div>
+        </div>
+      </div>
     </div>
   </div>
+</div>
+
