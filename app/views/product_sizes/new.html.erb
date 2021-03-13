@@ -45,14 +45,14 @@
             width: 90%; height: auto; margin: 5px;"%>
           </div>
           <div class="row">
-            <div class="col-5">
+            <div class="col-8">
               <h3>Product Size Updates</h3>
               <p>This Information will be used for customer fit recommendations.</p>
               <%# <div class="card-new"> %>
               <div class="card-new ml-0">
                 <%= simple_form_for [@product, @product_size] do |f| %>
                   <%= f.input :size_name, collection: ["extra small", "small", "medium", "large", "extra large"] , prompt: "Select Size" %>
-                  <%= f.input :hip_measurement, as: :string, placeholder: "cm" %>
+                  <%= f.input :hip_measurement, as: :string, placeholder: "cm", style:"width:400px;" %>
 
                   <%= f.input :bust_measurement, as: :string, placeholder: "cm" %>
 
@@ -60,10 +60,10 @@
                   <%= f.input :length_measurement, as: :string, placeholder: "cm" %>
               </div>
             </div>
-            <div class="col-7 d-flex justify-content-flex-start align-items-center">
+            <div class="col-4 d-flex justify-content-flex-start align-items-center">
               <div class="index-grid2">
                 <div class="row" >
-                  <%= f.button :submit, value: "Save Product Size", class: 'btn-orange-big', style: "margin-left: 90px;" %>
+                  <%= f.button :submit, value: "Save Product Size", class: 'btn-orange-big', style: "margin-left: 00px;" %>
                   <% end %>
                 </div>
                <div class="row bottom">

@@ -73,8 +73,10 @@
 
 .psize-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 2px;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-gap: 10px;
+  justify-content: center;
+  align-items: center;
 }
 
 .index-grid {
@@ -87,6 +89,14 @@
   display: grid;
   grid-template-columns: 1fr;
   align-items: start;
+}
+
+.grid3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 2px;
+  justify-content: center;
+  align-items: center;
 }
 
 // .product-show {

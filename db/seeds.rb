@@ -57,6 +57,7 @@ Product.create!(
     garment_type:  "shirt"
   )
 
+
   Product.create!(
     brand: Brand.first,
     name: "Navy Blazer",
