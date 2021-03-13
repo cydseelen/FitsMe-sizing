@@ -5,11 +5,19 @@
     // border-color: $burntorange;
     color: grey;
     font-size: 20px;
-    opacity: .8;
+    // opacity: .8;
     transition: background 0.3s ease;
     justify-content: center;
     width: 400px;
     height: 60px;
+    background: $burntorange;
+    color: $white;
+  }
+
+  .btn-orange-big:hover {
+    font-size: 20px;
+    color: white;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   }
 
   .btn-orange-big2 {
@@ -27,20 +35,9 @@
   }
 
   .btn-orange-big2:hover {
-    background: $white;
-    color: $burntorange;
     border: 2px solid $burntorange;
     font-size: 20px;
-   
-  }
 
-
-
-  .btn-orange-big:hover {
-    background: $burntorange;
-    color: $white;
-    font-size: 20px;
-    opacity: 1;
   }
 
   .btn-nav {
@@ -173,5 +170,5 @@
     display: none !important;
   }
 
-  
+
   }

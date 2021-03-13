@@ -8,14 +8,14 @@
             <li style="font-size: 15px; padding: 5px 5px; color:white;"> <i class="far fa-user"></i> <%= link_to 'Log Out', edit_user_registration_path, :style=>'color: white; font-size: 15px; justify-content:center;'%></li>
           <% else %>
             <li style="font-size: 15px; padding: 5px 5px; color: white;"><i class="far fa-user"></i><%= link_to 'Sign in', new_user_session_path, :style=>'color: white; font-size: 15px;' %></li>
-          <% end %> 
-          </ul>   
+          <% end %>
+          </ul>
         </div>
       <div class="logo">
         <h1><%= link_to "Fits", root_path, :style=>'color: white; font-weight: bold;' %>Me</h1>
       </div>
       <ul>
-        <li></h3>New Product Setup</h3></li> 
+        <li></h3>New Product Setup</h3></li>
         <div class="d-flex justify-content-center">
           <li style="font-size: 15px; padding: 5px 5px;"><i class="fas fa-coins"></i> Payment Center</li>
         </div>
@@ -29,13 +29,13 @@
         <div class="index-grid2">
           <div class= "row">
             <div class = "col-8">
-                <h1 style="color:grey;">Product Sizes</h1>
-                <h3> <em>Sanguene<em></h3>
-               <p> <i class="fas fa-location-arrow"></i> 10 Spring Lane Cleveland, Ohio 10889  
+                <h1 style="color:$burntorange;"><b>Product Sizes</b></h1>
+                <h3> <em>Saenguin</em></h3>
+               <p> <i class="fas fa-location-arrow"></i> 10 Spring Lane Cleveland, Ohio 10889
                 &nbsp; &nbsp; <i class="fas fa-user"> </i> User Since: October 2020
                </p>
             </div>
-            <div class = "col-4 justify-contents-center">  
+            <div class = "col-4 justify-contents-center">
               <%= image_tag 'logo2.png', style: "border-radius: 8px;
                 width: 200px; height: auto; margin: 2px; opacity: 1.0; border-color: $gray; box-shadow: 0 10px 20px 0 $grey;"%>
             </div>
@@ -51,25 +51,27 @@
               <div class="card-new">
                 <%= simple_form_for [@product, @product_size] do |f| %>
                   <%= f.input :size_name, collection: ["extra small", "small", "medium", "large", "extra large"] , prompt: "Select Size" %>
-                  <%= f.input :hip_measurement, as: :string %>
-                
-                  <%= f.input :bust_measurement, as: :string %>
+                  <%= f.input :hip_measurement, as: :string, placeholder: "cm" %>
 
-                  <%= f.input :waist_measurement, as: :string %>
-                  <%= f.input :length_measurement, as: :string %>
+                  <%= f.input :bust_measurement, as: :string, placeholder: "cm" %>
+
+                  <%= f.input :waist_measurement, as: :string, placeholder: "cm" %>
+                  <%= f.input :length_measurement, as: :string, placeholder: "cm" %>
               </div>
             </div>
             <div class="col-7 d-flex justify-content-flex-start align-items-center">
               <div class="index-grid2">
                 <div class="row" >
-                  <%= f.button :submit, class: 'btn-orange-big', style: "margin-left: 90px;" %>
+                  <%= f.button :submit, value: "Save Product Size", class: 'btn-orange-big', style: "margin-left: 90px;" %>
                   <% end %>
                 </div>
                <div class="row bottom">
-                  <p><%= link_to "Return to Product Gallery     ", products_path, style: "color: grey; margin-left: 300px; margin-top: 20px; font-size: 15px;" %> <i class="fas fa-long-arrow-alt-right"></i></p>
+                  <%= link_to products_path, style: "color: grey; margin-left: 300px; margin-top: 20px; font-size: 15px;" do %>
+                <i class="fas fa-long-arrow-alt-left"></i> Back to Brand
+                <% end %>
                 </div>
               </div>
-              <%# <%= image_tag 'sewing2.jpg', 
+              <%# <%= image_tag 'sewing2.jpg',
               style: "width: 90%; height: auto; margin: 5px; opacity: .9;"%>
          </div>
           </div>
