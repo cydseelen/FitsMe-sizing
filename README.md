@@ -16,8 +16,6 @@ This web application is built with Ruby on Rails as well as Ruby, HTML, CSS, & J
 
 Rails (6.0.3.4)
 
-Available at: [http://www.fitsmesizing.com/](http://www.fitsmesizing.com/)
-
 ## Web Stack
 
 * Github
